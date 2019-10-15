@@ -1,0 +1,23 @@
+John's Profile
+Name John Brown
+Location Georgia
+Phone 800-420-7240
+Email info@nostarch.com
+
+Janes's Profile
+Name Jane Doe
+Location Maine
+Phone 415-863-9900
+Email media@nostarch.com
+
+Simon's Profile
+Name Simon Funckle
+Location Washington
+Phone 415-863-9950
+Email academic@nostarch.com
+
+Betty's Profile
+Name Betty Brand
+Location Texas
+Phone 501-882-2391
+Email help@nostarch.com
