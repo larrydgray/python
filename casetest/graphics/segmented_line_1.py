@@ -14,7 +14,7 @@ y2 = 180
 
 x3 = 180
 y3 = 180
-
-canvas_1.create_line(x1,y1,x2,y2,x3,y3)
+lines = [x1,y1,x2,y2,x3,y3]
+canvas_1.create_line(lines)
 
 root.mainloop()
