@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "exceptions.py", line 10, in tryDoSomething
+    doSomething(size)
+  File "exceptions.py", line 6, in doSomething
+    raise Exception('Size of '+str(size)+' is more than 10!')
+Exception: Size of 22 is more than 10!
+Traceback (most recent call last):
+  File "exceptions.py", line 10, in tryDoSomething
+    doSomething(size)
+  File "exceptions.py", line 4, in doSomething
+    raise Exception('Size of '+str(size)+' is less than 5!')
+Exception: Size of 1 is less than 5!
+Traceback (most recent call last):
+  File "exceptions.py", line 10, in tryDoSomething
+    doSomething(size)
+  File "exceptions.py", line 6, in doSomething
+    raise Exception('Size of '+str(size)+' is more than 10!')
+Exception: Size of 22 is more than 10!

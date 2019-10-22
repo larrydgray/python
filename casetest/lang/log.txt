@@ -1,0 +1,14 @@
+ 2019-10-20 16:34:22,015 - DEBUG - Start of Logging Program
+ 2019-10-20 16:34:22,015 - INFO - This is a app that test python loggging.
+ 2019-10-20 16:34:22,015 - DEBUG - Start of factorial(5%)
+ 2019-10-20 16:34:22,016 - DEBUG - i is 0, total is 0
+ 2019-10-20 16:34:22,016 - DEBUG - i is 1, total is 0
+ 2019-10-20 16:34:22,016 - DEBUG - i is 2, total is 0
+ 2019-10-20 16:34:22,016 - DEBUG - i is 3, total is 0
+ 2019-10-20 16:34:22,016 - DEBUG - i is 4, total is 0
+ 2019-10-20 16:34:22,016 - DEBUG - i is 5, total is 0
+ 2019-10-20 16:34:22,016 - DEBUG - End of facctorial(5%)
+ 2019-10-20 16:34:22,016 - WARNING - This is a warning.
+ 2019-10-20 16:34:22,017 - ERROR - This is an error!
+ 2019-10-20 16:34:22,017 - CRITICAL - This is a critical problem!!!!!!!
+ 2019-10-20 16:34:22,017 - DEBUG - End of Program
