@@ -1,0 +1,1 @@
+This is the start for a game called liberation and conquest. The game will have WWII style land air and sea units.
