@@ -4,7 +4,8 @@ This is the folder for the GUI of the game
 
 To Do:
 1. Create Window using TKinter
-	- Graphics Area on top
-	- Command line at the bottom of the Graphics Area
+    - Create Menu with (File, Edit, View, Help)                             ***Kinda finished
+	- Graphics Area on top                                                  ***Use canvas
+	- Command text lines at the bottom of the Graphics Area
 	- Text Box for outputting text
 2. 
