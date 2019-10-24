@@ -1,7 +1,7 @@
 import json
 from tkinter import *
 root = Tk()
-root.title('Segmented Line')
+root.title('Read draw json sprite')
 cw=300
 ch=200
 canvas_1 = Canvas(root, width=cw, height=ch, background="black")
