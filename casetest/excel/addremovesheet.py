@@ -1,0 +1,12 @@
+import openpyxl
+wb = openpyxl.load_workbook('example_copy.xlsx')
+print(wb.sheetnames)
+wb.create_sheet()
+print(wb.sheetnames)
+wb.create_sheet(index=0, title='First Sheet')
+print(wb.sheetnames)
+wb.create_sheet(index=2, title='Middle Sheet')
+print(wb.sheetnames)
+wb.remove(wb['Middle Sheet'])
+wb.remove(wb['Sheet'])
+print(wb.sheetnames)
