@@ -2,11 +2,13 @@ import imapclient
 import pprint
 import imaplib
 imaplib._MAXLINE = 10000000
-imapObj = imapclient.IMAPClient('imap.mail.yahoo.com', ssl=True)
-imapObj.login('javacaverdude@yahoo.com','abplhoqkwzjrmype')
+# yahoo server is imap.mail.yahoo.com
+# gmail is imap.gmail.com
+imapObj = imapclient.IMAPClient('imap.gmail.com', ssl=True)
+imapObj.login('javacaverdude@gmail.com',r'xxxxxx')
 #pprint.pprint(imapObj.list_folders())
 imapObj.select_folder('INBOX', readonly=True)
-UIDs=imapObj.search(b'SINCE 20-Oct-2019')
+UIDs=imapObj.search('SUBJECT "LAC Moves"')
 rawMessages = imapObj.fetch(UIDs, ['BODY[]'])
 pprint.pprint(rawMessages)
 imapObj.logout()

@@ -56,12 +56,12 @@ print('-------------Messsage-------------')
 print(message)
 
 try:
-    #smtpObj = smtplib.SMTP('smtp.mail.yahoo.com',587)
-    #smtpObj.ehlo()
-    #smtpObj.starttls()
-    #smtpObj.login('javacaverdude@yahoo.com','xxxxxxx')
-    #smtpObj.sendmail(sender, receiver, message)
-    #smtpObj.quit()
+    smtpObj = smtplib.SMTP('smtp.mail.yahoo.com',587)
+    smtpObj.ehlo()
+    smtpObj.starttls()
+    smtpObj.login('javacaverdude@yahoo.com','xxxxxx')
+    smtpObj.sendmail(sender, receiver, message)
+    smtpObj.quit()
     print ("Successfully sent email")
 except Exception as e:
     print ("Error: unable to send email")

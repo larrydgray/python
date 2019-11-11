@@ -1,6 +1,6 @@
 from twilio.rest import Client
-accountSID = 'AC04e57b8c86c1241d57f864d53b8983cf'
-authToken = '3954e685973587ac2e93bc73de61ae04'
+accountSID = 'xxxxxx'
+authToken = 'xxxxxx'
 twilioCli = Client(accountSID, authToken)
 myTwilioNumber = '+12089532224'
 aCellNumber = '+16093287422'
