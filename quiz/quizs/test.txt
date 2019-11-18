@@ -1,0 +1,12 @@
+{ID: bla-bla-1-1}
+{QUESTION: This is a question.}
+{ANSWER: The word "bean" and its Germanic cognates (e.g. German Bohne) have existed in common
+ use in West Germanic languages since before the 12th century,[1] referring to broad 
+ beans and other pod-borne seeds. This was long before the New World genus Phaseolus 
+ was known in Europe. After Columbian-era contact between Europe and the Americas, 
+ use of the word was extended to pod-borne seeds of Phaseolus, such as the common 
+ bean and the runner bean, and the related genus Vigna. The term has long been applied
+ generally to many other seeds of similar form,[1][2] such as Old World soybeans,
+ peas, chickpeas (garbanzo beans), other vetches, and lupins, and even to those with
+ slighter resemblances, such as coffee beans, vanilla beans, castor beans, and cocoa beans.
+ Thus the term "bean" in general usage can mean a host of different species.[3]}
