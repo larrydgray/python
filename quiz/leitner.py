@@ -178,7 +178,7 @@ def loadcards(filename):
             print('Parse Error! ID: Expected.')
             return None
         else:
-            cardid=data[3:]
+            cardid=data[3:].strip()
 
         data=cardparser.getBlock()
         if(data==''):
@@ -198,11 +198,12 @@ def loadcards(filename):
             print('Parse Error! ANSWER: Expected.')
             return None
         else:
-            answer=data[:9]
-        thecardid=cardid[:len(cardid)-2]
-        box=cardid[len(cardid)-1:]
-        thecard = Card(thecardid,box,question,answer)
-        cards[thecardid]=thecard
+            answer=data[7:]
+        #print(cardid)
+        #print(question)
+        #print(answer)
+        thecard = Card(cardid,0,question,answer)
+        cards[cardid]=thecard
 
 class CardParser:
     
