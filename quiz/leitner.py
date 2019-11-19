@@ -1,27 +1,57 @@
-import os
+import os, sys
 
-def listfiles(dirName):
+def findtestcyclefile():
+    dirname='quizs'
     # create a list of file and sub directories 
     # names in the given directory 
-    listOfFile = os.listdir('./'+dirName)
-    allFiles = list()
+    listOfFile = os.listdir('./'+dirname)
+    allfiles = list()
     # Iterate over all the entries
     for entry in listOfFile:
         # Create full path
-        fullPath = os.path.join(dirName, entry)
+        fullPath = os.path.join(dirname, entry)
         # If entry is a directory then get the list of files in this directory 
         if not os.path.isdir(fullPath):
-            allFiles.append(entry)
-                
-    return allFiles
+            allfiles.append(entry)
+    for filename in allfiles:
+        #print(filename[:len(filename)-4])
+        if filename[:9]=='testcycle':
+            return filename[:len(filename)-4]
+    return None
+def loadtestcyclefile(testcyclefilename):
+    
+    cycleFile = open("./quizs/"+testcyclefilename+".txt",'r')
+    cycle=cycleFile.readlines()
+    newcycle=[]
+    for line in cycle:
+        newcycle.append(line.strip())
+    return newcycle      
 
 def loadtestcycle():
+    testcyclefilename=findtestcyclefile()
+    if(testcyclefilename==None):
+        print('No Test Cycle File Found.')
+    else:
+        cycle_ids=loadtestcyclefile(testcyclefilename)
+        if(cycle_ids[0]=='empty'):
+            print('Starting new Cycle')
+        else:
+            print(cycle_ids)
+
     print()
-    #look for file named testcycle#.txt in quizs folder
+    
 
 def loadbox(boxnum):
-    print()
-    #load Box of ID numbers for given box number 1 to 5
+    if(boxnum<1|boxnum>6):
+        print('Box number '+boxnum+' out of range. Should be 1 to 6.')
+        sys.exit()
+    boxFile = open("./quizs/box"+str(boxnum)+".txt",'r')
+    box=boxFile.readlines()
+    newbox=[]
+    for line in box:
+        newbox.append(line.strip())
+    return newbox        
+    
 
 def loadcards(filename):
     quizFile = open("./quizs/"+filename+".txt",'r')
