@@ -1,4 +1,27 @@
+import os
 
+def listfiles(dirName):
+    # create a list of file and sub directories 
+    # names in the given directory 
+    listOfFile = os.listdir('./'+dirName)
+    allFiles = list()
+    # Iterate over all the entries
+    for entry in listOfFile:
+        # Create full path
+        fullPath = os.path.join(dirName, entry)
+        # If entry is a directory then get the list of files in this directory 
+        if not os.path.isdir(fullPath):
+            allFiles.append(entry)
+                
+    return allFiles
+
+def loadtestcycle():
+    print()
+    #look for file named testcycle#.txt in quizs folder
+
+def loadbox(boxnum):
+    print()
+    #load Box of ID numbers for given box number 1 to 5
 
 def loadcards(filename):
     quizFile = open("./quizs/"+filename+".txt",'r')
@@ -79,6 +102,11 @@ class Card:
         self.question=question
         self.answer=answer
     
+class TestCycle:
+
+    def __init__(self, cyclenum, idlist):
+        self.cyclenum=cyclenum
+        self.idlist=idlist
 
             
 
