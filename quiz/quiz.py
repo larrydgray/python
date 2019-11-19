@@ -1,4 +1,8 @@
+import leitner
+
+cards = leitner.loadcards('test')
 #loads cards
+
 #shows cycle
 #shows number questions in this cycle per box
 #picks randomizes stack of cards from the boxes in this cycle

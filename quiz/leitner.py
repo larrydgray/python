@@ -27,18 +27,71 @@ def loadtestcyclefile(testcyclefilename):
         newcycle.append(line.strip())
     return newcycle      
 
-def loadtestcycle():
+def findboxfile(boxnum):
+    dirname='quizs'
+    # create a list of file and sub directories 
+    # names in the given directory 
+    listOfFile = os.listdir('./'+dirname)
+    allfiles = list()
+    # Iterate over all the entries
+    for entry in listOfFile:
+        # Create full path
+        fullPath = os.path.join(dirname, entry)
+        # If entry is a directory then get the list of files in this directory 
+        if not os.path.isdir(fullPath):
+            allfiles.append(entry)
+    for filename in allfiles:
+        #print(filename[:len(filename)-4])
+        if filename[:4]==('box'+str(boxnum)):
+            return filename[:len(filename)-4]
+    return None
+
+
+
+def loadtestcycle(cards):
+    
     testcyclefilename=findtestcyclefile()
     if(testcyclefilename==None):
-        print('No Test Cycle File Found.')
+        print('No Test Cycle File Found. Creating new Cycle 1.')
+        cyclefile = open('./quizs/testcycle1.txt','w')
+        ids=cards.keys()
+
+        cyclefile.writelines(ids)
+        cyclefile.close()
+        for id in ids:
+            cards[id].box=1
+
+        testcycle = TestCycle(1,ids)
+        
+        boxfile = open('./quizs/box1.txt','w')
+        boxfile.writelines(ids)
+        boxfile.close()
+        boxfile = open('./quizs/box2.txt','w')
+        boxfile.write('empty')
+        boxfile.close()
+        boxfile = open('./quizs/box3.txt','w')
+        boxfile.write('empty')
+        boxfile.close()
+        boxfile = open('./quizs/box4.txt','w')
+        boxfile.write('empty')
+        boxfile.close()
+        boxfile = open('./quizs/box5.txt','w')
+        boxfile.write('empty')
+        boxfile.close()
+        boxfile = open('./quizs/box6.txt','w')
+        boxfile.write('empty')
+        boxfile.close()
+        
+        return testcycle
     else:
         cycle_ids=loadtestcyclefile(testcyclefilename)
+        testcyclenum=int(testcyclefilename[9:])
         if(cycle_ids[0]=='empty'):
             print('Starting new Cycle')
         else:
-            print(cycle_ids)
+            testcycle = TestCycle(testcyclenum,cycle_ids)
 
-    print()
+            return testcycle
     
 
 def loadbox(boxnum):
@@ -51,7 +104,57 @@ def loadbox(boxnum):
     for line in box:
         newbox.append(line.strip())
     return newbox        
-    
+
+def loadboxes(cards):
+    boxfile = findboxfile(1)
+    if(boxfile==None):
+         return cards
+    else:
+        card_ids=loadbox(1)
+        if card_ids[0]!='empty':
+            for id in card_ids:
+                cards[id].box=1
+    boxfile = findboxfile(2)
+    if(boxfile==None):
+         return cards
+    else:
+        card_ids=loadbox(2)
+        if card_ids[0]!='empty':
+            for id in card_ids:
+                cards[id].box=2
+    boxfile = findboxfile(3)
+    if(boxfile==None):
+         return cards
+    else:
+        card_ids=loadbox(3)
+        if card_ids[0]!='empty':
+            for id in card_ids:
+                cards[id].box=3
+    boxfile = findboxfile(4)
+    if(boxfile==None):
+         return cards
+    else:
+        card_ids=loadbox(4)
+        if card_ids[0]!='empty':
+            for id in card_ids:
+                cards[id].box=4
+    boxfile = findboxfile(5)
+    if(boxfile==None):
+         return cards
+    else:
+        card_ids=loadbox(5)
+        if card_ids[0]!='empty':
+            for id in card_ids:
+                cards[id].box=5
+    boxfile = findboxfile(6)
+    if(boxfile==None):
+         return cards
+    else:
+        card_ids=loadbox(6)
+        if card_ids[0]!='empty':
+            for id in card_ids:
+                cards[id].box=6
+    return cards
 
 def loadcards(filename):
     quizFile = open("./quizs/"+filename+".txt",'r')
@@ -68,6 +171,7 @@ def loadcards(filename):
         data=cardparser.getBlock()
         if(data==''):
             if(cards!=False):
+                loadboxes(cards)
                 return cards
             else:
                 print('Parse Error! Unexpected end of file. No Data')
@@ -135,7 +239,7 @@ class Card:
 class TestCycle:
 
     def __init__(self, cyclenum, idlist):
-        self.cyclenum=cyclenum
+        self.cyclenum=int(cyclenum)
         self.idlist=idlist
 
             
