@@ -1,0 +1,90 @@
+{ID: python-datatypes-strings-1}
+{QUESTION: Describe a basic python strings definition.}
+{ANSWER: use 'xxxx' or "xxxx" . Created with mystringvarname = 'Hello world' .
+use \ for escape characters such as \n newline \" or \' etc.
+}
+{ID: python-datatypes-strings-2}
+{QUESTION: How can strings be defined over multiple lines?}
+{ANSWER:
+""" String can
+cover multiple lines
+"""  or '''  and '''
+}
+{ID: python-datatypes-strings-3}
+{QUESTION: How can you get a single char from a string? Or a substring?}
+{ANSWER:
+They can be treated like an array or list '1234'[0] is '1' .
+mystring='12345'  so mystring[:2] is '12'  and mystring[3:] is '45'
+mystring[1:3] is '23'
+}
+{ID: python-datatypes-strings-4}
+{QUESTION: How do you iterator over the chars of a string?}
+{ANSWER: You can use a string like a list in a for in statement
+for c in mystring:
+    print(c)
+}
+
+{ID: python-datatypes-strings-5}
+{QUESTION: How do you get the lenght of a string?}
+{ANSWER: len(mystring) is 5
+}
+{ID: python-datatypes-strings-6}
+{QUESTION: How do you merge two strings?}
+{ANSWER: use + to concatinate strings. 'Hello'+'World'
+ Also can use a join() method
+}  
+{ID: python-datatypes-strings-7}
+{QUESTION: How do you use a number in a string?}
+{ANSWER: use str(myint) or str(myfloat) to convert int or float to string. 
+}  
+{ID: python-datatypes-strings-8}
+{QUESTION: How do you divide a string by some delimiter such as ',' a string?}
+{ANSWER: mystring.split(',')
+}
+{ID: python-datatypes-strings-9}
+{QUESTION: How do you trim white space from a string?}
+{ANSWER: mystring.strip()
+}
+{ID: python-datatypes-strings-10}
+{QUESTION: How do you convert a string to an int or float?}
+{ANSWER: int(mystringint) or float(mystringfloat)
+}
+{ID: python-datatypes-numbers-1}
+{QUESTION: Describe types of python numbers.}
+{ANSWER: There is int, float and complex numbers.
+   int 55   float 3.25  complex is 5+3j where 3j is imaginary!
+}
+{ID: python-datatypes-numbers-2}
+{QUESTION: How do you work with really precise real numbers in python?}
+{ANSWER: Use decimal module.
+Decimal is for really long precise numbes  1.01002039487233987290374972374987239879238749082387
+decimal.Decimal(1.1)
+}
+{ID: python-datatypes-numbers-3}
+{QUESTION: How can you work with say fractional measurements with python?}
+{ANSWER: Use fractions module
+fractions.Fraction(1,2) is 1/2
+fractions.Fraction(1.5) is 3/2
+}
+{ID: python-datatypes-numbers-4}
+{QUESTION: How do the absolute value of a number?}
+{ANSWER: abs(mynum)
+}
+{ID: python-datatypes-numbers-5}
+{QUESTION: How do you raise a number to a power?}
+{ANSWER: pow(power,number)
+}
+{ID: python-datatypes-numbers-6}
+{QUESTION: How do you round a real number?}
+{ANSWER: round(num,decimalplaces)
+}
+{ID: python-datatypes-numbers-7}
+{QUESTION: Whats involved in getting random numbers?}
+{ANSWER: use random module
+ use random.seed() first
+ then random.Random() returns next float  0.0 to 1.0
+ or random.randint(start,end) so randint(0,100) is 0 to 100
+ }
+
+
+

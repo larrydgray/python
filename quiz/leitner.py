@@ -46,8 +46,6 @@ def findboxfile(boxnum):
             return filename[:len(filename)-4]
     return None
 
-
-
 def loadtestcycle(cards):
     
     testcyclefilename=findtestcyclefile()
