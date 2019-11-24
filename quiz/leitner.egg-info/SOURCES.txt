@@ -1,0 +1,14 @@
+setup.py
+test
+leitner/__init__.py
+leitner/leitner.py
+leitner.egg-info/PKG-INFO
+leitner.egg-info/SOURCES.txt
+leitner.egg-info/dependency_links.txt
+leitner.egg-info/top_level.txt
+test/test_findboxfile.py
+test/test_findtestcyclefile.py
+test/test_id_parse.py
+test/test_loadcards.py
+test/test_loadtestcycle.py
+test/test_readbox.py

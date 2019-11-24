@@ -2,6 +2,7 @@ import leitner
 
 cards = leitner.loadcards('test')
 #loads cards
+cycle = leitner.loadtestcycle()
 
 #shows cycle
 #shows number questions in this cycle per box

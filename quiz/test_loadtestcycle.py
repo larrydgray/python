@@ -1,2 +1,0 @@
-import leitner
-leitner.loadtestcycle()
