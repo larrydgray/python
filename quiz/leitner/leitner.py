@@ -1,4 +1,8 @@
 import os, sys
+import logging
+#logging.disable(logging.DEBUG)
+
+
 
 def findtestcyclefile(path):
     
@@ -14,10 +18,11 @@ def findtestcyclefile(path):
         if not os.path.isdir(fullPath):
             allfiles.append(entry)
     for filename in allfiles:
-        #print(filename[:len(filename)-4])
+        logging.debug(filename[:len(filename)-4])
         if filename[:9]=='testcycle':
             return filename[:len(filename)-4]
     return None
+
 def loadtestcyclefile(path, testcyclefilename):
     
     cycleFile = open(path+testcyclefilename+".txt",'r')
@@ -25,7 +30,37 @@ def loadtestcyclefile(path, testcyclefilename):
     newcycle=[]
     for line in cycle:
         newcycle.append(line.strip())
-    return newcycle      
+    return newcycle    
+
+def savetestcyclefile(testcycle, path, testcyclefilename): 
+    logging.debug("Save Test Cycle")
+    cyclefile = open(path+testcyclefilename+".txt",'w')
+    for id in testcycle:
+        cyclefile.write(id+'\n')
+    cyclefile.close()
+
+def removeidfromtestcycle(id, path, testcyclefilename):
+    logging.debug("Remove From Test Cycle")
+    testcycle = loadtestcyclefile(path, testcyclefilename)
+    testcycle.remove(id)
+    savetestcyclefile(testcycle, path, testcyclefilename)
+
+def removeidfrombox(id, path, boxnum):
+    logging.debug("Remove From Box")
+    box = loadbox(path, boxnum)
+    box.remove(id)
+    savebox(box, path, boxnum)
+
+def addidtobox(id, path, boxnum):
+    logging.debug("Add To Box")
+    box = loadbox(path, boxnum)
+    box.append(id)
+    savebox(box, path, boxnum)
+
+def moveidtobox(id, path, toboxnum, fromboxnum):
+    logging.debug("Moving to Box")
+    removeidfrombox(id, path, fromboxnum)
+    addidtobox(id,path, toboxnum)
 
 def findboxfile(path, boxnum):
     
@@ -41,13 +76,13 @@ def findboxfile(path, boxnum):
         if not os.path.isdir(fullPath):
             allfiles.append(entry)
     for filename in allfiles:
-        #print(filename[:len(filename)-4])
+        logging.debug(filename[:len(filename)-4])
         if filename[:4]==('box'+str(boxnum)):
             return filename[:len(filename)-4]
     return None
 
 def newcycle(path, cards):
-    print('No Test Cycle File Found. Creating new Cycle 1.')
+    logging.debug('No Test Cycle File Found. Creating new Cycle 1.')
     cyclefile = open(path+'testcycle1.txt','w')
     ids=cards.keys()
     for id in ids:
@@ -82,7 +117,7 @@ def newcycle(path, cards):
     return testcycle
 
 def startnextcycle(path, cards, testcyclenum):
-    print('Starting new cycle number '+str(testcyclenum))
+    logging.debug('Starting new cycle number '+str(testcyclenum))
     highestbox=1
     if(testcyclenum%2==0):
         highestbox+=1
@@ -92,7 +127,7 @@ def startnextcycle(path, cards, testcyclenum):
         highestbox+=1
     if(testcyclenum%16==0):
         highestbox+=1
-    print('highestbox '+str(highestbox))
+    logging.debug('highestbox '+str(highestbox))
     cycle_ids=[]
 
     keys=cards.keys()
@@ -110,13 +145,11 @@ def startnextcycle(path, cards, testcyclenum):
 
     return testcycle
     
-
-
 def loadtestcycle(path,cards):
     
     testcyclefilename=findtestcyclefile(path)
-    print(testcyclefilename)
-    print(path)
+    logging.debug(testcyclefilename)
+    logging.debug(path)
     # None means brand new study cycle starting at 1
     if(testcyclefilename==None):
        return newcycle(path, cards)
@@ -131,11 +164,16 @@ def loadtestcycle(path,cards):
         else:
             testcycle = TestCycle(testcyclenum,cycle_ids)
             return testcycle
-    
 
-def loadbox(path,boxnum):
+def savebox(box, path, boxnum):
+     boxfile = open(path+'box'+str(boxnum)+'.txt','w')
+     for id in box:
+         boxfile.write(id+'\n')
+     boxfile.close()
+
+def loadbox(path, boxnum):
     if boxnum<1 or boxnum>6:
-        print('Box number '+str(boxnum)+' out of range. Should be 1 to 6.')
+        logging.debug('Box number '+str(boxnum)+' out of range. Should be 1 to 6.')
         sys.exit()
     boxFile = open(path+'box'+str(boxnum)+'.txt','r')
     box=boxFile.readlines()
@@ -196,7 +234,7 @@ def loadboxes(path, cards):
     return cards
 
 def loadcards(path,filename):
-    print(os.getcwd())
+    logging.debug(os.getcwd())
     quizFile = open(path+filename+".txt",'r')
     aquiz = quizFile.read()
     cardparser = CardParser(aquiz)
@@ -242,9 +280,9 @@ def loadcards(path,filename):
             return None
         else:
             answer=data[7:]
-        #print(cardid)
-        #print(question)
-        #print(answer)
+        logging.debug(cardid)
+        logging.debug(question)
+        logging.debug(answer)
         thecard = Card(cardid,0,question,answer)
         cards[cardid]=thecard
 
@@ -268,8 +306,9 @@ class CardParser:
             while(self.cardsfiletext[self.pos]!='}'):
                 text+=self.cardsfiletext[self.pos]
                 self.pos+=1
-            #print(str(self.pos)+' '+self.cardsfiletext[self.pos])
+            logging.debug(str(self.pos)+' '+self.cardsfiletext[self.pos])
             return text.strip()
+
 class Card:
 
     def __init__(self, catagory_id, box, question, answer):

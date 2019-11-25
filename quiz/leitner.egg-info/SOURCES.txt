@@ -11,4 +11,6 @@ test/test_findtestcyclefile.py
 test/test_id_parse.py
 test/test_loadcards.py
 test/test_loadtestcycle.py
+test/test_movetobox.py
 test/test_readbox.py
+test/test_removefromcycle.py

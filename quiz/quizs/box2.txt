@@ -1,2 +1,4 @@
 python-datatypes-strings-10
 python-datatypes-numbers-1
+python-datatypes-strings-2
+python-datatypes-numbers-7

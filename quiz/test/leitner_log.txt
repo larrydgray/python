@@ -1,0 +1,8 @@
+ 2019-11-25 10:22:48,608 - DEBUG - Start of Logging Leitner Module
+ 2019-11-25 10:22:48,609 - INFO - Leitner modules are methods and classes that support the quiz.py app.
+ 2019-11-25 10:22:48,609 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
+ 2019-11-25 10:22:48,609 - INFO - This is where you are tested more often on things you get wrong and less often
+ 2019-11-25 10:22:48,610 - INFO - on things you get right.
+ 2019-11-25 10:22:48,610 - DEBUG - Moving to Box
+ 2019-11-25 10:22:48,610 - DEBUG - Remove From Box
+ 2019-11-25 10:22:48,612 - DEBUG - Add To Box
