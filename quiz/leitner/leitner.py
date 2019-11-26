@@ -35,6 +35,7 @@ def loadtestcyclefile(path, testcyclefilename):
 def savetestcyclefile(testcycle, path, testcyclefilename): 
     logging.debug("Save Test Cycle")
     cyclefile = open(path+testcyclefilename+".txt",'w')
+    
     for id in testcycle:
         cyclefile.write(id+'\n')
     cyclefile.close()
@@ -88,32 +89,44 @@ def findboxfile(path, boxnum):
 def newcycle(path, cards):
     logging.debug('No Test Cycle File Found. Creating new Cycle 1.')
     cyclefile = open(path+'testcycle1.txt','w')
-    ids=cards.keys()
+    idskeys=cards.keys()
+    ids = [] 
+    for key in idskeys: 
+        ids.append(key) 
+    print('Number of cards '+str(len(ids)))
+    print(ids)
     for id in ids:
         cyclefile.write(id+'\n')
-    
+    print('Done making ids')
     cyclefile.close()
+    print('Loading cards into Box1')
     for id in ids:
         cards[id].box=1
-
+    print('Set Cards to Box1')
     testcycle = TestCycle(1,ids)
-    
+    print('Made TestCycle')
     boxfile = open(path+'box1.txt','w')
+    print('Making box1')
     for id in ids:
         boxfile.write(id+'\n')
     boxfile.close()
+    print('Making box2')
     boxfile = open(path+'box2.txt','w')
     boxfile.write('empty')
     boxfile.close()
+    print('Making box3')
     boxfile = open(path+'box3.txt','w')
     boxfile.write('empty')
     boxfile.close()
+    print('Making box4')
     boxfile = open(path+'box4.txt','w')
     boxfile.write('empty')
     boxfile.close()
+    print('Making box5')
     boxfile = open(path+'box5.txt','w')
     boxfile.write('empty')
     boxfile.close()
+    print('Making box6')
     boxfile = open(path+'box6.txt','w')
     boxfile.write('empty')
     boxfile.close()
@@ -135,6 +148,7 @@ def startnextcycle(path, cards, testcyclenum):
     cycle_ids=[]
 
     keys=cards.keys()
+    print('Loading box1 to box'+str(highestbox))
     for key in keys:
         card=cards[key]
         if(card.box>0 and card.box<=highestbox):

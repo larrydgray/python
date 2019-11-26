@@ -18,12 +18,15 @@ def processcard(card, cycle_idlist):
                 cycle_idlist.remove(card.catagory_id)
                 break
             elif ch == b'd':
-                print('Demoting')
+                
                 if card.box>1:
+                    print('Demoting')
                     leitner.moveidtobox(card.catagory_id,'quizs\\', card.box-1, card.box)
                     card.box-=1
                     leitner.removeidfromtestcycle(card.catagory_id,'quizs\\', testcyclefilename)
                     cycle_idlist.remove(card.catagory_id)
+                else:
+                    print('Leaving')
                 break
             else:
                 continue
@@ -35,10 +38,11 @@ testcyclefilename='testcycle'+str(cycle.cyclenum)
 print("Cycle number "+str(cycle.cyclenum))
 while True:
     print("Number of questions left in cycle is "+str(len(cycle.idlist)))
-    if  cycle.idlist[0]=='':
-        cycle.idlist[0]='empty'
-        leitner.savetestcyclefile(cycle,'quizs\\', cards)
-        print('End of test cycle.')
+    if  len(cycle.idlist)==0:
+        cycle.idlist.append('empty')
+        
+        leitner.savetestcyclefile(cycle.idlist,'quizs\\', testcyclefilename)
+        print('End of test cycle '+str(cycle.cyclenum))
         sys.exit()
     card=cards[cycle.idlist[0]]
     print('ID:'+card.catagory_id+' Box '+str(card.box))
