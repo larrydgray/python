@@ -1,17 +1,57 @@
-import leitner
+import leitner.leitner
+import keyboard, msvcrt, sys
 
-cards = leitner.loadcards('test')
-#loads cards
-cycle = leitner.loadtestcycle()
+def processcard(card, cycle_idlist):
+    while True:  
+        if msvcrt.kbhit():
+            ch = msvcrt.getch()
+            if ch == b'l':  
+                print('Leaving')
+                cycle_idlist.remove(card.catagory_id)
+                break  
+            elif ch == b'p':
+                print('Promoting')
+                leitner.moveidtobox(card.catagory_id,'quizs\\', card.box+1, card.box)
+                card.box+=1
+                cycle_idlist.remove(card.catagory_id)
+                break
+            elif ch == b'd':
+                print('Demoting')
+                if card.box>1:
+                    leitner.moveidtobox(card.catagory_id,'quizs\\', card.box-1, card.box)
+                    card.box-=1
+                    cycle_idlist.remove(card.catagory_id)
+                break
+            else:
+                continue
+        
 
-#shows cycle
-#shows number questions in this cycle per box
-#picks randomizes stack of cards from the boxes in this cycle
-#shows user card1 catagory ID box and question
-#waits for user to answer question on paper or in his head
-#shows answer when user is ready to grade his answer
-#ask user to promote or demote quesiton on honor system
-#goes to next question
-#if user wants to quit, saves cycle to be reloaded for completion
-#if finished store cycle info in json user exam boxes jason file
-#if user wants show number of cards in each box level
+cards = leitner.loadcards('quizs\\','cards')
+cycle = leitner.loadtestcycle('quizs\\', cards)
+print("Cycle number "+str(cycle.cyclenum))
+print("Number of questions left in cycle is "+str(len(cycle.idlist)))
+while True:
+    card=cards[cycle.idlist[0]]
+    print('ID:'+card.catagory_id+' Box '+str(card.box))
+    print('QUESTION: '+card.question)
+    print('Hit Enter when finnished reviewing question.')
+    keyboard.wait('\r')
+    print('ANSWER: '+card.answer)
+    print('(P)romote, (D)emote, (L)eave in same box.')
+    processcard(card,cycle.idlist)
+    print('(N)ext question or (Q)uit')
+    while True:
+        if msvcrt.kbhit():
+            ch = msvcrt.getch()
+            if ch == b'n':  
+                break 
+            elif ch == b'q':
+                try:
+                    sys.exit()      
+                except SystemExit:
+                    print ('Quiting Cycle number '+str(cycle.cyclenum)+' with '+
+                        str(len(cycle.idlist))+' questions left.')
+                        break
+            else:
+                continue 
+    print()

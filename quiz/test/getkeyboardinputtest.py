@@ -1,10 +1,14 @@
-import keyboard  # using module keyboard
-while True:  # making a loop
-    try:  # used try so that if user pressed other than the given key error will not be shown
-        if keyboard.is_pressed('q'):  # if key 'q' is pressed 
-            print('You Pressed A Key!')
-            break  # finishing the loop
+import msvcrt, sys
+while True:
+    if msvcrt.kbhit():
+        ch = msvcrt.getch()
+        #if ch in '\x00\xe0':  # arrow or function key prefix?
+        #    ch = msvcrt.getch()  # second call returns the scan code
+        if ch == b'q':
+            print ("Q was pressed")
+        elif ch == b'\r':
+            print('Enter wa pressed')
+        elif ch == b'x':
+            sys.exit()
         else:
-            pass
-    except:
-        break  # if user pressed a key other than the given key the loop will break
+            print ("Key Pressed:", ch)

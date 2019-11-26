@@ -1,5 +1,5 @@
 import os, sys
-import logging
+import logging, random
 #logging.disable(logging.DEBUG)
 
 
@@ -321,7 +321,10 @@ class TestCycle:
 
     def __init__(self, cyclenum, idlist):
         self.cyclenum=int(cyclenum)
+        random.seed()
+        random.shuffle(idlist)
         self.idlist=idlist
+
 
             
 
