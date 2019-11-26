@@ -29,8 +29,8 @@ def processcard(card, cycle_idlist):
 cards = leitner.loadcards('quizs\\','cards')
 cycle = leitner.loadtestcycle('quizs\\', cards)
 print("Cycle number "+str(cycle.cyclenum))
-print("Number of questions left in cycle is "+str(len(cycle.idlist)))
 while True:
+    print("Number of questions left in cycle is "+str(len(cycle.idlist)))
     card=cards[cycle.idlist[0]]
     print('ID:'+card.catagory_id+' Box '+str(card.box))
     print('QUESTION: '+card.question)
@@ -51,7 +51,7 @@ while True:
                 except SystemExit:
                     print ('Quiting Cycle number '+str(cycle.cyclenum)+' with '+
                         str(len(cycle.idlist))+' questions left.')
-                        break
+                    break
             else:
                 continue 
     print()

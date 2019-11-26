@@ -1,5 +1,5 @@
 import os, sys
-import logging
+import logging, random
 #logging.disable(logging.DEBUG)
 
 
@@ -49,11 +49,15 @@ def removeidfrombox(id, path, boxnum):
     logging.debug("Remove From Box")
     box = loadbox(path, boxnum)
     box.remove(id)
+    if len(box) == 0:
+        box.append('empty')
     savebox(box, path, boxnum)
 
 def addidtobox(id, path, boxnum):
     logging.debug("Add To Box")
     box = loadbox(path, boxnum)
+    if box[0]=='empty':
+        box.remove('empty')
     box.append(id)
     savebox(box, path, boxnum)
 
@@ -321,7 +325,10 @@ class TestCycle:
 
     def __init__(self, cyclenum, idlist):
         self.cyclenum=int(cyclenum)
+        random.seed()
+        random.shuffle(idlist)
         self.idlist=idlist
+
 
             
 
