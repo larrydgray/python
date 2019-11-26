@@ -31,7 +31,7 @@ def processcard(card, cycle_idlist):
 
 cards = leitner.loadcards('quizs\\','cards')
 cycle = leitner.loadtestcycle('quizs\\', cards)
-testcyclefilename='testcycle'+str(cycle.cyclenum)+'.txt'
+testcyclefilename='testcycle'+str(cycle.cyclenum)
 print("Cycle number "+str(cycle.cyclenum))
 while True:
     print("Number of questions left in cycle is "+str(len(cycle.idlist)))
