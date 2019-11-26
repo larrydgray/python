@@ -2368,3 +2368,338 @@ fractions.Fraction(1.5) is 3/2
  2019-11-25 21:09:58,240 - DEBUG - Moving to Box
  2019-11-25 21:09:58,244 - DEBUG - Remove From Box
  2019-11-25 21:09:58,246 - DEBUG - Add To Box
+ 2019-11-26 12:53:04,633 - DEBUG - Start of Logging Leitner Module
+ 2019-11-26 12:53:04,659 - INFO - Leitner modules are methods and classes that support the quiz.py app.
+ 2019-11-26 12:53:04,660 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
+ 2019-11-26 12:53:04,660 - INFO - This is where you are tested more often on things you get wrong and less often
+ 2019-11-26 12:53:04,661 - INFO - on things you get right.
+ 2019-11-26 12:53:04,705 - DEBUG - C:\dev\github\python\quiz
+ 2019-11-26 12:53:04,706 - DEBUG - 31 }
+ 2019-11-26 12:53:04,708 - DEBUG - 87 }
+ 2019-11-26 12:53:04,709 - DEBUG - 229 }
+ 2019-11-26 12:53:04,710 - DEBUG - python-datatypes-strings-1
+ 2019-11-26 12:53:04,710 - DEBUG -  Describe a basic python strings definition.
+ 2019-11-26 12:53:04,711 - DEBUG -  use 'xxxx' or "xxxx" . Created with mystringvarname = 'Hello world' .
+use \ for escape characters such as \n newline \" or \' etc.
+ 2019-11-26 12:53:04,712 - DEBUG - 262 }
+ 2019-11-26 12:53:04,713 - DEBUG - 322 }
+ 2019-11-26 12:53:04,715 - DEBUG - 390 }
+ 2019-11-26 12:53:04,715 - DEBUG - python-datatypes-strings-2
+ 2019-11-26 12:53:04,716 - DEBUG -  How can strings be defined over multiple lines?
+ 2019-11-26 12:53:04,719 - DEBUG - 
+""" String can
+cover multiple lines
+"""  or '''  and '''
+ 2019-11-26 12:53:04,719 - DEBUG - 423 }
+ 2019-11-26 12:53:04,720 - DEBUG - 496 }
+ 2019-11-26 12:53:04,721 - DEBUG - 658 }
+ 2019-11-26 12:53:04,723 - DEBUG - python-datatypes-strings-3
+ 2019-11-26 12:53:04,724 - DEBUG -  How can you get a single char from a string? Or a substring?
+ 2019-11-26 12:53:04,724 - DEBUG - 
+They can be treated like an array or list '1234'[0] is '1' .
+mystring='12345'  so mystring[:2] is '12'  and mystring[3:] is '45'
+mystring[1:3] is '23'
+ 2019-11-26 12:53:04,727 - DEBUG - 691 }
+ 2019-11-26 12:53:04,728 - DEBUG - 751 }
+ 2019-11-26 12:53:04,729 - DEBUG - 849 }
+ 2019-11-26 12:53:04,729 - DEBUG - python-datatypes-strings-4
+ 2019-11-26 12:53:04,730 - DEBUG -  How do you iterator over the chars of a string?
+ 2019-11-26 12:53:04,733 - DEBUG -  You can use a string like a list in a for in statement
+for c in mystring:
+    print(c)
+ 2019-11-26 12:53:04,733 - DEBUG - 883 }
+ 2019-11-26 12:53:04,734 - DEBUG - 934 }
+ 2019-11-26 12:53:04,734 - DEBUG - 964 }
+ 2019-11-26 12:53:04,735 - DEBUG - python-datatypes-strings-5
+ 2019-11-26 12:53:04,735 - DEBUG -  How do you get the lenght of a string?
+ 2019-11-26 12:53:04,736 - DEBUG -  len(mystring) is 5
+ 2019-11-26 12:53:04,737 - DEBUG - 997 }
+ 2019-11-26 12:53:04,737 - DEBUG - 1039 }
+ 2019-11-26 12:53:04,739 - DEBUG - 1126 }
+ 2019-11-26 12:53:04,740 - DEBUG - python-datatypes-strings-6
+ 2019-11-26 12:53:04,740 - DEBUG -  How do you merge two strings?
+ 2019-11-26 12:53:04,741 - DEBUG -  use + to concatinate strings. 'Hello'+'World'
+ Also can use a join() method
+ 2019-11-26 12:53:04,741 - DEBUG - 1161 }
+ 2019-11-26 12:53:04,742 - DEBUG - 1210 }
+ 2019-11-26 12:53:04,742 - DEBUG - 1288 }
+ 2019-11-26 12:53:04,743 - DEBUG - python-datatypes-strings-7
+ 2019-11-26 12:53:04,743 - DEBUG -  How do you use a number in a string?
+ 2019-11-26 12:53:04,744 - DEBUG -  use str(myint) or str(myfloat) to convert int or float to string.
+ 2019-11-26 12:53:04,744 - DEBUG - 1323 }
+ 2019-11-26 12:53:04,745 - DEBUG - 1402 }
+ 2019-11-26 12:53:04,745 - DEBUG - 1433 }
+ 2019-11-26 12:53:04,746 - DEBUG - python-datatypes-strings-8
+ 2019-11-26 12:53:04,746 - DEBUG -  How do you divide a string by some delimiter such as ',' a string?
+ 2019-11-26 12:53:04,747 - DEBUG -  mystring.split(',')
+ 2019-11-26 12:53:04,747 - DEBUG - 1466 }
+ 2019-11-26 12:53:04,748 - DEBUG - 1521 }
+ 2019-11-26 12:53:04,749 - DEBUG - 1549 }
+ 2019-11-26 12:53:04,749 - DEBUG - python-datatypes-strings-9
+ 2019-11-26 12:53:04,750 - DEBUG -  How do you trim white space from a string?
+ 2019-11-26 12:53:04,750 - DEBUG -  mystring.strip()
+ 2019-11-26 12:53:04,751 - DEBUG - 1583 }
+ 2019-11-26 12:53:04,751 - DEBUG - 1643 }
+ 2019-11-26 12:53:04,752 - DEBUG - 1695 }
+ 2019-11-26 12:53:04,752 - DEBUG - python-datatypes-strings-10
+ 2019-11-26 12:53:04,753 - DEBUG -  How do you convert a string to an int or float?
+ 2019-11-26 12:53:04,753 - DEBUG -  int(mystringint) or float(mystringfloat)
+ 2019-11-26 12:53:04,754 - DEBUG - 1728 }
+ 2019-11-26 12:53:04,754 - DEBUG - 1774 }
+ 2019-11-26 12:53:04,755 - DEBUG - 1889 }
+ 2019-11-26 12:53:04,755 - DEBUG - python-datatypes-numbers-1
+ 2019-11-26 12:53:04,756 - DEBUG -  Describe types of python numbers.
+ 2019-11-26 12:53:04,756 - DEBUG -  There is int, float and complex numbers.
+   int 55   float 3.25  complex is 5+3j where 3j is imaginary!
+ 2019-11-26 12:53:04,757 - DEBUG - 1922 }
+ 2019-11-26 12:53:04,757 - DEBUG - 1994 }
+ 2019-11-26 12:53:04,758 - DEBUG - 2142 }
+ 2019-11-26 12:53:04,759 - DEBUG - python-datatypes-numbers-2
+ 2019-11-26 12:53:04,759 - DEBUG -  How do you work with really precise real numbers in python?
+ 2019-11-26 12:53:04,760 - DEBUG -  Use decimal module.
+Decimal is for really long precise numbes  1.01002039487233987290374972374987239879238749082387
+decimal.Decimal(1.1)
+ 2019-11-26 12:53:04,760 - DEBUG - 2175 }
+ 2019-11-26 12:53:04,761 - DEBUG - 2250 }
+ 2019-11-26 12:53:04,761 - DEBUG - 2344 }
+ 2019-11-26 12:53:04,762 - DEBUG - python-datatypes-numbers-3
+ 2019-11-26 12:53:04,762 - DEBUG -  How can you work with say fractional measurements with python?
+ 2019-11-26 12:53:04,763 - DEBUG -  Use fractions module
+fractions.Fraction(1,2) is 1/2
+fractions.Fraction(1.5) is 3/2
+ 2019-11-26 12:53:04,764 - DEBUG - 2377 }
+ 2019-11-26 12:53:04,764 - DEBUG - 2428 }
+ 2019-11-26 12:53:04,765 - DEBUG - 2450 }
+ 2019-11-26 12:53:04,765 - DEBUG - python-datatypes-numbers-4
+ 2019-11-26 12:53:04,766 - DEBUG -  How do the absolute value of a number?
+ 2019-11-26 12:53:04,767 - DEBUG -  abs(mynum)
+ 2019-11-26 12:53:04,767 - DEBUG - 2483 }
+ 2019-11-26 12:53:04,767 - DEBUG - 2533 }
+ 2019-11-26 12:53:04,768 - DEBUG - 2562 }
+ 2019-11-26 12:53:04,768 - DEBUG - python-datatypes-numbers-5
+ 2019-11-26 12:53:04,769 - DEBUG -  How do you raise a number to a power?
+ 2019-11-26 12:53:04,769 - DEBUG -  pow(power,number)
+ 2019-11-26 12:53:04,769 - DEBUG - 2595 }
+ 2019-11-26 12:53:04,770 - DEBUG - 2639 }
+ 2019-11-26 12:53:04,770 - DEBUG - 2675 }
+ 2019-11-26 12:53:04,770 - DEBUG - python-datatypes-numbers-6
+ 2019-11-26 12:53:04,771 - DEBUG -  How do you round a real number?
+ 2019-11-26 12:53:04,771 - DEBUG -  round(num,decimalplaces)
+ 2019-11-26 12:53:04,772 - DEBUG - 2708 }
+ 2019-11-26 12:53:04,772 - DEBUG - 2762 }
+ 2019-11-26 12:53:04,773 - DEBUG - 2930 }
+ 2019-11-26 12:53:04,773 - DEBUG - python-datatypes-numbers-7
+ 2019-11-26 12:53:04,773 - DEBUG -  Whats involved in getting random numbers?
+ 2019-11-26 12:53:04,774 - DEBUG -  use random module
+ use random.seed() first
+ then random.Random() returns next float  0.0 to 1.0
+ or random.randint(start,end) so randint(0,100) is 0 to 100
+ 2019-11-26 12:53:04,775 - DEBUG - box1
+ 2019-11-26 12:53:04,776 - DEBUG - box1
+ 2019-11-26 12:53:04,776 - DEBUG - box2
+ 2019-11-26 12:53:04,778 - DEBUG - box1
+ 2019-11-26 12:53:04,778 - DEBUG - box2
+ 2019-11-26 12:53:04,779 - DEBUG - box3
+ 2019-11-26 12:53:04,780 - DEBUG - box1
+ 2019-11-26 12:53:04,780 - DEBUG - box2
+ 2019-11-26 12:53:04,781 - DEBUG - box3
+ 2019-11-26 12:53:04,781 - DEBUG - box4
+ 2019-11-26 12:53:04,783 - DEBUG - box1
+ 2019-11-26 12:53:04,783 - DEBUG - box2
+ 2019-11-26 12:53:04,783 - DEBUG - box3
+ 2019-11-26 12:53:04,784 - DEBUG - box4
+ 2019-11-26 12:53:04,784 - DEBUG - box5
+ 2019-11-26 12:53:04,786 - DEBUG - box1
+ 2019-11-26 12:53:04,786 - DEBUG - box2
+ 2019-11-26 12:53:04,787 - DEBUG - box3
+ 2019-11-26 12:53:04,787 - DEBUG - box4
+ 2019-11-26 12:53:04,788 - DEBUG - box5
+ 2019-11-26 12:53:04,788 - DEBUG - box6
+ 2019-11-26 12:53:04,789 - DEBUG - box1
+ 2019-11-26 12:53:04,790 - DEBUG - box2
+ 2019-11-26 12:53:04,790 - DEBUG - box3
+ 2019-11-26 12:53:04,791 - DEBUG - box4
+ 2019-11-26 12:53:04,791 - DEBUG - box5
+ 2019-11-26 12:53:04,792 - DEBUG - box6
+ 2019-11-26 12:53:04,792 - DEBUG - cards
+ 2019-11-26 12:53:04,793 - DEBUG - testcycle4
+ 2019-11-26 12:53:04,794 - DEBUG - testcycle4
+ 2019-11-26 12:53:04,794 - DEBUG - quizs\
+ 2019-11-26 13:00:05,786 - DEBUG - Start of Logging Leitner Module
+ 2019-11-26 13:00:05,810 - INFO - Leitner modules are methods and classes that support the quiz.py app.
+ 2019-11-26 13:00:05,810 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
+ 2019-11-26 13:00:05,811 - INFO - This is where you are tested more often on things you get wrong and less often
+ 2019-11-26 13:00:05,811 - INFO - on things you get right.
+ 2019-11-26 13:00:05,859 - DEBUG - C:\dev\github\python\quiz
+ 2019-11-26 13:00:05,860 - DEBUG - 31 }
+ 2019-11-26 13:00:05,861 - DEBUG - 87 }
+ 2019-11-26 13:00:05,861 - DEBUG - 229 }
+ 2019-11-26 13:00:05,862 - DEBUG - python-datatypes-strings-1
+ 2019-11-26 13:00:05,862 - DEBUG -  Describe a basic python strings definition.
+ 2019-11-26 13:00:05,863 - DEBUG -  use 'xxxx' or "xxxx" . Created with mystringvarname = 'Hello world' .
+use \ for escape characters such as \n newline \" or \' etc.
+ 2019-11-26 13:00:05,863 - DEBUG - 262 }
+ 2019-11-26 13:00:05,864 - DEBUG - 322 }
+ 2019-11-26 13:00:05,864 - DEBUG - 390 }
+ 2019-11-26 13:00:05,865 - DEBUG - python-datatypes-strings-2
+ 2019-11-26 13:00:05,865 - DEBUG -  How can strings be defined over multiple lines?
+ 2019-11-26 13:00:05,866 - DEBUG - 
+""" String can
+cover multiple lines
+"""  or '''  and '''
+ 2019-11-26 13:00:05,866 - DEBUG - 423 }
+ 2019-11-26 13:00:05,867 - DEBUG - 496 }
+ 2019-11-26 13:00:05,868 - DEBUG - 658 }
+ 2019-11-26 13:00:05,868 - DEBUG - python-datatypes-strings-3
+ 2019-11-26 13:00:05,869 - DEBUG -  How can you get a single char from a string? Or a substring?
+ 2019-11-26 13:00:05,870 - DEBUG - 
+They can be treated like an array or list '1234'[0] is '1' .
+mystring='12345'  so mystring[:2] is '12'  and mystring[3:] is '45'
+mystring[1:3] is '23'
+ 2019-11-26 13:00:05,870 - DEBUG - 691 }
+ 2019-11-26 13:00:05,871 - DEBUG - 751 }
+ 2019-11-26 13:00:05,871 - DEBUG - 849 }
+ 2019-11-26 13:00:05,872 - DEBUG - python-datatypes-strings-4
+ 2019-11-26 13:00:05,872 - DEBUG -  How do you iterator over the chars of a string?
+ 2019-11-26 13:00:05,873 - DEBUG -  You can use a string like a list in a for in statement
+for c in mystring:
+    print(c)
+ 2019-11-26 13:00:05,874 - DEBUG - 883 }
+ 2019-11-26 13:00:05,874 - DEBUG - 934 }
+ 2019-11-26 13:00:05,875 - DEBUG - 964 }
+ 2019-11-26 13:00:05,875 - DEBUG - python-datatypes-strings-5
+ 2019-11-26 13:00:05,876 - DEBUG -  How do you get the lenght of a string?
+ 2019-11-26 13:00:05,876 - DEBUG -  len(mystring) is 5
+ 2019-11-26 13:00:05,877 - DEBUG - 997 }
+ 2019-11-26 13:00:05,877 - DEBUG - 1039 }
+ 2019-11-26 13:00:05,878 - DEBUG - 1126 }
+ 2019-11-26 13:00:05,879 - DEBUG - python-datatypes-strings-6
+ 2019-11-26 13:00:05,879 - DEBUG -  How do you merge two strings?
+ 2019-11-26 13:00:05,879 - DEBUG -  use + to concatinate strings. 'Hello'+'World'
+ Also can use a join() method
+ 2019-11-26 13:00:05,881 - DEBUG - 1161 }
+ 2019-11-26 13:00:05,882 - DEBUG - 1210 }
+ 2019-11-26 13:00:05,883 - DEBUG - 1288 }
+ 2019-11-26 13:00:05,883 - DEBUG - python-datatypes-strings-7
+ 2019-11-26 13:00:05,884 - DEBUG -  How do you use a number in a string?
+ 2019-11-26 13:00:05,884 - DEBUG -  use str(myint) or str(myfloat) to convert int or float to string.
+ 2019-11-26 13:00:05,885 - DEBUG - 1323 }
+ 2019-11-26 13:00:05,885 - DEBUG - 1402 }
+ 2019-11-26 13:00:05,886 - DEBUG - 1433 }
+ 2019-11-26 13:00:05,886 - DEBUG - python-datatypes-strings-8
+ 2019-11-26 13:00:05,887 - DEBUG -  How do you divide a string by some delimiter such as ',' a string?
+ 2019-11-26 13:00:05,888 - DEBUG -  mystring.split(',')
+ 2019-11-26 13:00:05,888 - DEBUG - 1466 }
+ 2019-11-26 13:00:05,889 - DEBUG - 1521 }
+ 2019-11-26 13:00:05,889 - DEBUG - 1549 }
+ 2019-11-26 13:00:05,890 - DEBUG - python-datatypes-strings-9
+ 2019-11-26 13:00:05,890 - DEBUG -  How do you trim white space from a string?
+ 2019-11-26 13:00:05,891 - DEBUG -  mystring.strip()
+ 2019-11-26 13:00:05,891 - DEBUG - 1583 }
+ 2019-11-26 13:00:05,892 - DEBUG - 1643 }
+ 2019-11-26 13:00:05,893 - DEBUG - 1695 }
+ 2019-11-26 13:00:05,893 - DEBUG - python-datatypes-strings-10
+ 2019-11-26 13:00:05,894 - DEBUG -  How do you convert a string to an int or float?
+ 2019-11-26 13:00:05,894 - DEBUG -  int(mystringint) or float(mystringfloat)
+ 2019-11-26 13:00:05,895 - DEBUG - 1728 }
+ 2019-11-26 13:00:05,895 - DEBUG - 1774 }
+ 2019-11-26 13:00:05,896 - DEBUG - 1889 }
+ 2019-11-26 13:00:05,896 - DEBUG - python-datatypes-numbers-1
+ 2019-11-26 13:00:05,897 - DEBUG -  Describe types of python numbers.
+ 2019-11-26 13:00:05,897 - DEBUG -  There is int, float and complex numbers.
+   int 55   float 3.25  complex is 5+3j where 3j is imaginary!
+ 2019-11-26 13:00:05,898 - DEBUG - 1922 }
+ 2019-11-26 13:00:05,899 - DEBUG - 1994 }
+ 2019-11-26 13:00:05,899 - DEBUG - 2142 }
+ 2019-11-26 13:00:05,900 - DEBUG - python-datatypes-numbers-2
+ 2019-11-26 13:00:05,900 - DEBUG -  How do you work with really precise real numbers in python?
+ 2019-11-26 13:00:05,901 - DEBUG -  Use decimal module.
+Decimal is for really long precise numbes  1.01002039487233987290374972374987239879238749082387
+decimal.Decimal(1.1)
+ 2019-11-26 13:00:05,901 - DEBUG - 2175 }
+ 2019-11-26 13:00:05,902 - DEBUG - 2250 }
+ 2019-11-26 13:00:05,903 - DEBUG - 2344 }
+ 2019-11-26 13:00:05,903 - DEBUG - python-datatypes-numbers-3
+ 2019-11-26 13:00:05,904 - DEBUG -  How can you work with say fractional measurements with python?
+ 2019-11-26 13:00:05,904 - DEBUG -  Use fractions module
+fractions.Fraction(1,2) is 1/2
+fractions.Fraction(1.5) is 3/2
+ 2019-11-26 13:00:05,905 - DEBUG - 2377 }
+ 2019-11-26 13:00:05,905 - DEBUG - 2428 }
+ 2019-11-26 13:00:05,906 - DEBUG - 2450 }
+ 2019-11-26 13:00:05,906 - DEBUG - python-datatypes-numbers-4
+ 2019-11-26 13:00:05,907 - DEBUG -  How do the absolute value of a number?
+ 2019-11-26 13:00:05,907 - DEBUG -  abs(mynum)
+ 2019-11-26 13:00:05,908 - DEBUG - 2483 }
+ 2019-11-26 13:00:05,909 - DEBUG - 2533 }
+ 2019-11-26 13:00:05,909 - DEBUG - 2562 }
+ 2019-11-26 13:00:05,910 - DEBUG - python-datatypes-numbers-5
+ 2019-11-26 13:00:05,910 - DEBUG -  How do you raise a number to a power?
+ 2019-11-26 13:00:05,911 - DEBUG -  pow(power,number)
+ 2019-11-26 13:00:05,911 - DEBUG - 2595 }
+ 2019-11-26 13:00:05,912 - DEBUG - 2639 }
+ 2019-11-26 13:00:05,912 - DEBUG - 2675 }
+ 2019-11-26 13:00:05,913 - DEBUG - python-datatypes-numbers-6
+ 2019-11-26 13:00:05,913 - DEBUG -  How do you round a real number?
+ 2019-11-26 13:00:05,914 - DEBUG -  round(num,decimalplaces)
+ 2019-11-26 13:00:05,914 - DEBUG - 2708 }
+ 2019-11-26 13:00:05,915 - DEBUG - 2762 }
+ 2019-11-26 13:00:05,916 - DEBUG - 2930 }
+ 2019-11-26 13:00:05,916 - DEBUG - python-datatypes-numbers-7
+ 2019-11-26 13:00:05,917 - DEBUG -  Whats involved in getting random numbers?
+ 2019-11-26 13:00:05,917 - DEBUG -  use random module
+ use random.seed() first
+ then random.Random() returns next float  0.0 to 1.0
+ or random.randint(start,end) so randint(0,100) is 0 to 100
+ 2019-11-26 13:00:05,919 - DEBUG - box1
+ 2019-11-26 13:00:05,920 - DEBUG - box1
+ 2019-11-26 13:00:05,921 - DEBUG - box2
+ 2019-11-26 13:00:05,923 - DEBUG - box1
+ 2019-11-26 13:00:05,923 - DEBUG - box2
+ 2019-11-26 13:00:05,924 - DEBUG - box3
+ 2019-11-26 13:00:05,926 - DEBUG - box1
+ 2019-11-26 13:00:05,926 - DEBUG - box2
+ 2019-11-26 13:00:05,927 - DEBUG - box3
+ 2019-11-26 13:00:05,927 - DEBUG - box4
+ 2019-11-26 13:00:05,929 - DEBUG - box1
+ 2019-11-26 13:00:05,929 - DEBUG - box2
+ 2019-11-26 13:00:05,929 - DEBUG - box3
+ 2019-11-26 13:00:05,930 - DEBUG - box4
+ 2019-11-26 13:00:05,930 - DEBUG - box5
+ 2019-11-26 13:00:05,931 - DEBUG - box1
+ 2019-11-26 13:00:05,932 - DEBUG - box2
+ 2019-11-26 13:00:05,932 - DEBUG - box3
+ 2019-11-26 13:00:05,933 - DEBUG - box4
+ 2019-11-26 13:00:05,933 - DEBUG - box5
+ 2019-11-26 13:00:05,933 - DEBUG - box6
+ 2019-11-26 13:00:05,935 - DEBUG - box1
+ 2019-11-26 13:00:05,935 - DEBUG - box2
+ 2019-11-26 13:00:05,936 - DEBUG - box3
+ 2019-11-26 13:00:05,936 - DEBUG - box4
+ 2019-11-26 13:00:05,936 - DEBUG - box5
+ 2019-11-26 13:00:05,937 - DEBUG - box6
+ 2019-11-26 13:00:05,937 - DEBUG - cards
+ 2019-11-26 13:00:05,937 - DEBUG - testcycle4
+ 2019-11-26 13:00:05,938 - DEBUG - testcycle4
+ 2019-11-26 13:00:05,938 - DEBUG - quizs\
+ 2019-11-26 13:01:16,292 - DEBUG - Moving to Box
+ 2019-11-26 13:01:16,296 - DEBUG - Remove From Box
+ 2019-11-26 13:01:16,297 - DEBUG - Add To Box
+ 2019-11-26 13:01:45,326 - DEBUG - Moving to Box
+ 2019-11-26 13:01:45,326 - DEBUG - Remove From Box
+ 2019-11-26 13:01:45,329 - DEBUG - Add To Box
+ 2019-11-26 13:02:01,574 - DEBUG - Moving to Box
+ 2019-11-26 13:02:01,574 - DEBUG - Remove From Box
+ 2019-11-26 13:02:01,576 - DEBUG - Add To Box
+ 2019-11-26 13:02:45,639 - DEBUG - Moving to Box
+ 2019-11-26 13:02:45,640 - DEBUG - Remove From Box
+ 2019-11-26 13:02:45,641 - DEBUG - Add To Box
+ 2019-11-26 13:02:54,915 - DEBUG - Moving to Box
+ 2019-11-26 13:02:54,919 - DEBUG - Remove From Box
+ 2019-11-26 13:02:54,921 - DEBUG - Add To Box
+ 2019-11-26 13:04:33,880 - DEBUG - Moving to Box
+ 2019-11-26 13:04:33,884 - DEBUG - Remove From Box
+ 2019-11-26 13:04:33,886 - DEBUG - Add To Box
+ 2019-11-26 13:04:57,957 - DEBUG - Moving to Box
+ 2019-11-26 13:04:57,961 - DEBUG - Remove From Box
+ 2019-11-26 13:04:57,963 - DEBUG - Add To Box
