@@ -1,30 +1,30 @@
 import leitner.leitner
 import keyboard, msvcrt, sys
 
-def processcard(card, cycle_idlist):
+def process_card(card, cycle_id_list):
     while True:  
         if msvcrt.kbhit():
             ch = msvcrt.getch()
             if ch == b'l':  
                 print('Leaving')
-                leitner.removeidfromtestcycle(card.catagory_id,'quizs\\', testcyclefilename)
-                cycle_idlist.remove(card.catagory_id)
+                leitner.remove_id_from_test_cycle(card.category_id,'quizs\\', test_cycle_file_name)
+                cycle_id_list.remove(card.category_id)
                 break  
             elif ch == b'p':
                 print('Promoting')
-                leitner.moveidtobox(card.catagory_id,'quizs\\', card.box+1, card.box)
+                leitner.move_id_to_box(card.category_id,'quizs\\', card.box+1, card.box)
                 card.box+=1
-                leitner.removeidfromtestcycle(card.catagory_id,'quizs\\', testcyclefilename)
-                cycle_idlist.remove(card.catagory_id)
+                leitner.remove_id_from_test_cycle(card.category_id,'quizs\\', test_cycle_file_name)
+                cycle_id_list.remove(card.category_id)
                 break
             elif ch == b'd':
                 
                 if card.box>1:
                     print('Demoting')
-                    leitner.moveidtobox(card.catagory_id,'quizs\\', card.box-1, card.box)
+                    leitner.move_id_to_box(card.category_id,'quizs\\', card.box-1, card.box)
                     card.box-=1
-                    leitner.removeidfromtestcycle(card.catagory_id,'quizs\\', testcyclefilename)
-                    cycle_idlist.remove(card.catagory_id)
+                    leitner.remove_id_from_test_cycle(card.category_id,'quizs\\', test_cycle_file_name)
+                    cycle_id_list.remove(card.catagory_id)
                 else:
                     print('Leaving')
                 break
@@ -32,26 +32,26 @@ def processcard(card, cycle_idlist):
                 continue
         
 
-cards = leitner.loadcards('quizs\\','cards')
-cycle = leitner.loadtestcycle('quizs\\', cards)
-testcyclefilename='testcycle'+str(cycle.cyclenum)
-print("Cycle number "+str(cycle.cyclenum))
+cards = leitner.load_cards('quizs\\','cards')
+cycle = leitner.load_test_cycle('quizs\\', cards)
+test_cycle_file_name='testcycle'+str(cycle.cycle_num)
+print("Cycle number "+str(cycle.cycle_num))
 while True:
-    print("Number of questions left in cycle is "+str(len(cycle.idlist)))
-    if  len(cycle.idlist)==0:
-        cycle.idlist.append('empty')
+    print("Number of questions left in cycle is "+str(len(cycle.id_list)))
+    if  len(cycle.id_list)==0:
+        cycle.id_list.append('empty')
         
-        leitner.savetestcyclefile(cycle.idlist,'quizs\\', testcyclefilename)
-        print('End of test cycle '+str(cycle.cyclenum))
+        leitner.save_test_cycle_file(cycle.id_list,'quizs\\', test_cycle_file_name)
+        print('End of test cycle '+str(cycle.cycle_num))
         sys.exit()
-    card=cards[cycle.idlist[0]]
-    print('ID:'+card.catagory_id+' Box '+str(card.box))
+    card=cards[cycle.id_list[0]]
+    print('ID:'+card.category_id+' Box '+str(card.box))
     print('QUESTION: '+card.question)
     print('Hit Enter when finnished reviewing question.')
     keyboard.wait('\r')
     print('ANSWER: '+card.answer)
     print('(P)romote, (D)emote, (L)eave in same box.')
-    processcard(card,cycle.idlist)
+    process_card(card,cycle.id_list)
     print('(N)ext question or (Q)uit')
     while True:
         if msvcrt.kbhit():
@@ -59,8 +59,8 @@ while True:
             if ch == b'n':  
                 break 
             elif ch == b'q': 
-                print ('Quiting Cycle number '+str(cycle.cyclenum)+' with '+
-                    str(len(cycle.idlist))+' questions left.')
+                print ('Quiting Cycle number '+str(cycle.cycle_num)+' with '+
+                    str(len(cycle.id_list))+' questions left.')
                 sys.exit()      
             else:
                 continue 

@@ -4,271 +4,271 @@ import logging, random
 
 
 
-def findtestcyclefile(path):
+def find_test_cycle_file(path):
     
     # create a list of file and sub directories 
     # names in the given directory 
-    listOfFile = os.listdir(path)
-    allfiles = list()
+    list_of_files = os.listdir(path)
+    all_files = list()
     # Iterate over all the entries
-    for entry in listOfFile:
+    for entry in list_of_files:
         # Create full path
-        fullPath = os.path.join(path, entry)
+        full_path = os.path.join(path, entry)
         # If entry is a directory then get the list of files in this directory 
-        if not os.path.isdir(fullPath):
-            allfiles.append(entry)
-    for filename in allfiles:
-        logging.debug(filename[:len(filename)-4])
-        if filename[:9]=='testcycle':
-            return filename[:len(filename)-4]
+        if not os.path.isdir(full_path):
+            all_files.append(entry)
+    for file_name in all_files:
+        logging.debug(file_name[:len(file_name)-4])
+        if file_name[:9]=='testcycle':
+            return file_name[:len(file_name)-4]
     return None
 
-def loadtestcyclefile(path, testcyclefilename):
+def load_test_cycle_file(path, test_cycle_file_name):
     
-    cycleFile = open(path+testcyclefilename+".txt",'r')
-    cycle=cycleFile.readlines()
-    newcycle=[]
+    cycle_file = open(path+test_cycle_file_name+".txt",'r')
+    cycle=cycle_file.readlines()
+    new_cycle=[]
     for line in cycle:
-        newcycle.append(line.strip())
-    return newcycle    
+        new_cycle.append(line.strip())
+    return new_cycle    
 
-def savetestcyclefile(testcycle, path, testcyclefilename): 
+def save_test_cycle_file(test_cycle, path, test_cycle_file_name): 
     logging.debug("Save Test Cycle")
-    cyclefile = open(path+testcyclefilename+".txt",'w')
+    cycle_file = open(path+test_cycle_file_name+".txt",'w')
     
-    for id in testcycle:
-        cyclefile.write(id+'\n')
-    cyclefile.close()
+    for id in test_cycle:
+        cycle_file.write(id+'\n')
+    cycle_file.close()
 
-def removeidfromtestcycle(id, path, testcyclefilename):
+def remove_id_from_test_cycle(id, path, test_cycle_file_name):
     logging.debug("Remove From Test Cycle")
-    testcycle = loadtestcyclefile(path, testcyclefilename)
-    testcycle.remove(id)
-    savetestcyclefile(testcycle, path, testcyclefilename)
+    test_cycle = load_test_cycle_file(path, test_cycle_file_name)
+    test_cycle.remove(id)
+    save_test_cycle_file(test_cycle, path, test_cycle_file_name)
 
-def removeidfrombox(id, path, boxnum):
+def remove_id_from_box(id, path, box_num):
     logging.debug("Remove From Box")
-    box = loadbox(path, boxnum)
+    box = load_box(path, box_num)
     box.remove(id)
     if len(box) == 0:
         box.append('empty')
-    savebox(box, path, boxnum)
+    save_box(box, path, box_num)
 
-def addidtobox(id, path, boxnum):
+def add_id_to_box(id, path, box_num):
     logging.debug("Add To Box")
-    box = loadbox(path, boxnum)
+    box = load_box(path, box_num)
     if box[0]=='empty':
         box.remove('empty')
     box.append(id)
-    savebox(box, path, boxnum)
+    save_box(box, path, box_num)
 
-def moveidtobox(id, path, toboxnum, fromboxnum):
+def move_id_to_box(id, path, to_box_num, from_box_num):
     logging.debug("Moving to Box")
-    removeidfrombox(id, path, fromboxnum)
-    addidtobox(id,path, toboxnum)
+    remove_id_from_box(id, path, from_box_num)
+    add_id_to_box(id,path, to_box_num)
 
-def findboxfile(path, boxnum):
+def find_box_file(path, box_num):
     
     # create a list of file and sub directories 
     # names in the given directory 
-    listOfFile = os.listdir(path)
-    allfiles = list()
+    list_of_files = os.listdir(path)
+    all_files = list()
     # Iterate over all the entries
-    for entry in listOfFile:
+    for entry in list_of_files:
         # Create full path
-        fullPath = os.path.join(path, entry)
+        full_path = os.path.join(path, entry)
         # If entry is a directory then get the list of files in this directory 
-        if not os.path.isdir(fullPath):
-            allfiles.append(entry)
-    for filename in allfiles:
-        logging.debug(filename[:len(filename)-4])
-        if filename[:4]==('box'+str(boxnum)):
-            return filename[:len(filename)-4]
+        if not os.path.isdir(full_path):
+            all_files.append(entry)
+    for file_name in all_files:
+        logging.debug(file_name[:len(file_name)-4])
+        if file_name[:4]==('box'+str(box_num)):
+            return file_name[:len(file_name)-4]
     return None
 
-def newcycle(path, cards):
+def new_cycle(path, cards):
     logging.debug('No Test Cycle File Found. Creating new Cycle 1.')
-    cyclefile = open(path+'testcycle1.txt','w')
-    idskeys=cards.keys()
+    cycle_file = open(path+'testcycle1.txt','w')
+    ids_keys=cards.keys()
     ids = [] 
-    for key in idskeys: 
+    for key in ids_keys: 
         ids.append(key) 
     print('Number of cards '+str(len(ids)))
     print(ids)
     for id in ids:
-        cyclefile.write(id+'\n')
+        cycle_file.write(id+'\n')
     print('Done making ids')
-    cyclefile.close()
+    cycle_file.close()
     print('Loading cards into Box1')
     for id in ids:
         cards[id].box=1
     print('Set Cards to Box1')
-    testcycle = TestCycle(1,ids)
+    test_cycle = TestCycle(1,ids)
     print('Made TestCycle')
-    boxfile = open(path+'box1.txt','w')
+    box_file = open(path+'box1.txt','w')
     print('Making box1')
     for id in ids:
-        boxfile.write(id+'\n')
-    boxfile.close()
+        box_file.write(id+'\n')
+    box_file.close()
     print('Making box2')
-    boxfile = open(path+'box2.txt','w')
-    boxfile.write('empty')
-    boxfile.close()
+    box_file = open(path+'box2.txt','w')
+    box_file.write('empty')
+    box_file.close()
     print('Making box3')
-    boxfile = open(path+'box3.txt','w')
-    boxfile.write('empty')
-    boxfile.close()
+    box_file = open(path+'box3.txt','w')
+    box_file.write('empty')
+    box_file.close()
     print('Making box4')
-    boxfile = open(path+'box4.txt','w')
-    boxfile.write('empty')
-    boxfile.close()
+    box_file = open(path+'box4.txt','w')
+    box_file.write('empty')
+    box_file.close()
     print('Making box5')
-    boxfile = open(path+'box5.txt','w')
-    boxfile.write('empty')
-    boxfile.close()
+    box_file = open(path+'box5.txt','w')
+    box_file.write('empty')
+    box_file.close()
     print('Making box6')
-    boxfile = open(path+'box6.txt','w')
-    boxfile.write('empty')
-    boxfile.close()
+    box_file = open(path+'box6.txt','w')
+    box_file.write('empty')
+    box_file.close()
     
-    return testcycle
+    return test_cycle
 
-def startnextcycle(path, cards, testcyclenum):
-    logging.debug('Starting new cycle number '+str(testcyclenum))
-    highestbox=1
-    if(testcyclenum%2==0):
-        highestbox+=1
-    if(testcyclenum%4==0):
-        highestbox+=1
-    if(testcyclenum%8==0):
-        highestbox+=1
-    if(testcyclenum%16==0):
-        highestbox+=1
-    logging.debug('highestbox '+str(highestbox))
+def start_next_cycle(path, cards, test_cycle_num):
+    logging.debug('Starting new cycle number '+str(test_cycle_num))
+    highest_box=1
+    if(test_cycle_num%2==0):
+        highest_box+=1
+    if(test_cycle_num%4==0):
+        highest_box+=1
+    if(test_cycle_num%8==0):
+        highest_box+=1
+    if(test_cycle_num%16==0):
+        highest_box+=1
+    logging.debug('highestbox '+str(highest_box))
     cycle_ids=[]
 
     keys=cards.keys()
-    print('Loading box1 to box'+str(highestbox))
+    print('Loading box1 to box'+str(highest_box))
     for key in keys:
         card=cards[key]
-        if(card.box>0 and card.box<=highestbox):
+        if(card.box>0 and card.box<=highest_box):
             cycle_ids.append(key)
-    os.rename(path+'testcycle'+str(testcyclenum)+'.txt', 
-        path+'testcycle'+str(testcyclenum+1)+'.txt')
-    testcyclefile = open(path+'testcycle'+str(testcyclenum+1)+'.txt','w')
+    os.rename(path+'testcycle'+str(test_cycle_num)+'.txt', 
+        path+'testcycle'+str(test_cycle_num+1)+'.txt')
+    test_cycle_file = open(path+'testcycle'+str(test_cycle_num+1)+'.txt','w')
     for id in cycle_ids:
-        testcyclefile.write(id+'\n')
+        test_cycle_file.write(id+'\n')
     
-    testcycle = TestCycle(testcyclenum+1,cycle_ids)
+    testcycle = TestCycle(test_cycle_num+1,cycle_ids)
 
     return testcycle
     
-def loadtestcycle(path,cards):
+def load_test_cycle(path,cards):
     
-    testcyclefilename=findtestcyclefile(path)
-    logging.debug(testcyclefilename)
+    test_cycle_file_name=find_test_cycle_file(path)
+    logging.debug(test_cycle_file_name)
     logging.debug(path)
     # None means brand new study cycle starting at 1
-    if(testcyclefilename==None):
-       return newcycle(path, cards)
+    if(test_cycle_file_name==None):
+       return new_cycle(path, cards)
     else:
         #else not brand new cycle, continuing cycle
-        cycle_ids=loadtestcyclefile(path, testcyclefilename)
-        testcyclenum=int(testcyclefilename[9:])
+        cycle_ids=load_test_cycle_file(path, test_cycle_file_name)
+        test_cycle_num=int(test_cycle_file_name[9:])
         # if empty test cycle file then beginning next cycle
         if(cycle_ids[0]=='empty'):
-            return startnextcycle(path, cards, testcyclenum)
+            return start_next_cycle(path, cards, test_cycle_num)
         # else load current saved cycle state and begin testing
         else:
-            testcycle = TestCycle(testcyclenum,cycle_ids)
-            return testcycle
+            test_cycle = TestCycle(test_cycle_num,cycle_ids)
+            return test_cycle
 
-def savebox(box, path, boxnum):
-     boxfile = open(path+'box'+str(boxnum)+'.txt','w')
+def save_box(box, path, box_num):
+     box_file = open(path+'box'+str(box_num)+'.txt','w')
      for id in box:
-         boxfile.write(id+'\n')
-     boxfile.close()
+         box_file.write(id+'\n')
+     box_file.close()
 
-def loadbox(path, boxnum):
-    if boxnum<1 or boxnum>6:
-        logging.debug('Box number '+str(boxnum)+' out of range. Should be 1 to 6.')
+def load_box(path, box_num):
+    if box_num<1 or box_num>6:
+        logging.debug('Box number '+str(box_num)+' out of range. Should be 1 to 6.')
         sys.exit()
-    boxFile = open(path+'box'+str(boxnum)+'.txt','r')
-    box=boxFile.readlines()
-    newbox=[]
+    box_file = open(path+'box'+str(box_num)+'.txt','r')
+    box=box_file.readlines()
+    new_box=[]
     for line in box:
-        newbox.append(line.strip())
-    return newbox        
+        new_box.append(line.strip())
+    return new_box        
 
-def loadboxes(path, cards):
-    boxfile = findboxfile(path, 1)
-    if(boxfile==None):
+def load_boxes(path, cards):
+    box_file = find_box_file(path, 1)
+    if(box_file==None):
          return cards
     else:
-        card_ids=loadbox(path,1)
+        card_ids=load_box(path,1)
         if card_ids[0]!='empty':
             for id in card_ids:
                 cards[id].box=1
-    boxfile = findboxfile(path, 2)
-    if(boxfile==None):
+    box_file = find_box_file(path, 2)
+    if(box_file==None):
          return cards
     else:
-        card_ids=loadbox(path, 2)
+        card_ids=load_box(path, 2)
         if card_ids[0]!='empty':
             for id in card_ids:
                 cards[id].box=2
-    boxfile = findboxfile(path, 3)
-    if(boxfile==None):
+    box_file = find_box_file(path, 3)
+    if(box_file==None):
          return cards
     else:
-        card_ids=loadbox(path, 3)
+        card_ids=load_box(path, 3)
         if card_ids[0]!='empty':
             for id in card_ids:
                 cards[id].box=3
-    boxfile = findboxfile(path, 4)
-    if(boxfile==None):
+    box_file = find_box_file(path, 4)
+    if(box_file==None):
          return cards
     else:
-        card_ids=loadbox(path, 4)
+        card_ids=load_box(path, 4)
         if card_ids[0]!='empty':
             for id in card_ids:
                 cards[id].box=4
-    boxfile = findboxfile(path, 5)
-    if(boxfile==None):
+    box_file = find_box_file(path, 5)
+    if(box_file==None):
          return cards
     else:
-        card_ids=loadbox(path, 5)
+        card_ids=load_box(path, 5)
         if card_ids[0]!='empty':
             for id in card_ids:
                 cards[id].box=5
-    boxfile = findboxfile(path, 6)
-    if(boxfile==None):
+    box_file = find_box_file(path, 6)
+    if(box_file==None):
          return cards
     else:
-        card_ids=loadbox(path, 6)
+        card_ids=load_box(path, 6)
         if card_ids[0]!='empty':
             for id in card_ids:
                 cards[id].box=6
     return cards
 
-def loadcards(path,filename):
+def load_cards(path,file_name):
     logging.debug(os.getcwd())
-    quizFile = open(path+filename+".txt",'r')
-    aquiz = quizFile.read()
-    cardparser = CardParser(aquiz)
+    quiz_file = open(path+file_name+".txt",'r')
+    aquiz = quiz_file.read()
+    card_parser = CardParser(aquiz)
     cards={}
     while True:
-        cardid=''
+        card_id=''
         question=''
         answer=''
         
         # not an elegant way to do this, but it will work
         # need to rewrite this
-        data=cardparser.getBlock()
+        data=card_parser.get_block()
         if(data==''):
             if(cards!=False):
                 
-                loadboxes(path, cards)
+                load_boxes(path, cards)
                 return cards
             else:
                 print('Parse Error! Unexpected end of file. No Data')
@@ -277,9 +277,9 @@ def loadcards(path,filename):
             print('Parse Error! ID: Expected.')
             return None
         else:
-            cardid=data[3:].strip()
+            card_id=data[3:].strip()
 
-        data=cardparser.getBlock()
+        data=card_parser.get_block()
         if(data==''):
             print('Parse Error! Unexpected end of file.')
             return None
@@ -289,7 +289,7 @@ def loadcards(path,filename):
         else:
             question=data[9:]
 
-        data=cardparser.getBlock()
+        data=card_parser.get_block()
         if(data==''):
             print('Parse Error! Unexpected end of file.')
             return None
@@ -298,50 +298,50 @@ def loadcards(path,filename):
             return None
         else:
             answer=data[7:]
-        logging.debug(cardid)
+        logging.debug(card_id)
         logging.debug(question)
         logging.debug(answer)
-        thecard = Card(cardid,0,question,answer)
-        cards[cardid]=thecard
+        the_card = Card(card_id,0,question,answer)
+        cards[card_id]=the_card
 
 class CardParser:
     
-    def __init__(self, cardsfiletext):
+    def __init__(self, cards_file_text):
         self.pos=0
-        self.cardsfiletext = cardsfiletext
-    def getBlock(self):
+        self.cards_file_text = cards_file_text
+    def get_block(self):
         if(self.pos==-1):
             return ''
         text=''
-        if(self.pos<=len(self.cardsfiletext)):
+        if(self.pos<=len(self.cards_file_text)):
             
-            while(self.cardsfiletext[self.pos]!='{'):
+            while(self.cards_file_text[self.pos]!='{'):
                 self.pos+=1
-                if(self.pos==len(self.cardsfiletext)):
+                if(self.pos==len(self.cards_file_text)):
                     self.pos=-1
                     return ''
             self.pos+=1
-            while(self.cardsfiletext[self.pos]!='}'):
-                text+=self.cardsfiletext[self.pos]
+            while(self.cards_file_text[self.pos]!='}'):
+                text+=self.cards_file_text[self.pos]
                 self.pos+=1
-            logging.debug(str(self.pos)+' '+self.cardsfiletext[self.pos])
+            logging.debug(str(self.pos)+' '+self.cards_file_text[self.pos])
             return text.strip()
 
 class Card:
 
-    def __init__(self, catagory_id, box, question, answer):
-        self.catagory_id=catagory_id
+    def __init__(self, category_id, box, question, answer):
+        self.category_id=category_id
         self.box=box
         self.question=question
         self.answer=answer
     
 class TestCycle:
 
-    def __init__(self, cyclenum, idlist):
-        self.cyclenum=int(cyclenum)
+    def __init__(self, cycle_num, id_list):
+        self.cycle_num=int(cycle_num)
         random.seed()
-        random.shuffle(idlist)
-        self.idlist=idlist
+        random.shuffle(id_list)
+        self.id_list=id_list
 
 
             
