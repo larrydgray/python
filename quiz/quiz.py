@@ -7,33 +7,35 @@ def process_card(card, cycle_id_list):
             ch = msvcrt.getch()
             if ch == b'l':  
                 print('Leaving')
-                leitner.remove_id_from_test_cycle(card.category_id,'quizs\\', test_cycle_file_name)
+                leitner.remove_id_from_test_cycle(card.category_id)
                 cycle_id_list.remove(card.category_id)
                 break  
             elif ch == b'p':
                 print('Promoting')
-                leitner.move_id_to_box(card.category_id,'quizs\\', card.box+1, card.box)
+                leitner.move_id_to_box(card.category_id, card.box+1, card.box)
                 card.box+=1
-                leitner.remove_id_from_test_cycle(card.category_id,'quizs\\', test_cycle_file_name)
+                leitner.remove_id_from_test_cycle(card.category_id)
                 cycle_id_list.remove(card.category_id)
                 break
             elif ch == b'd':
                 
                 if card.box>1:
                     print('Demoting')
-                    leitner.move_id_to_box(card.category_id,'quizs\\', card.box-1, card.box)
+                    leitner.move_id_to_box(card.category_id, card.box-1, card.box)
                     card.box-=1
-                    leitner.remove_id_from_test_cycle(card.category_id,'quizs\\', test_cycle_file_name)
-                    cycle_id_list.remove(card.catagory_id)
+                    leitner.remove_id_from_test_cycle(card.category_id)
+                    cycle_id_list.remove(card.category_id)
                 else:
                     print('Leaving')
                 break
             else:
                 continue
         
+leitner.set_path('quizs\\')
+leitner.set_test_cycle_file_name('cards')
 
-cards = leitner.load_cards('quizs\\','cards')
-cycle = leitner.load_test_cycle('quizs\\', cards)
+cards = leitner.load_cards()
+cycle = leitner.load_test_cycle()
 test_cycle_file_name='testcycle'+str(cycle.cycle_num)
 print("Cycle number "+str(cycle.cycle_num))
 while True:
@@ -41,7 +43,7 @@ while True:
     if  len(cycle.id_list)==0:
         cycle.id_list.append('empty')
         
-        leitner.save_test_cycle_file(cycle.id_list,'quizs\\', test_cycle_file_name)
+        leitner.save_test_cycle_file(cycle.id_list)
         print('End of test cycle '+str(cycle.cycle_num))
         sys.exit()
     card=cards[cycle.id_list[0]]
