@@ -341,6 +341,7 @@ def _load_boxes():
 # though I have no check for this coded yet
 def load_cards():
     logging.debug(os.getcwd())
+
     quiz_file = open(test_info.path+test_info.set_test_cycle_file_name+".txt",'r')
     aquiz = quiz_file.read()
     card_parser = CardParser(aquiz)
@@ -353,44 +354,59 @@ def load_cards():
         # not an elegant way to do this, but it will work
         # need to rewrite this
         data=card_parser.get_block()
+        # if data is an empty string we may be at end of file
         if(data==''):
+            # if cards is not an empty Dictionary
+            # we are at end of cards file
             if(cards!=False):
                 
-                _load_boxes()
+                _load_boxes() # will set box numbers on each card if its in a box
                 test_info.cards=cards
                 return cards
-            else:
+            else: # if empty data and no cards we have a problem
                 print('Parse Error! Unexpected end of file. No Data')
                 return None
-        if(data[:3]!='ID:'):
+        #Cards are in 3 blocks
+        #{ID:category-1} {QUESTION: A question?} {ANSWER: An answer.}
+        
+        # handle ID: block
+        if(data[:3]!='ID:'): # if prefix is not ID:
             print('Parse Error! ID: Expected.')
             return None
-        else:
-            card_id=data[3:].strip()
+        else: 
+            card_id=data[3:].strip() # card id is the ID which follows the prefix
 
+        # get next block and make sure its a {} block or not eof
         data=card_parser.get_block()
         if(data==''):
             print('Parse Error! Unexpected end of file.')
             return None
-        if(data[:9]!='QUESTION:'):
+        
+        # handle QUESTION: block
+        if(data[:9]!='QUESTION:'): # if prefix is not QUESTION:
             print('Parse Error! QUESTION: Expected.')
             return None
-        else:
-            question=data[9:]
-
+        else:  
+            question=data[9:] # question is the question that follows prefix
+        
+        # get next block and make sure its a {} block or not eof
         data=card_parser.get_block()
         if(data==''):
             print('Parse Error! Unexpected end of file.')
             return None
-        if(data[:7]!='ANSWER:'):
+            
+        # handle ANSWER: block
+        if(data[:7]!='ANSWER:'): # if answer is not ANSWER: 
             print('Parse Error! ANSWER: Expected.')
             return None
         else:
-            answer=data[7:]
+            answer=data[7:] # answer is the answer that follows prefix
         logging.debug(card_id)
         logging.debug(question)
         logging.debug(answer)
+        # Make the card
         the_card = Card(card_id,0,question,answer)
+        # Put card in dictionary
         cards[card_id]=the_card
 
 # Parses card file based on { and } And 
@@ -405,22 +421,23 @@ class CardParser:
     # each card has 3 {}{}{}
     # this class does not yet validate the cards file for proper format
     def get_block(self):
-        if(self.pos==-1):
+        # are we at end of file text? I'm  not sure it this will ever be needed
+        if(self.pos==-1): 
             return ''
         text=''
-        if(self.pos<=len(self.cards_file_text)):
+        if(self.pos<=len(self.cards_file_text)): #if position is within the card file text or not end of text
             
-            while(self.cards_file_text[self.pos]!='{'):
-                self.pos+=1
-                if(self.pos==len(self.cards_file_text)):
+            while(self.cards_file_text[self.pos]!='{'): # loop while not a  new data block 
+                self.pos+=1 # scanning the text skipping white space or anything between } and {
+                if(self.pos==len(self.cards_file_text)): # at end of file text
                     self.pos=-1
                     return ''
-            self.pos+=1
-            while(self.cards_file_text[self.pos]!='}'):
-                text+=self.cards_file_text[self.pos]
-                self.pos+=1
+            self.pos+=1 # scanning the text to the char after {
+            while(self.cards_file_text[self.pos]!='}'): # while not at end of data block }
+                text+=self.cards_file_text[self.pos] # building the data
+                self.pos+=1 # scanning the text
             logging.debug(str(self.pos)+' '+self.cards_file_text[self.pos])
-            return text.strip()
+            return text.strip() # strip text of white space and return it
 
 # Card that contains fields for ID, Box Num, Quesiton and Answer
 # ID = Category-Category-#    Where there are any number of nested unique categories 
@@ -438,8 +455,8 @@ class TestCycle:
     # so that question are given in random order
     def __init__(self, cycle_num, id_list):
         self.cycle_num=int(cycle_num)
-        random.seed()
-        random.shuffle(id_list)
+        random.seed() # always call seed() to get new random numbers each time app is run
+        random.shuffle(id_list) # shuffle the cards
         self.id_list=id_list
 
 

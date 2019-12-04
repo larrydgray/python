@@ -1,0 +1,57 @@
+{ID:uml-1}
+{QUESTION: What are the two main types one one subtype of uml diagrams?}
+{ANSWER: structure, behavior and interaction is subtype of behavior}
+{ID:uml-structure-1}
+{QUESTION: Name the seven UML structure diagrams.}
+{ANSWER: Package, Class, Object, Component, Composite, Collaboration, Deployment}
+{ID:uml-behavior-1}
+{QUESTION: Name the 3 UML behavior diagrams and the one subtype}
+{ANSWER: Activity, Use Case, State and subtype Interaction}
+{ID:uml-interaction-1}
+{QUESTION: Name the 4 types of UML interaction diagrams}
+{ANSWER: Sequence, Timing, Communications, Interaction Overview}
+{ID:uml-2}
+{QUESTION: How many uml digrams are there?}
+{ANSWER: Around 14 give or take.}
+{ID:uml-structure-2}
+{QUESTION: Describe the structure Package diagram}
+{ANSWER: Shows package grouping of classes usually in a symbol that looks like a folder 
+with tab. Packages can implement an inteface or package. Dashed lines with arrows
+shows dependencies. A package symbol can be nested within a package symbol.}
+{ID:uml-structure-3}
+{QUESTION: Describe the structure Class diagram.}
+{ANSWER: Have boxes that represent classes with name, properties which
+are attributes and opeartions. Various association lines with different arrows
+show how classes interelate. Keywords can describe things. Multiplicity is where
+thee is 0, 0..#, 0..* or 1..#, 1..* etc.}
+{ID:uml-structure-4}
+{QUESTION: Describe the structure Object diagram.}
+{ANSWER: Snapshot of objects in a system at a point in time. Boxes that show obectname:classname and
+name=value for fields or data.}
+{ID:uml-structure-5}
+{QUESTION: Describe the structure Component diagram.}
+{ANSWER:Use a box with symbol that looks like a plug. Also use assocition lines with round ciricle in 
+half circle socket. Can be nested. Use :somename[value] in box. May have ports or squares on sides where 
+connectors come in. Similar to composite.}
+{ID:uml-structure-6}
+{QUESTION: Describe the structure Composite diagram.}
+{ANSWER: Uses box with lolipop lines connecting to box or half ciricle lolipops connection to box.
+Circle lolipops are controls and half circle are input/output. These boxes can be nested and there
+maybe be control flow association lines called connectors. May have little squares on the sides of
+box called ports. Similar to Component}
+{ID:uml-structure-7}
+{QUESTION: Describe the structure Collaboration diagram}.
+{ANSWER: Collaboration is UML 1. Mostly boxes with associations and mutipliticy.
+Has no flow or arrows and a dashed circle or lines that show collaboration occurance.
+Boxes name roles. }
+{ID:uml-structure-8}
+{QUESTION: Describe the structure Deployment diagram.}
+{ANSWER: These diagrams show communications paths between parts of a system. And show the 
+parts of the system in a 3d box for hardware and other or 3d cylinder for data stores. They can
+show artifacts like executables, and containers or execution enviroments. Also 
+deployment files and operating systems.}
+
+
+
+
+
