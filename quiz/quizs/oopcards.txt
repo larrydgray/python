@@ -1,0 +1,56 @@
+{ID:oop-1}
+{QUESTION: What is an OOP Design Pattern?}
+{ANSWER:  OOP Design Patterns are reusable solutions to commonly occuring software design problems.
+ Design patterns were started as best practices that were applied again and again 
+ to similar problems encountered in different contexts. Some patterns are composted of other
+ patterns. And some are very similar but for different situations.}
+{ID:oop-2}
+{QUESTION: What is a good OOP Design Patterns website to know of?}
+{ANSWER: http://www.vincehuston.org/dp/ Huston Design Patterns. }
+{ID:oop-3}
+{QUESTION: What are the 3 main categories of design patterns?}
+{ANSWER: Creational, Behavioral, Structural}
+{ID:oop-4}
+{QUESTION: What is an OOP Creational design pattern?}
+{ANSWER: This copies objects, creates objects or reuses objects. Some languages
+use the 'new' operator. Some objects have a class or a prototype to partern new object on.
+And sometimes you will make your own functions or methods to make or return objects.}
+{ID:oop-5}
+{QUESTION: What is an OOP Behavioral design pattern?}
+{ANSWER: In software engineering, behavioral design patterns are design patterns that identify 
+common communication patterns between objects and realize these patterns. By doing so, these 
+patterns increase flexibility in carrying out this communication. They define your functions or
+methods and a pattern for how objects communicate for different situations.}
+{ID:oop-6}
+{QUESTION: What is an OOP Structural design pattern?}
+{ANSWER: Oop structural design patterns are simple ways to relate objects in 
+common situations. Structural patterns explain how to assemble objects and classes into larger 
+structures while keeping these structures flexible and efficient. They are not how objects communicate so
+much as they are how they fit together.}
+{ID:oop-creational-1}
+{QUESTION: Name 5 most common creational patterns.}
+{ANSWER: Factory Method, Prototype, Singleton, Abstract Factory, Builder.}
+{ID:oop-behavioral-1}
+{QUESTION: Name 11 most common behaviroal patterns.}
+{ANSWER: Template Method, Strategy, Command, Memento, Mediator, State, Observer, Iterator,
+Chain of Responsibility, Interpreter, Visitor.}
+{ID:oop-structural-1}
+{QUESTION: Name 7 most common structural patterns.}
+{ANSWER: Adapter, Composite, Decorator, Proxy, Facade, Fly Weight, Bridge.}
+{ID:oop-structural-2}
+{QUESTION: Name a very most common structural design pattern used in user interfaces.}
+{ANSWER: Model View Controller or MVC.}
+{ID:oop-structural-3}
+{QUESTION: Describe MVC pattern.}
+{ANSWER: MVC separates Model which is the database or data files or data structures in memory from View  
+and Controller. View can be the reports or gui components. A view could also be data file types
+ such as JSON, CSV, XML or HTML. The controller might be commmand pattern or observer pattern. In the case 
+ of gui, the controller code and view code can be kept in same source file or classes. The idea is that 
+ generally views may be swapped or models may be swapped without affecting the other components.}
+{ID:oop-creational-2}
+{QUESTION: What is the Factory Method?}
+{ANSWER: Static mehod that returns an object of the Class typeor a subclass type. It may return a
+reference to an already created object for reuse. It may have more descriptive names that a 
+constructor which of course must be the same name as the class.}
+
+

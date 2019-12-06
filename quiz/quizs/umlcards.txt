@@ -38,7 +38,7 @@ show how classes interelate. Keywords can describe things. Multiplicity is where
 thee is 0, 0..#, 0..* or 1..#, 1..* etc.}
 {ID:uml-structure-4}
 {QUESTION: Describe the structure Object diagram.}
-{ANSWER: Snapshot of objects in a system at a point in time. Boxes that show obectname:classname and
+{ANSWER: Snapshot of objects in a system at a point in time. Boxes that show objectname:classname and
 name=value for fields or data.}
 {ID:uml-structure-5}
 {QUESTION: Describe the structure Component diagram.}
