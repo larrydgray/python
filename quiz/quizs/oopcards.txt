@@ -144,5 +144,20 @@ and calls visit() on the Driver. More than one Driver could be dispatched by cab
 asList(). The adapter would implement an interface and wrap the class it is adapting. It makes a class look
 and act like another kind of class. Real world examples are socket adapters and plug adapters.}
 {ID:oop-structural-5}
-{QUESTION: }
-{ANSWER: }
+{QUESTION: What is Composite structural design pattern?}
+{ANSWER: Recursive tree structure of objects that "has a" object or objects. A graphical user interface is such 
+a design. With Java Swing it was Frame, Panel, Component. With JavaFX it is Stage, Scene, Components. In HTML 
+it is <html><body><elements>. An xml document is also composite design. Directory structure on file system 
+is a composite design.}
+{ID:oop-structural-6}
+{QUESTION: What is Decorator structural design pattern?}
+{ANSWER: One to one composite design. One object constructs and wraps another object to enhance it's 
+capabilities or alter its function. IO Streams in Java are examples of decorators. A FileInputStream wraps
+a File. A BufferedInputStream can wrap an InputStream or a FileInputStream. Other examples of decorator can 
+be seen in Views in MVC. A DoubleLineBorder might wrap a Border.}
+{ID:oop-structural-7}
+{QUESTION: What is Proxy structural design pattern?}
+{ANSWER: RMI is a perfect example with Java. So you make an Interface and a class on each side of an
+internet connection implements it. The class on client side simply calls the same methods on the
+server side. The server side executes the logic and may or may not return some value to the 
+client side class.  A real world example is writing a check for payment. }
