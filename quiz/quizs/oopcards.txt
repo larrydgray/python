@@ -102,8 +102,47 @@ keeps Mememto objects and decided when to restore one on the Originator.}
 {QUESTION: What is Mediator behavioral design pattern?}
 {ANSWER: Where objects have a many to many relationship. Unix users to group mappings is an example. another
 example is air traffic control tower. Planes do not talk to each other but only to tower which talks to 
-all planes. Another example would be a dialog that talks to all it's components. If a coponent needs to message
+all planes. Another example would be a dialog that talks to all it's components. If a component needs to message
 another component it does so via the dialog object.}
 {ID:oop-behavioral-7}
 {QUESTION: What is State behavioral design pattern?}
+{ANSWER: An object's behavior changes based on changes to it's state. Prime example is various edit 
+modes in text editors. State objects are often Singltons. Another example was state of a ceiling fan, low, med
+high and off. State of a vending machine, product in stock, change available, money deposited.}
+{ID:oop-behavioral-8}
+{QUESTION: What is Observer behavioral design pattern?}
+{ANSWER: One to many relationship. In user interfaces this can be listeners. A component can have any
+number of listeners. An object has a method to add observers. Observers have an update() method. This is 
+also like callback design. In HTML with JavaScript components can have multiple observers. One example is
+an auctioneer and bidders(observers). If one observer bids then the auctioneer notifies all observers of new
+high bid.}
+{ID:oop-behavioral-9}
+{QUESTION: What is Iterator behavioral design pattern.}
+{ANSWER: Define a hasNext() method on a collection. Define a next() method to get the next 
+item in the colleciton. The colleciton can have a method iterator() to return a fresh iterator of
+itself. Generally for each or for in or for of is prefered over Iterators.}
+{ID:oop-behavioral-10}
+{QUESTION: What is Chain of Responsibilty behavioral design pattern?}
+{ANSWER: A linked list of command objects. Each command wraps a command that preceded it. When the first or
+front command is called, it then calls the one it wraps. Only commands pertinent to the call at hand 
+will execute. Multiple commands may execute for a given call. Real world example is coin bank that sorts coins
+into stacks. Coins are sorted into stacks based on size, dime, penny, nickle, quarter, dollar.}
+{ID:oop-behavioral-11}
+{QUESTION: What is Interpreter behavioral design pattern.}
+{ANSWER: Maps a recursive grammar to a tree structure. You have composite nodes which is a rule that references 
+other rules or a terminal leaf node. The composite will have a solve or iterpret method. This uses Composite design
+pattern. A real world example is a musician interpreting sheet music notes. Notes are terminal.}
+{ID:oop-behavioral-12}
+{QUESTION: What is the Visitor behavioral design pattern?}
+{ANSWER: If you want to add behavior to an object without chanigng it. Add an accept(Visitor) method. Make a Visitor
+object with one or more visit() methods. Can have more than one visitor or call accept more than once with
+different visitors. Real world example is Cab Compnay, Customer and Cab Driver(Visitor) So Customer has accept(Driver) 
+and calls visit() on the Driver. More than one Driver could be dispatched by cab company for example closest available.}
+{ID:oop-structural-4}
+{QUESTION: What is Adapter structural design pattern?}
+{ANSWER: Converts the interface of a class into interface that is expected. A java example is iterator() or 
+asList(). The adapter would implement an interface and wrap the class it is adapting. It makes a class look
+and act like another kind of class. Real world examples are socket adapters and plug adapters.}
+{ID:oop-structural-5}
+{QUESTION: }
 {ANSWER: }
