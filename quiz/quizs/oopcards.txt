@@ -94,4 +94,16 @@ object with execute() method. Give the command to another class which will call 
 of Responisibility can use Command Pattern to execute a list of commands.}
 {ID:oop-behavioral-5}
 {QUESTION: What is Memento behavioral design pattern?}
+{ANSWER: A good example for Memento is undo/redo opertions in an editor. Memento captures
+an objects state so that it can be restored. Example is undo or rollback. Memento has 3 objectss, 
+Originator, Caretaker, and Memento. Originator knows how to store its state in a Memento object. Caretaker
+keeps Mememto objects and decided when to restore one on the Originator.}
+{ID:oop-behavioral-6}
+{QUESTION: What is Mediator behavioral design pattern?}
+{ANSWER: Where objects have a many to many relationship. Unix users to group mappings is an example. another
+example is air traffic control tower. Planes do not talk to each other but only to tower which talks to 
+all planes. Another example would be a dialog that talks to all it's components. If a coponent needs to message
+another component it does so via the dialog object.}
+{ID:oop-behavioral-7}
+{QUESTION: What is State behavioral design pattern?}
 {ANSWER: }
