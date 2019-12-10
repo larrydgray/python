@@ -161,3 +161,26 @@ be seen in Views in MVC. A DoubleLineBorder might wrap a Border.}
 internet connection implements it. The class on client side simply calls the same methods on the
 server side. The server side executes the logic and may or may not return some value to the 
 client side class.  A real world example is writing a check for payment. }
+{ID:oop-structural-8}
+{QUESTION: What is Facade structural design pattern?}
+{ANSWER: Wraps a complicated sub system with simpler interface. An example of a facade is dealing
+with customer service representative when placing an order. The representative knows about and handles
+all the complexities of the orders, and ordering process. One area where I might be tempted to create
+a facade is in dealing with complex tables in modern UI's. Facade defines a simpler inerface and does not
+add functionallity.}
+{ID:oop-structural-9}
+{QUESTION: What is Flyweight structural design pattern?}
+{ANSWER: An example of flyweight is the icons used in the folder tree to represent folders and different
+file types. Instead of having 100's image copies, One object holds the image and is retrieved over and over
+by window pain when needed by a factory. So you have 3 parts, a factory, a base class and a subclass for
+specific types. Flyweight objects have state dependent and state independent parts. The independend parts
+are used over and over or shared. I used this pattern for an RPG map composed of square tiles representing 
+terrain or other objects.}
+{ID:oop-structural-10}
+{QUESTION: What is Bridge structural design pattern?}
+{ANSWER: A house hold example is power switch. In a home you can have many types of switches, and different
+types of appliances to be switched on or off. You may have a pole switch, or a toggle switch or a dial 
+switch. You can have a light, or a fan or an outlet or anything on the switch. In OO design the abstraction 
+and implementation vary independently. This is like making one class and putting the behavior in a different 
+class. So the interface can vary with the first class and the behavior can vary with the 2nd class.}
+
