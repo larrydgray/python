@@ -1,0 +1,49 @@
+{ID:algorithm-1}
+{QUESTION: What is algorithm efficiency?}
+{ANWSER: This is described as time or space complexity. It's asymtotic meaning 
+calculated as aproaching infinity. It's based on number of input items described as N.}
+{ID:algorithm-2}
+{QUESTION: What are three types of functions that desbribe algorithm complexity?}
+{ANSWER: Big O(worst case), Big Omega(best case) and Big Theta(average case).}
+{ID:algorithm-3}
+{QUESTION: What is a 4th type of function used to describe algorithm complexity?}
+{ANSWER: Little O notation.}
+{ID:alogorithm-bigo-1}
+{QUESTION: Describe O(1) time complexity.}
+{ANSWER: Constant time complexity. The algorithm always has same value for N or
+otherwise uses same time to complete. A loop that always processes each of the 50 states will
+have constant time complexity. Graphed this is a straght horizontal line.}
+{ID:algorithm-bigo-2}
+{QUESTION: Describe O(n) time complexity.}
+{ANSWER: Linear time complexity. As number of input increases so does time, same amount
+of time for each input item. An example is a loop that may have any number of input items.
+A loop that processes people from all 50 states could grow infniitly over time as population
+grows. Linear Search is an example for this. Graphed this is a straight diagonal line.}
+{ID:algorithm-bigo-3}
+{QUESTION: Describe O(n^2) time complexity.}
+{ANSWER: Quadratic time complexity. This is like a loop within a loop. But could also
+be a recursive time complexity such as in QuickSort worst case. Same for Bubble sort.
+Graphed this is a curved line that is quickly steaper to straight up.}
+{ID:algorithm-bigo-4}
+{QUESTION: Describe O(log n) time complexity.}
+{ANSWER: Logorithmic time complexity. This describes algorithms that divide the problem in half on
+each step such as Binary Search. Graphed this is a curved line that uses less time for larger N. So 
+it curves quickly up in the beginning and is less steep moving to the right of the graph.}
+{ID:algorithm-bigo-5}
+{QUESTION: Describe O(n^c) time complexity.}
+{ANSWER: Polynomial or Algerbaic, Tree adjoining grammer or parsing. No Graph.}
+{ID:algorithm-bigo-6}
+{QUESTION: Describe O(c^n) time complexity.}
+{Exponential. Graph curvs upward very quickly. Example is traveling salesman problem.}
+{ID:algorithm-bigo-7}
+{QUESTION: Describe O(n log n) time complexity.}
+{ANSWER: Linearithmic, Loglinear or Quasilinear or simply n log n. Examples
+are fastes comparison sort, heap sort and merge sort. Graphs almost like Linear with slight
+curve upward in beginning.}
+{ID:algorithm-bigo-8}
+{QUESTION: Describe O(n^c) time complexity where c > 0 and c < 1.}
+{ANSWER: Fractional Power. Example searching in a K-D Tree or multi-dimentional tree.}
+{ID:algorithm-bigo-9}
+{QUESTION: Describe O(n log* n) time complexity.}
+{ANSWER: Called n log star n.  Example is triangulation of a simple polygon using Seidel's algorithm.
+}
