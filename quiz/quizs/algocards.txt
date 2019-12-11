@@ -46,4 +46,38 @@ curve upward in beginning.}
 {ID:algorithm-bigo-9}
 {QUESTION: Describe O(n log* n) time complexity.}
 {ANSWER: Called n log star n.  Example is triangulation of a simple polygon using Seidel's algorithm.
+Or union find algorithm.}
+{ID:algorithm-bigo-9}
+{QUESTION: Describe O(n!) time complexity.}
+{ANSWER: Factorial. Bogo Sort.  Enumerating all partitions of a set.
+ Generating all unrestricted permutations of a poset. The slowest algorithm there is. This graph
+ curves upward more quickly than other functions.}
+{ID:algorithm-bigo-10}
+{QUESTION: Describe O(log log n) time complexity.}
+{ANSWER: Double Logorithmic. Example is number of comparisons spent finding an item using 
+interpolation search in a sorted array of uniformly distributed values. }
+{ID:algorithm-bigo-11}
+{QUESTION: Describe O((log n)^c) c>1 time complexity.}
+{ANSWER: Polylogorithmic. Matrix chain ordering can be solved in polylogarithmic time on a 
+parallel random-access machine.}
+{ID:algorithm-bigo-12}
+{QUESTION: Describe O(n^3) time complexity.}
+{ANSWER: Cubic. Naive multiplication of two n×n matrices. Calculating partial correlation.
+ Processing a 3D data structure. Loop in a loop in a loop.}
+{ID:algorithm-bigo-13}
+{QUESTION: What is the rule about constants in Big O?}
+{ANSWER: Constant factors O(1) in code are ignored only code that equates to a function is accepted.}
+{ID:algorithm-bigo-14}
+{QUESTION: What is the transivtivity rule in Big O?}
+{ANSWER: If function h(n) grows at most as fast as g(n), which grows at most as fast as f(n), 
+then h(n)grows at most as fast as f(n)}
+{ID:algorithm-bigo-15}
+{QUESTION: What is the rule of sums in Big O?}
+{ANSWER: The sum of functions grows as its fastest-growing term.}
+{ID:algorithm-bigo-16}
+{QUESTION: What is the rule of products in Big O?}
+{ANSWER: The product of upper bounds of functions gives an upper bound for the product of the functions.}
+{ID:algorithm-bigo-17}
+{QUESTION: What is the limit rule in Big O?}
+{ANSWER: Didn't understand this one. A limit might be calculated with calculus under certain situations.
 }
