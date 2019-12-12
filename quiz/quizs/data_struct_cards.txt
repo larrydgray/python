@@ -1,0 +1,139 @@
+{ID:data_structures-1}
+{QUESTION: What are the 3 most basic forms of data structures?}
+{ANSWER: 1. Bit (boolean) and Byte. 2. Primitives such as integer, real numbers and characters. 
+3. Strings and arrays.}
+{ID:data_structures-2}
+{QUESTION: Name seven common names for main types of data structures.}
+{Linked, List, Vector, Stack, Queue, Ditionary, Set, Tree, Graph.}
+{ID:data_structures-3}
+{QUESTION: List kinds of Linked data structures.}
+{ANSWER: Linked List, Double Linked List, Circularly Linked list, Trees, Graphs}
+{ID:data_structures-4}
+{QUESTION: List alternative language names for Vector dat structures.}
+{ANSWER: List, ArrayList, Tuple, Vector, Set}
+{ID:data_structures-5}
+{QUESTION: List kinds of Queues.}
+{ANSWER: Queue, Piority Queue.}
+{ID:data_structures-6}
+{QUESTION: List alternate names for Dictionaries.}
+{ANSWER: Dictionary, Hast Table, Hash Map, JavaScript Array}
+{ID:data_structures-7}
+{QUESTION: List some main kinds of Trees.}
+{ANSWER: Tree, B-Tree, Binary Tree, Balanced Tree, Document, DOM}
+{ID:data_structures-8}
+{QUESTION: List types of arrays and array like structures.}
+{Array, Multi-Dimensioned Array, Jagged Arrays, List, Tuple, Some Collections in c#}
+{ID:data_structures-9}
+{QUESTION: Name and describe two important data structures that are basic building blocks in languages.}
+{ANSWER:Records and Objects. Both Records and Obects have fields that can be primitive data types, record or
+object data types, and even functions (which is a type of object) in some languages. Object but not Records
+have functions called methods associated with it's data. Objects are defined by Classes.  }
+{ID:data_structures-10}
+{QUESTION: What is a linked data structure?}
+{ANSWER: Linked data structures have nodes which contain pointers(references) to other nodes and data. Nodes can have
+forward and backward pointers or upward and downward pointers. Trees can have list of nodes called siblings.
+A list can have a front node and back node, next node and previous node. Trees can have root, child and parent 
+nodes, ansetor and decendents. A graph has vertices nodes, neighbors and edges.}
+{ID:data_structures-11}
+{QUESTION: List kinds of Graphs}
+{ANSWER: Graph and Scene Graph}
+{ID:data_structures-12}
+{QUESTION: Describe List.}
+{ANSWER: List data can be accesed by element number like an array with set(index,object) and object get(index).
+List also has behavior for adding to the end of list, getting size of list, removing(index) item
+from list. List may have a way to search list for object and sort list. List can add other list
+and remove another list of items from the list. Vectors an list are almost the same thing. A set 
+is a list with no duplicates. Can be array or LinkedList based.}
+{ID:data_structures-13}
+{QUESTION: Describe a Vector.}
+{ANSWER: Another name for List. See list Description. Vectors or List can be based on LinkedList or
+array based.}
+{ID:data_structures-14}
+{QUESTION: Describe Set.}
+{ANSWER: A list with no duplicates. Sets have operations like union, intersection, difference
+and subset. A HashSet is like a Dictionary with unique value entries.}
+{ID:data_structures-15}
+{QUESTION: Describe a Stack.}
+{ANSWER: A stack has push and pop methods to add values to the top of the stack. Imagine of
+course processing an inbox for paperwork on your desk where you always work the papers last
+placed on top. This is also called LIFO or last in first out. Call stack is common application.
+When you get an exception the error message wiil list a call stack trace. Called unwiding the
+stack. Stack overflow is where you fill the stack up so much you run out of memory for it.}
+{ID:data_structures-16}
+{QUESTION: Describe a queue.}
+{ANSWER: A queue is a list that is LIFO or last in first out. It's like working from the 
+bottom of the Stack. A common example would be a keyboard Queue. As characters come in the
+list builds and as your software gets time it pulls characters that last to come into the queue.
+A priority queue is like the system process or thread processing. Each process or thread might
+be given a level. Higher priority is given processor timeslice until that queue is empty, 
+then lower pirority. Priority queue is really like multiple queues.}
+{ID:data_structures-17}
+{QUESTION: Describe a Dictionary.}
+{ANSWER: Also called HashTable or HashMap or perhaps Map. These store key,value pairs. They are very efficient
+at adding to the storage or retrieving. These cards in this Leitner app are stored in
+a dictionary. JavaScript arrays become a Dictionary if you use non numeric indexes. These 
+may have set(key,value) or value get(key) behavior. In some languages the key is the index of
+the array or list. Should be able to get list of keys or values.}
+{ID:data_structures-18}
+{QUESTION: Tree have a root, branches and leaves. Each branch can have one, two or more branches. 
+a node has no branches its called a leaf. Nodes are named as root, child, parent, sibling,
+ ancestors and decedents. A common tree structure is the file system on any computer. There
+ are many kinds of trees in coding such as Trees, B-Trees and Binary Trees. If you 
+ get a tree such as an xml or html document the root node is returned. Trees have getChildren()
+ getParent(), getSiblngs(), addChild() behavior. Might have getLeftChild() addLeftChild() 
+ getRightChild() addRightChild(). A child node is a root for all of its decendents. A 
+ child node might be a leaf node if it has no decendents. A child node might have removeNode()
+ behavior.}
+{ID:data_structures-19}
+{QUESTION: Describe a Graph.}
+{ANSWER: Graphs have edges, vertices and neihbors. Nodes are vertices and
+neighbors. In a graph any node can be a neighbor of any other node. I would have 
+called this data structure a Net or Network. Examples are the power grid system,
+the internet, or our highway system. Could even be three dimensional in something
+like a cave system. Games and JavaFX uses a Scene Graph. In javafx it is called a graph,
+but it seems to me to be more of a composition or Tree. Graphs have addVertex() removeVertex()
+addEdge() removeEdge() behavior. Also getEdgeValue() getVertexValue() adjacent() neighbor() 
+behavior.}
+{ID:data_structures-java-1}
+{QUESTION: List some Java Integer Primitives and describe their possible values.}
+{ANSWER: byte, char, short int, int, long int. Byte 1 byte is -128 to 127. char 2 bytes is 0 to 65535.
+short 2 bytes is -32,768 to 32,767. int 4 bytes is around +/- 2 million. long 8 bytes is around +/- 
+9 Million Trillion. Java also has an object for BigInteger that will
+handle any size integer up to available ram.}
+{ID:data_structures-java-2}
+{QUESTION: List Java Real numbers and describe their possible values.}
+{ANSWER: float and double. float 4 bytes is signed real 6-7 significant digits  ±3.40282347E+38F .
+double 8 bytes is signed real 15 significant digits  ±1.79769313486231570E+308}
+{ID:data_structures-java-3}
+{QUESTION: Describe java boolean primitive.}
+{ANSWER: Stored in 1 byte but JVM dependent, true or false value. BitSet is an
+object for working with bit size values. Called flags in some programming context.}
+{ID:data_structures-java-4}
+{QUESTION: Describe java references.}
+{references are like pointers to Java objects. They are 4 bytess on 32bit JVMs and 8
+bytes on 64bit JVMs. An object of course contains data fields which may be primitives or
+other references, and may also contain methods. A lambda is a special Java object that
+only has a single function and is treated like a funciton.}
+{ID:data_structures-20}
+{QUESTION: What do modern programming languages usually call data structures?}
+{ANSWER: Collections. Though Arrays and Objects are technically a data structure.}
+{ID:data_structures-javascript-1}
+{QUESTION: Name JavaScript primitives.}
+{ANSWER: Boolean, Null, Undefined, Number, BigInt, String, Symbol, and Object. A 
+JavaScript function is technically and Object and can be assigned to a variable and
+be passed around like any value. JavaScript numbers can be very large. Numbers 
+are both real and integer and consume 8 bytes.}
+{ID:data_structures-21}
+{QUESTION: What's a main difference in Arrays from other DataStructures like
+List, Vectors, Tuples etc. }
+{ANSWER: Depending on the Language arrays are fixed in size. The others can
+grow to fill all available memory. In some situations using arrays can be more
+efficient.}
+{ID:data_structures-python-1}
+{QUESTION: List python primitives.}
+{ANSWER:  Boolean, int, float, complex, Strings, Objects}
+{ID:data_structures-csharp-1}
+{QUESTION: List c# primitives.}
+{ANSWER: bool, byte, sbyte, char, short, ushort, int, uint, long, ulong,
+decimal, float, double, object, string}
+
