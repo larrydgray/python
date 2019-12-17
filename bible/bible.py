@@ -43,9 +43,35 @@ def split_verse(verse_text):
 
 # Returns number of chapters in book or verses in chapter.
 def get_number_of(book_chapter):
-    print()
-
-
+    split = book_chapter.split(':')
+    book = split[0]
+    chapter = int(split[1])
+    verse_ids=book_verses.keys()
+    
+    # if chapter = 0 then we are looking for number of chapters in a book.
+    if chapter==0:
+        chapter_count=0
+        for verse_id in verse_ids:
+            split = verse_id.split(':')
+            verse_book=split[0]
+            verse_chapter=int(split[1])
+            if verse_book==book:
+                if verse_chapter>chapter_count:
+                    chapter_count=verse_chapter
+        return chapter_count
+    # if chapter > 0 then we are looking for number of verses in chapter.
+    elif chapter>0:
+        verse_count=0
+        for verse_id in verse_ids:
+            split = verse_id.split(':')
+            verse_book=split[0]
+            verse_chapter=int(split[1])
+            verse_verse_num=int(split[2])
+            if verse_book==book:
+                if verse_chapter==chapter:
+                    if verse_verse_num>verse_count:
+                        verse_count=verse_verse_num
+        return verse_count
 
 # build the verse ID from book name and verse_input return name:#:#
 # this may not be used! consider removing it
@@ -61,6 +87,8 @@ class Verse:
         self.chapter = chapter
         self.verse = verse
         self.verse_text = verse_text.strip()
+        self.verse_log = 0
+        self.verse_note = ''
 
     def getId(self):
         return self.book+':'+self.chapter+':'+self.verse
@@ -72,6 +100,14 @@ class Verse:
         return self.verse
     def get_verse_text(self):
         return self.verse_text
+    def get_verse_log(self):
+        return self.verse_log
+    def get_verse_note(self):
+        return self.verse_note
+    def add_verse_note(self, note):
+        self.verse_note+=note
+    def inc_verse_log(self):
+        self.verse_log+=1
 
 # loads books
 book_verses=load_book('Matthew')
@@ -114,8 +150,8 @@ book_verses.update(load_book('1Sam')) #Samuel
 book_verses.update(load_book('2Sam'))
 book_verses.update(load_book('1Kings'))
 book_verses.update(load_book('2Kings'))
-book_verses.update(load_book('1Cron')) #Chronicles
-book_verses.update(load_book('2Cron'))
+book_verses.update(load_book('1Chron')) #Chronicles
+book_verses.update(load_book('2Chron'))
 book_verses.update(load_book('Ezra'))
 book_verses.update(load_book('Nehemiah'))    
 book_verses.update(load_book('Esther'))
@@ -146,6 +182,7 @@ book_verses.update(load_book('Malachi'))
 
 
 selected_verse=''
+current_verse=''
 # main loop gets keyboard input commands
 while(selected_verse!='stop'): #input of stop means quit
     print('Enter b:c:v or stop') # to retrieve a verse enter book_name:chapter_number:verse_number ie.e Luke:1:1
@@ -154,11 +191,28 @@ while(selected_verse!='stop'): #input of stop means quit
         break
     if selected_verse[:4]=='list':
         print(get_number_of(selected_verse[5:]))
+    if len(selected_verse)==0:
+        split=current_verse.split(':')
+        book=split[0]
+        chapter=int(split[1])
+        verse=int(split[2])
+        last_chapter=get_number_of(book+':0')
+        last_verse=get_number_of(book+':'+str(chapter))
+        if verse<last_verse:
+            selected_verse=book+':'+str(chapter)+':'+str(verse+1)
+            print(selected_verse)
+        elif verse==last_verse:
+            if chapter<last_chapter:
+                selected_verse=book+':'+str(chapter+1)+':1'
+                print(selected_verse)
+            elif chapter==last_chapter:
+                print('End of '+book)
     try:
         a_verse = book_verses[selected_verse] # i.e. Luke:1:1 as key
         print()
         print(a_verse.get_verse_text())
         print()
+        current_verse=selected_verse
     except KeyError: # Dictionary key error
         print('Verse Not Found')
     
