@@ -1,3 +1,22 @@
+def write_log():
+    logFile = open("log.txt",'w')
+    verse_ids=book_verses.keys()
+    verse=None
+    for verse_id in verse_ids:
+        verse=book_verses[verse_id]
+        log=verse.get_verse_log()        
+        if log>0:
+            logFile.write(verse_id+':'+log+'\n')
+
+def read_log():
+    #open log file
+    #read in lines
+    #for in the lines
+    #split line on :
+    #gives book chapter verse lognum
+    #make verse id
+    #set log number for verse
+
 
 # loads the verses from given book .txt file and returns a Dictionary of verses.
 def load_book(name):
