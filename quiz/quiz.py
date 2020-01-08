@@ -32,16 +32,17 @@ def process_card(card, cycle_id_list):
                 break
             else:
                 continue # any key but l p or d and we keep looping
-        
+cards={}
 leitner.set_path('quizs\\')
-leitner.set_test_cycle_file_name('algo_cards')
-cards = leitner.load_cards()
-leitner.set_test_cycle_file_name('data_struct_cards')
-cards.update(leitner.load_cards())
-leitner.set_test_cycle_file_name('oop_cards')
-cards.update(leitner.load_cards())
 leitner.set_test_cycle_file_name('uml_cards')
-cards.update(leitner.load_cards())
+cards = leitner.load_cards()
+print(cards)
+#leitner.set_test_cycle_file_name('data_struct_cards')
+#cards.update(leitner.load_cards())
+#leitner.set_test_cycle_file_name('oop_cards')
+#cards.update(leitner.load_cards())
+#leitner.set_test_cycle_file_name('uml_cards')
+#cards.update(leitner.load_cards())
 
 cycle = leitner.load_test_cycle()
 

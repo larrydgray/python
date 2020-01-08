@@ -5,7 +5,7 @@
 {QUESTION: What is an interaction diagram?}
 {ANSWER: They describe how groups of objects collaborate in some behavior, senario or use case.}
 {ID:uml-3}
-{QUESTIOIN: What is a structure diagram?}
+{QUESTION: What is a structure diagram?}
 {ANSWER: A structure diagram is a conceptual modeling tool used to document the different structures 
 that make up a system such as a database or an application. It shows the hierarchy or structure of the 
 different components or modules of the system and shows how they connect and interact with each other.}
@@ -63,36 +63,36 @@ parts of the system in a 3d box for hardware and other or 3d cylinder for data s
 show artifacts like executables, and containers or execution enviroments. Also 
 deployment files and operating systems.}
 {ID:uml-behavior-1}
-{Question: Describe the behavior Activity diagram.}
+{QUESTION: Describe the behavior Activity diagram.}
 {ANSWER: Activity diagrams describe procedural logic, business processs and work flow. These
  are reminicent of flow charts. However they support parallel behavior.}
 {ID:uml-behavior-2}
-{Question: Describe the behavior Use Case diagram.}
+{QUESTION: Describe the behavior Use Case diagram.}
 {ANSWER: These capture the functional requirements of a system. Describe users of a system 
 and interaction with the system itself. Uses a senario which are steps that a user takes to
 interact with the system. Users are actors that play roles.}
 {ID:uml-behavior-3}
-{Question: Describe the behavior State diagram.}
+{QUESTION: Describe the behavior State diagram.}
 {ANSWER: State machine diagrams show changing states of objects. You might draw a state 
 machine diagram to show the lifetime behavior of a single object. They use flow lines thats
 show flow of change in state, not flow of execution. You can have physical or activity states. Can
 have concurrent states. }
 {ID:uml-interaction-2}
-{QUESTIION: Describe the interaction Sequence diagram.}
+{QUESTION: Describe the interaction Sequence diagram.}
 {ANSWER: Captures the behavior of a single senario. Show messages that are passed
 between objects in a given use case. This resembles a call trace diagram. }
 {ID:uml-interaction-3}
-{QUESTIION: Describe the interaction Timing diagram.}
+{QUESTION: Describe the interaction Timing diagram.}
 {ANSWER: Used a lot in electronic engineering. Focus on timing constraints for a single object
 or more usefully for a bunch of objects. Shows a horizontal time line and list state changes or
 activities with time shown in (s)econds or (m)inutes etc.}
 {ID:uml-interaction-4}
-{QUESTIION: Describe the interaction Communications diagram.}
+{QUESTION: Describe the interaction Communications diagram.}
 {ANSWER: Emphasises data links between various participants in the diagram. Like sequence but 
 uses boxes with arrowed lines to show direction of communication. Uses numbers 1, 1.1, 1.5.2 etc 
 to show steps or sequence. Boxes can be placed anywhere around the diagram. }
 {ID:uml-interaction-5}
-{QUESTIION: Describe the interaction Interaction Overview daigram.}
+{QUESTION: Describe the interaction Interaction Overview daigram.}
 {ANSWER: Combination of Activity and Sequnece diagrams. Can be show as Activity 
 diagram with Sequnece diagrams or Sequinece diagrams with Activity digrams.}
 
