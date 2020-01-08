@@ -1,5 +1,0 @@
-python-datatypes-strings-5
-python-datatypes-strings-1
-python-datatypes-strings-6
-python-datatypes-numbers-6
-python-datatypes-strings-4

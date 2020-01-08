@@ -7,7 +7,7 @@ import logging, random
 class TestInfo:
     def __init__(self, path, file_name):
         self.path=path
-        self.set_test_cycle_file_name=file_name
+        self.test_cycle_file_name=file_name
         # Dictionary of Cards
         self.cards=None
 # Makes sure its not simply None
@@ -342,7 +342,7 @@ def _load_boxes():
 def load_cards():
     logging.debug(os.getcwd())
 
-    quiz_file = open(test_info.path+test_info.set_test_cycle_file_name+".txt",'r')
+    quiz_file = open(test_info.path+test_info.test_cycle_file_name+".txt",'r')
     aquiz = quiz_file.read()
     card_parser = CardParser(aquiz)
     cards={}

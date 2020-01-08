@@ -6117,3 +6117,33 @@ fractions.Fraction(1.5) is 3/2
  2019-11-26 16:54:33,671 - DEBUG - Add To Box
  2019-11-26 16:54:33,673 - DEBUG - Remove From Test Cycle
  2019-11-26 16:54:33,674 - DEBUG - Save Test Cycle
+ 2020-01-08 16:06:36,925 - DEBUG - Start of Logging Leitner Module
+ 2020-01-08 16:06:36,957 - INFO - Leitner modules are methods and classes that support the quiz.py app.
+ 2020-01-08 16:06:36,957 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
+ 2020-01-08 16:06:36,957 - INFO - This is where you are tested more often on things you get wrong and less often
+ 2020-01-08 16:06:36,957 - INFO - on things you get right.
+ 2020-01-08 16:06:37,222 - DEBUG - c:\dev\github\python\quiz
+ 2020-01-08 16:10:27,648 - DEBUG - Start of Logging Leitner Module
+ 2020-01-08 16:10:27,648 - INFO - Leitner modules are methods and classes that support the quiz.py app.
+ 2020-01-08 16:10:27,648 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
+ 2020-01-08 16:10:27,648 - INFO - This is where you are tested more often on things you get wrong and less often
+ 2020-01-08 16:10:27,648 - INFO - on things you get right.
+ 2020-01-08 16:10:27,711 - DEBUG - c:\dev\github\python\quiz
+ 2020-01-08 16:12:02,065 - DEBUG - Start of Logging Leitner Module
+ 2020-01-08 16:12:02,065 - INFO - Leitner modules are methods and classes that support the quiz.py app.
+ 2020-01-08 16:12:02,065 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
+ 2020-01-08 16:12:02,065 - INFO - This is where you are tested more often on things you get wrong and less often
+ 2020-01-08 16:12:02,065 - INFO - on things you get right.
+ 2020-01-08 16:12:02,128 - DEBUG - c:\dev\github\python\quiz
+ 2020-01-08 16:12:02,284 - DEBUG - 15 }
+ 2020-01-08 16:12:02,284 - DEBUG - 57 }
+ 2020-01-08 16:12:02,284 - DEBUG - 225 }
+ 2020-01-08 16:12:49,606 - DEBUG - Start of Logging Leitner Module
+ 2020-01-08 16:12:49,606 - INFO - Leitner modules are methods and classes that support the quiz.py app.
+ 2020-01-08 16:12:49,606 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
+ 2020-01-08 16:12:49,606 - INFO - This is where you are tested more often on things you get wrong and less often
+ 2020-01-08 16:12:49,606 - INFO - on things you get right.
+ 2020-01-08 16:12:49,653 - DEBUG - c:\dev\github\python\quiz
+ 2020-01-08 16:12:49,653 - DEBUG - 15 }
+ 2020-01-08 16:12:49,653 - DEBUG - 57 }
+ 2020-01-08 16:12:49,653 - DEBUG - 225 }

@@ -1,8 +1,0 @@
-python-datatypes-numbers-4
-python-datatypes-strings-7
-python-datatypes-strings-2
-python-datatypes-numbers-3
-python-datatypes-strings-3
-python-datatypes-strings-9
-python-datatypes-strings-8
-python-datatypes-numbers-7
