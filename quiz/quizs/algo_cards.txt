@@ -1,6 +1,6 @@
 {ID:algorithm-1}
 {QUESTION: What is algorithm efficiency?}
-{ANWSER: This is described as time or space complexity. It's asymtotic meaning 
+{ANSWER: This is described as time or space complexity. It's asymtotic meaning 
 calculated as aproaching infinity. It's based on number of input items described as N.}
 {ID:algorithm-2}
 {QUESTION: What are three types of functions that desbribe algorithm complexity?}
@@ -34,7 +34,7 @@ it curves quickly up in the beginning and is less steep moving to the right of t
 {ANSWER: Polynomial or Algerbaic, Tree adjoining grammer or parsing. No Graph.}
 {ID:algorithm-bigo-6}
 {QUESTION: Describe O(c^n) time complexity.}
-{Exponential. Graph curvs upward very quickly. Example is traveling salesman problem.}
+{ANSWER: Exponential. Graph curvs upward very quickly. Example is traveling salesman problem.}
 {ID:algorithm-bigo-7}
 {QUESTION: Describe O(n log n) time complexity.}
 {ANSWER: Linearithmic, Loglinear or Quasilinear or simply n log n. Examples

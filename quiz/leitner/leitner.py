@@ -5,17 +5,18 @@ import logging, random
 # Test Info class holds inforation about the current test so that
 # Not so many parameters have to passed around.
 class TestInfo:
-    def __init__(self, path, file_name):
+    def __init__(self, path, file_names):
         self.path=path
-        self.test_cycle_file_name=file_name
+        # Tuple of card file names
+        self.test_cycle_file_names=file_names
         # Dictionary of Cards
         self.cards=None
 # Makes sure its not simply None
 test_info = TestInfo('bla','bla.txt')
 
 # Sets the file name for the current test cycle which in 'testcycle5.txt' is 'testcycle5'
-def set_test_cycle_file_name(file_name):
-    test_info.test_cycle_file_name = file_name
+def set_test_cycle_file_names(file_names):
+    test_info.test_cycle_file_names = file_names
 
 # Sets the path to the testcycle#.txt, box#.txt and cards.txt files for this test
 # Which is for the example 'quizs//'
@@ -341,9 +342,10 @@ def _load_boxes():
 # though I have no check for this coded yet
 def load_cards():
     logging.debug(os.getcwd())
-
-    quiz_file = open(test_info.path+test_info.test_cycle_file_name+".txt",'r')
-    aquiz = quiz_file.read()
+    aquiz=''
+    for card_file in test_info.test_cycle_file_names:
+        quiz_file = open(test_info.path+card_file+".txt",'r')
+        aquiz += quiz_file.read()
     card_parser = CardParser(aquiz)
     cards={}
     while True:
@@ -458,6 +460,7 @@ class TestCycle:
         random.seed() # always call seed() to get new random numbers each time app is run
         random.shuffle(id_list) # shuffle the cards
         self.id_list=id_list
+        
 
 
 

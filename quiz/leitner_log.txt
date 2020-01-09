@@ -1,194 +1,979 @@
- 2020-01-08 16:43:51,656 - DEBUG - Start of Logging Leitner Module
- 2020-01-08 16:43:51,656 - INFO - Leitner modules are methods and classes that support the quiz.py app.
- 2020-01-08 16:43:51,656 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
- 2020-01-08 16:43:51,656 - INFO - This is where you are tested more often on things you get wrong and less often
- 2020-01-08 16:43:51,656 - INFO - on things you get right.
- 2020-01-08 16:43:51,706 - DEBUG - C:\dev\github\python\quiz
- 2020-01-08 16:43:51,707 - DEBUG - 9 }
- 2020-01-08 16:43:51,707 - DEBUG - 82 }
- 2020-01-08 16:43:51,735 - DEBUG - 151 }
- 2020-01-08 16:43:51,736 - DEBUG - uml-1
- 2020-01-08 16:43:51,736 - DEBUG -  What are the two main types one one subtype of uml diagrams?
- 2020-01-08 16:43:51,736 - DEBUG -  structure, behavior and interaction is subtype of behavior
- 2020-01-08 16:43:51,737 - DEBUG - 162 }
- 2020-01-08 16:43:51,737 - DEBUG - 206 }
- 2020-01-08 16:43:51,738 - DEBUG - 303 }
- 2020-01-08 16:43:51,738 - DEBUG - uml-2
- 2020-01-08 16:43:51,738 - DEBUG -  What is an interaction diagram?
- 2020-01-08 16:43:51,739 - DEBUG -  They describe how groups of objects collaborate in some behavior, senario or use case.
- 2020-01-08 16:43:51,739 - DEBUG - 314 }
- 2020-01-08 16:43:51,740 - DEBUG - 355 }
- 2020-01-08 16:43:51,740 - DEBUG - 665 }
- 2020-01-08 16:43:51,741 - DEBUG - uml-3
- 2020-01-08 16:43:51,741 - DEBUG -  What is a structure diagram?
- 2020-01-08 16:43:51,742 - DEBUG -  A structure diagram is a conceptual modeling tool used to document the different structures 
+ 2020-01-08 22:28:41,890 - DEBUG - Start of Logging Leitner Module
+ 2020-01-08 22:28:41,890 - INFO - Leitner modules are methods and classes that support the quiz.py app.
+ 2020-01-08 22:28:41,890 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
+ 2020-01-08 22:28:41,890 - INFO - This is where you are tested more often on things you get wrong and less often
+ 2020-01-08 22:28:41,890 - INFO - on things you get right.
+ 2020-01-08 22:29:07,363 - DEBUG - Start of Logging Leitner Module
+ 2020-01-08 22:29:07,363 - INFO - Leitner modules are methods and classes that support the quiz.py app.
+ 2020-01-08 22:29:07,379 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
+ 2020-01-08 22:29:07,379 - INFO - This is where you are tested more often on things you get wrong and less often
+ 2020-01-08 22:29:07,379 - INFO - on things you get right.
+ 2020-01-08 22:29:07,427 - DEBUG - C:\dev\github\python\quiz
+ 2020-01-08 22:29:42,662 - DEBUG - Start of Logging Leitner Module
+ 2020-01-08 22:29:42,687 - INFO - Leitner modules are methods and classes that support the quiz.py app.
+ 2020-01-08 22:29:42,687 - INFO - This is a efficient learning method. Google or Wiki Leitner Learning System.
+ 2020-01-08 22:29:42,687 - INFO - This is where you are tested more often on things you get wrong and less often
+ 2020-01-08 22:29:42,687 - INFO - on things you get right.
+ 2020-01-08 22:29:42,741 - DEBUG - C:\dev\github\python\quiz
+ 2020-01-08 22:29:42,741 - DEBUG - 15 }
+ 2020-01-08 22:29:42,741 - DEBUG - 57 }
+ 2020-01-08 22:29:42,741 - DEBUG - 225 }
+ 2020-01-08 22:29:42,741 - DEBUG - algorithm-1
+ 2020-01-08 22:29:42,741 - DEBUG -  What is algorithm efficiency?
+ 2020-01-08 22:29:42,741 - DEBUG -  This is described as time or space complexity. It's asymtotic meaning 
+calculated as aproaching infinity. It's based on number of input items described as N.
+ 2020-01-08 22:29:42,741 - DEBUG - 242 }
+ 2020-01-08 22:29:42,741 - DEBUG - 324 }
+ 2020-01-08 22:29:42,741 - DEBUG - 403 }
+ 2020-01-08 22:29:42,741 - DEBUG - algorithm-2
+ 2020-01-08 22:29:42,756 - DEBUG -  What are three types of functions that desbribe algorithm complexity?
+ 2020-01-08 22:29:42,756 - DEBUG -  Big O(worst case), Big Omega(best case) and Big Theta(average case).
+ 2020-01-08 22:29:42,756 - DEBUG - 420 }
+ 2020-01-08 22:29:42,756 - DEBUG - 502 }
+ 2020-01-08 22:29:42,756 - DEBUG - 531 }
+ 2020-01-08 22:29:42,756 - DEBUG - algorithm-3
+ 2020-01-08 22:29:42,761 - DEBUG -  What is a 4th type of function used to describe algorithm complexity?
+ 2020-01-08 22:29:42,761 - DEBUG -  Little O notation.
+ 2020-01-08 22:29:42,761 - DEBUG - 554 }
+ 2020-01-08 22:29:42,761 - DEBUG - 597 }
+ 2020-01-08 22:29:42,764 - DEBUG - 846 }
+ 2020-01-08 22:29:42,764 - DEBUG - alogorithm-bigo-1
+ 2020-01-08 22:29:42,764 - DEBUG -  Describe O(1) time complexity.
+ 2020-01-08 22:29:42,764 - DEBUG -  Constant time complexity. The algorithm always has same value for N or
+otherwise uses same time to complete. A loop that always processes each of the 50 states will
+have constant time complexity. Graphed this is a straght horizontal line.
+ 2020-01-08 22:29:42,764 - DEBUG - 868 }
+ 2020-01-08 22:29:42,764 - DEBUG - 911 }
+ 2020-01-08 22:29:42,768 - DEBUG - 1271 }
+ 2020-01-08 22:29:42,768 - DEBUG - algorithm-bigo-2
+ 2020-01-08 22:29:42,768 - DEBUG -  Describe O(n) time complexity.
+ 2020-01-08 22:29:42,768 - DEBUG -  Linear time complexity. As number of input increases so does time, same amount
+of time for each input item. An example is a loop that may have any number of input items.
+A loop that processes people from all 50 states could grow infniitly over time as population
+grows. Linear Search is an example for this. Graphed this is a straight diagonal line.
+ 2020-01-08 22:29:42,768 - DEBUG - 1293 }
+ 2020-01-08 22:29:42,773 - DEBUG - 1338 }
+ 2020-01-08 22:29:42,773 - DEBUG - 1581 }
+ 2020-01-08 22:29:42,773 - DEBUG - algorithm-bigo-3
+ 2020-01-08 22:29:42,776 - DEBUG -  Describe O(n^2) time complexity.
+ 2020-01-08 22:29:42,776 - DEBUG -  Quadratic time complexity. This is like a loop within a loop. But could also
+be a recursive time complexity such as in QuickSort worst case. Same for Bubble sort.
+Graphed this is a curved line that is quickly steaper to straight up.
+ 2020-01-08 22:29:42,804 - DEBUG - 1603 }
+ 2020-01-08 22:29:42,804 - DEBUG - 1650 }
+ 2020-01-08 22:29:42,804 - DEBUG - 1941 }
+ 2020-01-08 22:29:42,804 - DEBUG - algorithm-bigo-4
+ 2020-01-08 22:29:42,804 - DEBUG -  Describe O(log n) time complexity.
+ 2020-01-08 22:29:42,820 - DEBUG -  Logorithmic time complexity. This describes algorithms that divide the problem in half on
+each step such as Binary Search. Graphed this is a curved line that uses less time for larger N. So 
+it curves quickly up in the beginning and is less steep moving to the right of the graph.
+ 2020-01-08 22:29:42,820 - DEBUG - 1963 }
+ 2020-01-08 22:29:42,820 - DEBUG - 2008 }
+ 2020-01-08 22:29:42,820 - DEBUG - 2088 }
+ 2020-01-08 22:29:42,820 - DEBUG - algorithm-bigo-5
+ 2020-01-08 22:29:42,820 - DEBUG -  Describe O(n^c) time complexity.
+ 2020-01-08 22:29:42,820 - DEBUG -  Polynomial or Algerbaic, Tree adjoining grammer or parsing. No Graph.
+ 2020-01-08 22:29:42,820 - DEBUG - 2110 }
+ 2020-01-08 22:29:42,820 - DEBUG - 2155 }
+ 2020-01-08 22:29:42,820 - DEBUG - 2250 }
+ 2020-01-08 22:29:42,820 - DEBUG - algorithm-bigo-6
+ 2020-01-08 22:29:42,820 - DEBUG -  Describe O(c^n) time complexity.
+ 2020-01-08 22:29:42,820 - DEBUG -  Exponential. Graph curvs upward very quickly. Example is traveling salesman problem.
+ 2020-01-08 22:29:42,820 - DEBUG - 2272 }
+ 2020-01-08 22:29:42,820 - DEBUG - 2321 }
+ 2020-01-08 22:29:42,820 - DEBUG - 2517 }
+ 2020-01-08 22:29:42,820 - DEBUG - algorithm-bigo-7
+ 2020-01-08 22:29:42,820 - DEBUG -  Describe O(n log n) time complexity.
+ 2020-01-08 22:29:42,820 - DEBUG -  Linearithmic, Loglinear or Quasilinear or simply n log n. Examples
+are fastes comparison sort, heap sort and merge sort. Graphs almost like Linear with slight
+curve upward in beginning.
+ 2020-01-08 22:29:42,820 - DEBUG - 2539 }
+ 2020-01-08 22:29:42,820 - DEBUG - 2606 }
+ 2020-01-08 22:29:42,820 - DEBUG - 2693 }
+ 2020-01-08 22:29:42,820 - DEBUG - algorithm-bigo-8
+ 2020-01-08 22:29:42,836 - DEBUG -  Describe O(n^c) time complexity where c > 0 and c < 1.
+ 2020-01-08 22:29:42,836 - DEBUG -  Fractional Power. Example searching in a K-D Tree or multi-dimentional tree.
+ 2020-01-08 22:29:42,836 - DEBUG - 2715 }
+ 2020-01-08 22:29:42,836 - DEBUG - 2765 }
+ 2020-01-08 22:29:42,836 - DEBUG - 2893 }
+ 2020-01-08 22:29:42,836 - DEBUG - algorithm-bigo-9
+ 2020-01-08 22:29:42,836 - DEBUG -  Describe O(n log* n) time complexity.
+ 2020-01-08 22:29:42,836 - DEBUG -  Called n log star n.  Example is triangulation of a simple polygon using Seidel's algorithm.
+Or union find algorithm.
+ 2020-01-08 22:29:42,836 - DEBUG - 2915 }
+ 2020-01-08 22:29:42,836 - DEBUG - 2959 }
+ 2020-01-08 22:29:42,836 - DEBUG - 3176 }
+ 2020-01-08 22:29:42,836 - DEBUG - algorithm-bigo-9
+ 2020-01-08 22:29:42,836 - DEBUG -  Describe O(n!) time complexity.
+ 2020-01-08 22:29:42,836 - DEBUG -  Factorial. Bogo Sort.  Enumerating all partitions of a set.
+ Generating all unrestricted permutations of a poset. The slowest algorithm there is. This graph
+ curves upward more quickly than other functions.
+ 2020-01-08 22:29:42,836 - DEBUG - 3199 }
+ 2020-01-08 22:29:42,836 - DEBUG - 3250 }
+ 2020-01-08 22:29:42,836 - DEBUG - 3415 }
+ 2020-01-08 22:29:42,836 - DEBUG - algorithm-bigo-10
+ 2020-01-08 22:29:42,836 - DEBUG -  Describe O(log log n) time complexity.
+ 2020-01-08 22:29:42,836 - DEBUG -  Double Logorithmic. Example is number of comparisons spent finding an item using 
+interpolation search in a sorted array of uniformly distributed values.
+ 2020-01-08 22:29:42,836 - DEBUG - 3438 }
+ 2020-01-08 22:29:42,836 - DEBUG - 3493 }
+ 2020-01-08 22:29:42,851 - DEBUG - 3618 }
+ 2020-01-08 22:29:42,851 - DEBUG - algorithm-bigo-11
+ 2020-01-08 22:29:42,851 - DEBUG -  Describe O((log n)^c) c>1 time complexity.
+ 2020-01-08 22:29:42,851 - DEBUG -  Polylogorithmic. Matrix chain ordering can be solved in polylogarithmic time on a 
+parallel random-access machine.
+ 2020-01-08 22:29:42,851 - DEBUG - 3641 }
+ 2020-01-08 22:29:42,851 - DEBUG - 3686 }
+ 2020-01-08 22:29:42,851 - DEBUG - 3838 }
+ 2020-01-08 22:29:42,851 - DEBUG - algorithm-bigo-12
+ 2020-01-08 22:29:42,851 - DEBUG -  Describe O(n^3) time complexity.
+ 2020-01-08 22:29:42,851 - DEBUG -  Cubic. Naive multiplication of two n×n matrices. Calculating partial correlation.
+ Processing a 3D data structure. Loop in a loop in a loop.
+ 2020-01-08 22:29:42,851 - DEBUG - 3861 }
+ 2020-01-08 22:29:42,851 - DEBUG - 3916 }
+ 2020-01-08 22:29:42,851 - DEBUG - 4018 }
+ 2020-01-08 22:29:42,851 - DEBUG - algorithm-bigo-13
+ 2020-01-08 22:29:42,851 - DEBUG -  What is the rule about constants in Big O?
+ 2020-01-08 22:29:42,851 - DEBUG -  Constant factors O(1) in code are ignored only code that equates to a function is accepted.
+ 2020-01-08 22:29:42,851 - DEBUG - 4041 }
+ 2020-01-08 22:29:42,851 - DEBUG - 4094 }
+ 2020-01-08 22:29:42,867 - DEBUG - 4229 }
+ 2020-01-08 22:29:42,867 - DEBUG - algorithm-bigo-14
+ 2020-01-08 22:29:42,867 - DEBUG -  What is the transivtivity rule in Big O?
+ 2020-01-08 22:29:42,867 - DEBUG -  If function h(n) grows at most as fast as g(n), which grows at most as fast as f(n), 
+then h(n)grows at most as fast as f(n)
+ 2020-01-08 22:29:42,867 - DEBUG - 4252 }
+ 2020-01-08 22:29:42,867 - DEBUG - 4299 }
+ 2020-01-08 22:29:42,867 - DEBUG - 4365 }
+ 2020-01-08 22:29:42,867 - DEBUG - algorithm-bigo-15
+ 2020-01-08 22:29:42,867 - DEBUG -  What is the rule of sums in Big O?
+ 2020-01-08 22:29:42,867 - DEBUG -  The sum of functions grows as its fastest-growing term.
+ 2020-01-08 22:29:42,867 - DEBUG - 4388 }
+ 2020-01-08 22:29:42,867 - DEBUG - 4439 }
+ 2020-01-08 22:29:42,867 - DEBUG - 4545 }
+ 2020-01-08 22:29:42,867 - DEBUG - algorithm-bigo-16
+ 2020-01-08 22:29:42,867 - DEBUG -  What is the rule of products in Big O?
+ 2020-01-08 22:29:42,867 - DEBUG -  The product of upper bounds of functions gives an upper bound for the product of the functions.
+ 2020-01-08 22:29:42,867 - DEBUG - 4568 }
+ 2020-01-08 22:29:42,867 - DEBUG - 4613 }
+ 2020-01-08 22:29:42,867 - DEBUG - 4720 }
+ 2020-01-08 22:29:42,867 - DEBUG - algorithm-bigo-17
+ 2020-01-08 22:29:42,867 - DEBUG -  What is the limit rule in Big O?
+ 2020-01-08 22:29:42,867 - DEBUG -  Didn't understand this one. A limit might be calculated with calculus under certain situations.
+ 2020-01-08 22:29:42,882 - DEBUG - 4742 }
+ 2020-01-08 22:29:42,882 - DEBUG - 4806 }
+ 2020-01-08 22:29:42,882 - DEBUG - 4927 }
+ 2020-01-08 22:29:42,882 - DEBUG - data_structures-1
+ 2020-01-08 22:29:42,882 - DEBUG -  What are the 3 most basic forms of data structures?
+ 2020-01-08 22:29:42,882 - DEBUG -  1. Bit (boolean) and Byte. 2. Primitives such as integer, real numbers and characters. 
+3. Strings and arrays.
+ 2020-01-08 22:29:42,882 - DEBUG - 4950 }
+ 2020-01-08 22:29:42,882 - DEBUG - 5021 }
+ 2020-01-08 22:29:42,882 - DEBUG - 5096 }
+ 2020-01-08 22:29:42,882 - DEBUG - data_structures-2
+ 2020-01-08 22:29:42,882 - DEBUG -  Name seven common names for main types of data structures.
+ 2020-01-08 22:29:42,882 - DEBUG -  Linked, List, Vector, Stack, Queue, Ditionary, Set, Tree, Graph.
+ 2020-01-08 22:29:42,882 - DEBUG - 5119 }
+ 2020-01-08 22:29:42,882 - DEBUG - 5169 }
+ 2020-01-08 22:29:42,882 - DEBUG - 5250 }
+ 2020-01-08 22:29:42,882 - DEBUG - data_structures-3
+ 2020-01-08 22:29:42,882 - DEBUG -  List kinds of Linked data structures.
+ 2020-01-08 22:29:42,882 - DEBUG -  Linked List, Double Linked List, Circularly Linked list, Trees, Graphs
+ 2020-01-08 22:29:42,882 - DEBUG - 5273 }
+ 2020-01-08 22:29:42,882 - DEBUG - 5344 }
+ 2020-01-08 22:29:42,882 - DEBUG - 5390 }
+ 2020-01-08 22:29:42,898 - DEBUG - data_structures-4
+ 2020-01-08 22:29:42,898 - DEBUG -  List alternative language names for Vector dat structures.
+ 2020-01-08 22:29:42,898 - DEBUG -  List, ArrayList, Tuple, Vector, Set
+ 2020-01-08 22:29:42,898 - DEBUG - 5413 }
+ 2020-01-08 22:29:42,898 - DEBUG - 5447 }
+ 2020-01-08 22:29:42,898 - DEBUG - 5479 }
+ 2020-01-08 22:29:42,898 - DEBUG - data_structures-5
+ 2020-01-08 22:29:42,898 - DEBUG -  List kinds of Queues.
+ 2020-01-08 22:29:42,898 - DEBUG -  Queue, Piority Queue.
+ 2020-01-08 22:29:42,898 - DEBUG - 5502 }
+ 2020-01-08 22:29:42,898 - DEBUG - 5553 }
+ 2020-01-08 22:29:42,898 - DEBUG - 5614 }
+ 2020-01-08 22:29:42,898 - DEBUG - data_structures-6
+ 2020-01-08 22:29:42,898 - DEBUG -  List alternate names for Dictionaries.
+ 2020-01-08 22:29:42,898 - DEBUG -  Dictionary, Hast Table, Hash Map, JavaScript Array
+ 2020-01-08 22:29:42,898 - DEBUG - 5637 }
+ 2020-01-08 22:29:42,898 - DEBUG - 5680 }
+ 2020-01-08 22:29:42,898 - DEBUG - 5746 }
+ 2020-01-08 22:29:42,914 - DEBUG - data_structures-7
+ 2020-01-08 22:29:42,914 - DEBUG -  List some main kinds of Trees.
+ 2020-01-08 22:29:42,914 - DEBUG -  Tree, B-Tree, Binary Tree, Balanced Tree, Document, DOM
+ 2020-01-08 22:29:42,914 - DEBUG - 5769 }
+ 2020-01-08 22:29:42,914 - DEBUG - 5829 }
+ 2020-01-08 22:29:42,914 - DEBUG - 5922 }
+ 2020-01-08 22:29:42,914 - DEBUG - data_structures-8
+ 2020-01-08 22:29:42,914 - DEBUG -  List types of arrays and array like structures.
+ 2020-01-08 22:29:42,914 - DEBUG -  Array, Multi-Dimensioned Array, Jagged Arrays, List, Tuple, Some Collections in c#
+ 2020-01-08 22:29:42,914 - DEBUG - 5945 }
+ 2020-01-08 22:29:42,914 - DEBUG - 6050 }
+ 2020-01-08 22:29:42,914 - DEBUG - 6359 }
+ 2020-01-08 22:29:42,914 - DEBUG - data_structures-9
+ 2020-01-08 22:29:42,914 - DEBUG -  Name and describe two important data structures that are basic building blocks in languages.
+ 2020-01-08 22:29:42,914 - DEBUG - Records and Objects. Both Records and Obects have fields that can be primitive data types, record or
+object data types, and even functions (which is a type of object) in some languages. Object but not Records
+have functions called methods associated with it's data. Objects are defined by Classes.
+ 2020-01-08 22:29:42,914 - DEBUG - 6383 }
+ 2020-01-08 22:29:42,914 - DEBUG - 6428 }
+ 2020-01-08 22:29:42,914 - DEBUG - 6848 }
+ 2020-01-08 22:29:42,914 - DEBUG - data_structures-10
+ 2020-01-08 22:29:42,929 - DEBUG -  What is a linked data structure?
+ 2020-01-08 22:29:42,929 - DEBUG -  Linked data structures have nodes which contain pointers(references) to other nodes and data. Nodes can have
+forward and backward pointers or upward and downward pointers. Trees can have list of nodes called siblings.
+A list can have a front node and back node, next node and previous node. Trees can have root, child and parent 
+nodes, ansetor and decendents. A graph has vertices nodes, neighbors and edges.
+ 2020-01-08 22:29:42,929 - DEBUG - 6872 }
+ 2020-01-08 22:29:42,929 - DEBUG - 6905 }
+ 2020-01-08 22:29:42,929 - DEBUG - 6937 }
+ 2020-01-08 22:29:42,929 - DEBUG - data_structures-11
+ 2020-01-08 22:29:42,929 - DEBUG -  List kinds of Graphs
+ 2020-01-08 22:29:42,929 - DEBUG -  Graph and Scene Graph
+ 2020-01-08 22:29:42,929 - DEBUG - 6961 }
+ 2020-01-08 22:29:42,929 - DEBUG - 6988 }
+ 2020-01-08 22:29:42,929 - DEBUG - 7456 }
+ 2020-01-08 22:29:42,929 - DEBUG - data_structures-12
+ 2020-01-08 22:29:42,929 - DEBUG -  Describe List.
+ 2020-01-08 22:29:42,929 - DEBUG -  List data can be accesed by element number like an array with set(index,object) and object get(index).
+List also has behavior for adding to the end of list, getting size of list, removing(index) item
+from list. List may have a way to search list for object and sort list. List can add other list
+and remove another list of items from the list. Vectors an list are almost the same thing. A set 
+is a list with no duplicates. Can be array or LinkedList based.
+ 2020-01-08 22:29:42,929 - DEBUG - 7480 }
+ 2020-01-08 22:29:42,929 - DEBUG - 7511 }
+ 2020-01-08 22:29:42,929 - DEBUG - 7625 }
+ 2020-01-08 22:29:42,945 - DEBUG - data_structures-13
+ 2020-01-08 22:29:42,945 - DEBUG -  Describe a Vector.
+ 2020-01-08 22:29:42,945 - DEBUG -  Another name for List. See list Description. Vectors or List can be based on LinkedList or
+array based.
+ 2020-01-08 22:29:42,945 - DEBUG - 7649 }
+ 2020-01-08 22:29:42,976 - DEBUG - 7675 }
+ 2020-01-08 22:29:42,976 - DEBUG - 7840 }
+ 2020-01-08 22:29:42,976 - DEBUG - data_structures-14
+ 2020-01-08 22:29:42,976 - DEBUG -  Describe Set.
+ 2020-01-08 22:29:42,976 - DEBUG -  A list with no duplicates. Sets have operations like union, intersection, difference
+and subset. A HashSet is like a Dictionary with unique value entries.
+ 2020-01-08 22:29:42,976 - DEBUG - 7864 }
+ 2020-01-08 22:29:42,976 - DEBUG - 7894 }
+ 2020-01-08 22:29:42,976 - DEBUG - 8360 }
+ 2020-01-08 22:29:42,976 - DEBUG - data_structures-15
+ 2020-01-08 22:29:42,976 - DEBUG -  Describe a Stack.
+ 2020-01-08 22:29:42,976 - DEBUG -  A stack has push and pop methods to add values to the top of the stack. Imagine of
+course processing an inbox for paperwork on your desk where you always work the papers last
+placed on top. This is also called LIFO or last in first out. Call stack is common application.
+When you get an exception the error message wiil list a call stack trace. Called unwiding the
+stack. Stack overflow is where you fill the stack up so much you run out of memory for it.
+ 2020-01-08 22:29:42,976 - DEBUG - 8384 }
+ 2020-01-08 22:29:42,976 - DEBUG - 8414 }
+ 2020-01-08 22:29:42,976 - DEBUG - 8947 }
+ 2020-01-08 22:29:42,976 - DEBUG - data_structures-16
+ 2020-01-08 22:29:42,976 - DEBUG -  Describe a queue.
+ 2020-01-08 22:29:42,976 - DEBUG -  A queue is a list that is LIFO or last in first out. It's like working from the 
+bottom of the Stack. A common example would be a keyboard Queue. As characters come in the
+list builds and as your software gets time it pulls characters that last to come into the queue.
+A priority queue is like the system process or thread processing. Each process or thread might
+be given a level. Higher priority is given processor timeslice until that queue is empty, 
+then lower pirority. Priority queue is really like multiple queues.
+ 2020-01-08 22:29:42,976 - DEBUG - 8971 }
+ 2020-01-08 22:29:42,976 - DEBUG - 9006 }
+ 2020-01-08 22:29:42,976 - DEBUG - 9454 }
+ 2020-01-08 22:29:42,976 - DEBUG - data_structures-17
+ 2020-01-08 22:29:42,992 - DEBUG -  Describe a Dictionary.
+ 2020-01-08 22:29:42,992 - DEBUG -  Also called HashTable or HashMap or perhaps Map. These store key,value pairs. They are very efficient
+at adding to the storage or retrieving. These cards in this Leitner app are stored in
+a dictionary. JavaScript arrays become a Dictionary if you use non numeric indexes. These 
+may have set(key,value) or value get(key) behavior. In some languages the key is the index of
+the array or list. Should be able to get list of keys or values.
+ 2020-01-08 22:29:42,992 - DEBUG - 9478 }
+ 2020-01-08 22:29:42,992 - DEBUG - 9523 }
+ 2020-01-08 22:29:42,992 - DEBUG - 10269 }
+ 2020-01-08 22:29:42,992 - DEBUG - data_structures-18
+ 2020-01-08 22:29:42,992 - DEBUG -  Describe a Tree data structures.
+ 2020-01-08 22:29:42,992 - DEBUG -  Trees have a root, branches and leaves. Each branch can have one, two or more branches. 
+a node has no branches its called a leaf. Nodes are named as root, child, parent, sibling,
+ ancestors and decedents. A common tree structure is the file system on any computer. There
+ are many kinds of trees in coding such as Trees, B-Trees and Binary Trees. If you 
+ get a tree such as an xml or html document the root node is returned. Trees have getChildren()
+ getParent(), getSiblngs(), addChild() behavior. Might have getLeftChild() addLeftChild() 
+ getRightChild() addRightChild(). A child node is a root for all of its decendents. A 
+ child node might be a leaf node if it has no decendents. A child node might have removeNode()
+ behavior.
+ 2020-01-08 22:29:42,992 - DEBUG - 10293 }
+ 2020-01-08 22:29:42,992 - DEBUG - 10323 }
+ 2020-01-08 22:29:42,992 - DEBUG - 10930 }
+ 2020-01-08 22:29:42,992 - DEBUG - data_structures-19
+ 2020-01-08 22:29:42,992 - DEBUG -  Describe a Graph.
+ 2020-01-08 22:29:42,992 - DEBUG -  Graphs have edges, vertices and neihbors. Nodes are vertices and
+neighbors. In a graph any node can be a neighbor of any other node. I would have 
+called this data structure a Net or Network. Examples are the power grid system,
+the internet, or our highway system. Could even be three dimensional in something
+like a cave system. Games and JavaFX uses a Scene Graph. In javafx it is called a graph,
+but it seems to me to be more of a composition or Tree. Graphs have addVertex() removeVertex()
+addEdge() removeEdge() behavior. Also getEdgeValue() getVertexValue() adjacent() neighbor() 
+behavior.
+ 2020-01-08 22:29:42,992 - DEBUG - 10958 }
+ 2020-01-08 22:29:42,992 - DEBUG - 11040 }
+ 2020-01-08 22:29:42,992 - DEBUG - 11359 }
+ 2020-01-08 22:29:42,992 - DEBUG - data_structures-java-1
+ 2020-01-08 22:29:42,992 - DEBUG -  List some Java Integer Primitives and describe their possible values.
+ 2020-01-08 22:29:42,992 - DEBUG -  byte, char, short int, int, long int. Byte 1 byte is -128 to 127. char 2 bytes is 0 to 65535.
+short 2 bytes is -32,768 to 32,767. int 4 bytes is around +/- 2 million. long 8 bytes is around +/- 
+9 Million Trillion. Java also has an object for BigInteger that will
+handle any size integer up to available ram.
+ 2020-01-08 22:29:43,007 - DEBUG - 11387 }
+ 2020-01-08 22:29:43,007 - DEBUG - 11458 }
+ 2020-01-08 22:29:43,007 - DEBUG - 11639 }
+ 2020-01-08 22:29:43,007 - DEBUG - data_structures-java-2
+ 2020-01-08 22:29:43,007 - DEBUG -  List Java Real numbers and describe their possible values.
+ 2020-01-08 22:29:43,007 - DEBUG -  float and double. float 4 bytes is signed real 6-7 significant digits  ±3.40282347E+38F .
+double 8 bytes is signed real 15 significant digits  ±1.79769313486231570E+308
+ 2020-01-08 22:29:43,007 - DEBUG - 11667 }
+ 2020-01-08 22:29:43,007 - DEBUG - 11712 }
+ 2020-01-08 22:29:43,007 - DEBUG - 11875 }
+ 2020-01-08 22:29:43,007 - DEBUG - data_structures-java-3
+ 2020-01-08 22:29:43,007 - DEBUG -  Describe java boolean primitive.
+ 2020-01-08 22:29:43,007 - DEBUG -  Stored in 1 byte but JVM dependent, true or false value. BitSet is an
+object for working with bit size values. Called flags in some programming context.
+ 2020-01-08 22:29:43,007 - DEBUG - 11903 }
+ 2020-01-08 22:29:43,007 - DEBUG - 11941 }
+ 2020-01-08 22:29:43,007 - DEBUG - 12270 }
+ 2020-01-08 22:29:43,007 - DEBUG - data_structures-java-4
+ 2020-01-08 22:29:43,007 - DEBUG -  Describe java references.
+ 2020-01-08 22:29:43,007 - DEBUG -  References are like pointers to Java objects. They are 4 bytess on 32bit JVMs and 8
+bytes on 64bit JVMs. An object of course contains data fields which may be primitives or
+other references, and may also contain methods. A lambda is a special Java object that
+only has a single function and is treated like a funciton.
+ 2020-01-08 22:29:43,007 - DEBUG - 12294 }
+ 2020-01-08 22:29:43,007 - DEBUG - 12373 }
+ 2020-01-08 22:29:43,023 - DEBUG - 12456 }
+ 2020-01-08 22:29:43,023 - DEBUG - data_structures-20
+ 2020-01-08 22:29:43,023 - DEBUG -  What do modern programming languages usually call data structures?
+ 2020-01-08 22:29:43,023 - DEBUG -  Collections. Though Arrays and Objects are technically a data structure.
+ 2020-01-08 22:29:43,023 - DEBUG - 12490 }
+ 2020-01-08 22:29:43,023 - DEBUG - 12530 }
+ 2020-01-08 22:29:43,023 - DEBUG - 12824 }
+ 2020-01-08 22:29:43,023 - DEBUG - data_structures-javascript-1
+ 2020-01-08 22:29:43,023 - DEBUG -  Name JavaScript primitives.
+ 2020-01-08 22:29:43,023 - DEBUG -  Boolean, Null, Undefined, Number, BigInt, String, Symbol, and Object. A 
+JavaScript function is technically and Object and can be assigned to a variable and
+be passed around like any value. JavaScript numbers can be very large. Numbers 
+are both real and integer and consume 8 bytes.
+ 2020-01-08 22:29:43,023 - DEBUG - 12848 }
+ 2020-01-08 22:29:43,039 - DEBUG - 12954 }
+ 2020-01-08 22:29:43,039 - DEBUG - 13121 }
+ 2020-01-08 22:29:43,039 - DEBUG - data_structures-21
+ 2020-01-08 22:29:43,039 - DEBUG -  What's a main difference in Arrays from other DataStructures like
+List, Vectors, Tuples etc.
+ 2020-01-08 22:29:43,039 - DEBUG -  Depending on the Language arrays are fixed in size. The others can
+grow to fill all available memory. In some situations using arrays can be more
+efficient.
+ 2020-01-08 22:29:43,039 - DEBUG - 13151 }
+ 2020-01-08 22:29:43,039 - DEBUG - 13187 }
+ 2020-01-08 22:29:43,039 - DEBUG - 13245 }
+ 2020-01-08 22:29:43,039 - DEBUG - data_structures-python-1
+ 2020-01-08 22:29:43,039 - DEBUG -  List python primitives.
+ 2020-01-08 22:29:43,039 - DEBUG -   Boolean, int, float, complex, Strings, Objects
+ 2020-01-08 22:29:43,039 - DEBUG - 13275 }
+ 2020-01-08 22:29:43,039 - DEBUG - 13307 }
+ 2020-01-08 22:29:43,039 - DEBUG - 13420 }
+ 2020-01-08 22:29:43,039 - DEBUG - data_structures-csharp-1
+ 2020-01-08 22:29:43,039 - DEBUG -  List c# primitives.
+ 2020-01-08 22:29:43,039 - DEBUG -  bool, byte, sbyte, char, short, ushort, int, uint, long, ulong,
+decimal, float, double, object, string
+ 2020-01-08 22:29:43,039 - DEBUG - 13432 }
+ 2020-01-08 22:29:43,039 - DEBUG - 13475 }
+ 2020-01-08 22:29:43,039 - DEBUG - 13819 }
+ 2020-01-08 22:29:43,039 - DEBUG - oop-1
+ 2020-01-08 22:29:43,039 - DEBUG -  What is an OOP Design Pattern?
+ 2020-01-08 22:29:43,039 - DEBUG -   OOP Design Patterns are reusable solutions to commonly occuring software design problems.
+ Design patterns were started as best practices that were applied again and again 
+ to similar problems encountered in different contexts. Some patterns are composted of other
+ patterns. And some are very similar but for different situations.
+ 2020-01-08 22:29:43,054 - DEBUG - 13830 }
+ 2020-01-08 22:29:43,054 - DEBUG - 13897 }
+ 2020-01-08 22:29:43,070 - DEBUG - 13963 }
+ 2020-01-08 22:29:43,070 - DEBUG - oop-2
+ 2020-01-08 22:29:43,070 - DEBUG -  What is a good OOP Design Patterns website to know of?
+ 2020-01-08 22:29:43,070 - DEBUG -  http://www.vincehuston.org/dp/ Huston Design Patterns.
+ 2020-01-08 22:29:43,070 - DEBUG - 13974 }
+ 2020-01-08 22:29:43,070 - DEBUG - 14037 }
+ 2020-01-08 22:29:43,070 - DEBUG - 14082 }
+ 2020-01-08 22:29:43,070 - DEBUG - oop-3
+ 2020-01-08 22:29:43,070 - DEBUG -  What are the 3 main categories of design patterns?
+ 2020-01-08 22:29:43,070 - DEBUG -  Creational, Behavioral, Structural
+ 2020-01-08 22:29:43,070 - DEBUG - 14093 }
+ 2020-01-08 22:29:43,070 - DEBUG - 14147 }
+ 2020-01-08 22:29:43,070 - DEBUG - 14404 }
+ 2020-01-08 22:29:43,086 - DEBUG - oop-4
+ 2020-01-08 22:29:43,086 - DEBUG -  What is an OOP Creational design pattern?
+ 2020-01-08 22:29:43,086 - DEBUG -  This copies objects, creates objects or reuses objects. Some languages
+use the 'new' operator. Some objects have a class or a prototype to partern new object on.
+And sometimes you will make your own functions or methods to make or return objects.
+ 2020-01-08 22:29:43,086 - DEBUG - 14415 }
+ 2020-01-08 22:29:43,086 - DEBUG - 14469 }
+ 2020-01-08 22:29:43,086 - DEBUG - 14832 }
+ 2020-01-08 22:29:43,086 - DEBUG - oop-5
+ 2020-01-08 22:29:43,086 - DEBUG -  What is an OOP Behavioral design pattern?
+ 2020-01-08 22:29:43,086 - DEBUG -  In software engineering, behavioral design patterns are design patterns that identify 
+common communication patterns between objects and realize these patterns. By doing so, these 
+patterns increase flexibility in carrying out this communication. They define your functions or
+methods and a pattern for how objects communicate for different situations.
+ 2020-01-08 22:29:43,086 - DEBUG - 14843 }
+ 2020-01-08 22:29:43,086 - DEBUG - 14897 }
+ 2020-01-08 22:29:43,086 - DEBUG - 15218 }
+ 2020-01-08 22:29:43,086 - DEBUG - oop-6
+ 2020-01-08 22:29:43,086 - DEBUG -  What is an OOP Structural design pattern?
+ 2020-01-08 22:29:43,086 - DEBUG -  Oop structural design patterns are simple ways to relate objects in 
+common situations. Structural patterns explain how to assemble objects and classes into larger 
+structures while keeping these structures flexible and efficient. They are not how objects communicate so
+much as they are how they fit together.
+ 2020-01-08 22:29:43,086 - DEBUG - 15240 }
+ 2020-01-08 22:29:43,086 - DEBUG - 15292 }
+ 2020-01-08 22:29:43,086 - DEBUG - 15367 }
+ 2020-01-08 22:29:43,086 - DEBUG - oop-creational-1
+ 2020-01-08 22:29:43,086 - DEBUG -  Name 5 most common creational patterns.
+ 2020-01-08 22:29:43,086 - DEBUG -  Factory Method, Prototype, Singleton, Abstract Factory, Builder.
+ 2020-01-08 22:29:43,086 - DEBUG - 15389 }
+ 2020-01-08 22:29:43,086 - DEBUG - 15442 }
+ 2020-01-08 22:29:43,101 - DEBUG - 15581 }
+ 2020-01-08 22:29:43,101 - DEBUG - oop-behavioral-1
+ 2020-01-08 22:29:43,101 - DEBUG -  Name 11 most common behaviroal patterns.
+ 2020-01-08 22:29:43,101 - DEBUG -  Template Method, Strategy, Command, Memento, Mediator, State, Observer, Iterator,
+Chain of Responsibility, Interpreter, Visitor.
+ 2020-01-08 22:29:43,101 - DEBUG - 15603 }
+ 2020-01-08 22:29:43,101 - DEBUG - 15655 }
+ 2020-01-08 22:29:43,101 - DEBUG - 15731 }
+ 2020-01-08 22:29:43,101 - DEBUG - oop-structural-1
+ 2020-01-08 22:29:43,101 - DEBUG -  Name 7 most common structural patterns.
+ 2020-01-08 22:29:43,101 - DEBUG -  Adapter, Composite, Decorator, Proxy, Facade, Fly Weight, Bridge.
+ 2020-01-08 22:29:43,101 - DEBUG - 15753 }
+ 2020-01-08 22:29:43,101 - DEBUG - 15840 }
+ 2020-01-08 22:29:43,101 - DEBUG - 15880 }
+ 2020-01-08 22:29:43,101 - DEBUG - oop-structural-2
+ 2020-01-08 22:29:43,101 - DEBUG -  Name a very most common structural design pattern used in user interfaces.
+ 2020-01-08 22:29:43,101 - DEBUG -  Model View Controller or MVC.
+ 2020-01-08 22:29:43,101 - DEBUG - 15902 }
+ 2020-01-08 22:29:43,101 - DEBUG - 15936 }
+ 2020-01-08 22:29:43,101 - DEBUG - 16449 }
+ 2020-01-08 22:29:43,101 - DEBUG - oop-structural-3
+ 2020-01-08 22:29:43,101 - DEBUG -  Describe MVC pattern.
+ 2020-01-08 22:29:43,101 - DEBUG -  MVC separates Model which is the database or data files or data structures in memory from View  
+and Controller. View can be the reports or gui components. A view could also be data file types
+ such as JSON, CSV, XML or HTML. The controller might be commmand pattern or observer pattern. In the case 
+ of gui, the controller code and view code can be kept in same source file or classes. The idea is that 
+ generally views may be swapped or models may be swapped without affecting the other components.
+ 2020-01-08 22:29:43,101 - DEBUG - 16471 }
+ 2020-01-08 22:29:43,101 - DEBUG - 16511 }
+ 2020-01-08 22:29:43,101 - DEBUG - 16767 }
+ 2020-01-08 22:29:43,117 - DEBUG - oop-creational-2
+ 2020-01-08 22:29:43,117 - DEBUG -  What is the Factory Method?
+ 2020-01-08 22:29:43,117 - DEBUG -  Static mehod that returns an object of the Class typeor a subclass type. It may return a
+reference to an already created object for reuse. It may have more descriptive names that a 
+constructor which of course must be the same name as the class.
+ 2020-01-08 22:29:43,117 - DEBUG - 16789 }
+ 2020-01-08 22:29:43,117 - DEBUG - 16820 }
+ 2020-01-08 22:29:43,117 - DEBUG - 17060 }
+ 2020-01-08 22:29:43,117 - DEBUG - oop-creational-3
+ 2020-01-08 22:29:43,117 - DEBUG -  What is Prototype?
+ 2020-01-08 22:29:43,117 - DEBUG -  In Java the Class and new operator are examples of prototype. JavaScript has a prototype object
+for making classes. clone() method is also example of Prototype. This is basically making an instance object or
+copy of a base class.
+ 2020-01-08 22:29:43,117 - DEBUG - 17082 }
+ 2020-01-08 22:29:43,117 - DEBUG - 17113 }
+ 2020-01-08 22:29:43,117 - DEBUG - 17402 }
+ 2020-01-08 22:29:43,117 - DEBUG - oop-creational-4
+ 2020-01-08 22:29:43,117 - DEBUG -  What is Singleton?
+ 2020-01-08 22:29:43,117 - DEBUG -  No args constructor made private. Instead use a static getInstance() method. The class 
+will make a private instance of itself the first time getInstance() is called. After that getInstance()
+returns the sole instance of the class. Java Runtime class is an exaple of Singleton.
+ 2020-01-08 22:29:43,117 - DEBUG - 17424 }
+ 2020-01-08 22:29:43,117 - DEBUG - 17462 }
+ 2020-01-08 22:29:43,117 - DEBUG - 18095 }
+ 2020-01-08 22:29:43,117 - DEBUG - oop-creational-5
+ 2020-01-08 22:29:43,117 - DEBUG -  What is Abstract Factory?
+ 2020-01-08 22:29:43,117 - DEBUG -  Create a base abstract factory class which will be extended to make concrete factories. Factory
+has any number of createProduct()methods for making different products. These products extend a base
+product. In this way products can differ depending on the concrete factory that makes them. To add a 
+new line of products just build the new concrete products and concrete factory for the product line. An
+example of this might be a board game with unit types and factions. Each faction would have it's own concrete
+factory for getting units with faction imagry and other faction specs. Flyweight pattern uses factory design.
+ 2020-01-08 22:29:43,117 - DEBUG - 18117 }
+ 2020-01-08 22:29:43,132 - DEBUG - 18172 }
+ 2020-01-08 22:29:43,132 - DEBUG - 18510 }
+ 2020-01-08 22:29:43,132 - DEBUG - oop-creational-6
+ 2020-01-08 22:29:43,132 - DEBUG -  What is Builder creational design pattern?
+ 2020-01-08 22:29:43,132 - DEBUG -  Constructs a large complex object in steps. The representation of the ojbect can be one of 
+many. Used when parsing files or data. Java examples are Dialog boxes, StringBuilder, DocumentBuilder etc. This
+is used where there are many paramters for constructing an object. Can force immutability once the object is fully
+created.
+ 2020-01-08 22:29:43,132 - DEBUG - 18532 }
+ 2020-01-08 22:29:43,132 - DEBUG - 18595 }
+ 2020-01-08 22:29:43,132 - DEBUG - 18867 }
+ 2020-01-08 22:29:43,132 - DEBUG - oop-behavioral-2
+ 2020-01-08 22:29:43,132 - DEBUG -  What is Template Method behavioral design pattern?
+ 2020-01-08 22:29:43,132 - DEBUG -  Short answer is the Java Abstract Class. Some methods are declaired abstract and basic behavior is 
+defined by other methods. Unlike the Interface some of the basic implementation is already coded. Template
+Method uses inheritance to vary part of the algorithm.
+ 2020-01-08 22:29:43,132 - DEBUG - 18889 }
+ 2020-01-08 22:29:43,132 - DEBUG - 18945 }
+ 2020-01-08 22:29:43,132 - DEBUG - 19296 }
+ 2020-01-08 22:29:43,132 - DEBUG - oop-behavioral-3
+ 2020-01-08 22:29:43,132 - DEBUG -  What is Strategy behavioral design pattern?
+ 2020-01-08 22:29:43,132 - DEBUG -  Java Interface is an example of this pattern. Defines implementation to be supplied. Varying
+algorithms can be supplied for one interface. Algorithms can be swapped out. An example is Java Comparable 
+interface which has a compareTo(O) method. For example one implementation might be made for assending sort,
+and another for decending sort.
+ 2020-01-08 22:29:43,132 - DEBUG - 19318 }
+ 2020-01-08 22:29:43,132 - DEBUG - 19377 }
+ 2020-01-08 22:29:43,132 - DEBUG - 19655 }
+ 2020-01-08 22:29:43,132 - DEBUG - oop-behavioral-4
+ 2020-01-08 22:29:43,132 - DEBUG -  What is the Command behavioral design pattern?
+ 2020-01-08 22:29:43,132 - DEBUG -  A good example of this is in adding a Listener to a Button. Callback. Make a command 
+object with execute() method. Give the command to another class which will call the execute() method. Chain
+of Responisibility can use Command Pattern to execute a list of commands.
+ 2020-01-08 22:29:43,148 - DEBUG - 19677 }
+ 2020-01-08 22:29:43,148 - DEBUG - 19732 }
+ 2020-01-08 22:29:43,148 - DEBUG - 20102 }
+ 2020-01-08 22:29:43,148 - DEBUG - oop-behavioral-5
+ 2020-01-08 22:29:43,148 - DEBUG -  What is Memento behavioral design pattern?
+ 2020-01-08 22:29:43,148 - DEBUG -  A good example for Memento is undo/redo opertions in an editor. Memento captures
+an objects state so that it can be restored. Example is undo or rollback. Memento has 3 objectss, 
+Originator, Caretaker, and Memento. Originator knows how to store its state in a Memento object. Caretaker
+keeps Mememto objects and decided when to restore one on the Originator.
+ 2020-01-08 22:29:43,148 - DEBUG - 20124 }
+ 2020-01-08 22:29:43,148 - DEBUG - 20180 }
+ 2020-01-08 22:29:43,148 - DEBUG - 20560 }
+ 2020-01-08 22:29:43,148 - DEBUG - oop-behavioral-6
+ 2020-01-08 22:29:43,148 - DEBUG -  What is Mediator behavioral design pattern?
+ 2020-01-08 22:29:43,148 - DEBUG -  Where objects have a many to many relationship. Unix users to group mappings is an example. another
+example is air traffic control tower. Planes do not talk to each other but only to tower which talks to 
+all planes. Another example would be a dialog that talks to all it's components. If a component needs to message
+another component it does so via the dialog object.
+ 2020-01-08 22:29:43,148 - DEBUG - 20582 }
+ 2020-01-08 22:29:43,148 - DEBUG - 20635 }
+ 2020-01-08 22:29:43,148 - DEBUG - 20943 }
+ 2020-01-08 22:29:43,148 - DEBUG - oop-behavioral-7
+ 2020-01-08 22:29:43,148 - DEBUG -  What is State behavioral design pattern?
+ 2020-01-08 22:29:43,148 - DEBUG -  An object's behavior changes based on changes to it's state. Prime example is various edit 
+modes in text editors. State objects are often Singltons. Another example was state of a ceiling fan, low, med
+high and off. State of a vending machine, product in stock, change available, money deposited.
+ 2020-01-08 22:29:43,148 - DEBUG - 20965 }
+ 2020-01-08 22:29:43,148 - DEBUG - 21021 }
+ 2020-01-08 22:29:43,148 - DEBUG - 21455 }
+ 2020-01-08 22:29:43,148 - DEBUG - oop-behavioral-8
+ 2020-01-08 22:29:43,148 - DEBUG -  What is Observer behavioral design pattern?
+ 2020-01-08 22:29:43,164 - DEBUG -  One to many relationship. In user interfaces this can be listeners. A component can have any
+number of listeners. An object has a method to add observers. Observers have an update() method. This is 
+also like callback design. In HTML with JavaScript components can have multiple observers. One example is
+an auctioneer and bidders(observers). If one observer bids then the auctioneer notifies all observers of new
+high bid.
+ 2020-01-08 22:29:43,164 - DEBUG - 21477 }
+ 2020-01-08 22:29:43,164 - DEBUG - 21533 }
+ 2020-01-08 22:29:43,164 - DEBUG - 21799 }
+ 2020-01-08 22:29:43,164 - DEBUG - oop-behavioral-9
+ 2020-01-08 22:29:43,164 - DEBUG -  What is Iterator behavioral design pattern.
+ 2020-01-08 22:29:43,164 - DEBUG -  Define a hasNext() method on a collection. Define a next() method to get the next 
+item in the colleciton. The colleciton can have a method iterator() to return a fresh iterator of
+itself. Generally for each or for in or for of is prefered over Iterators.
+ 2020-01-08 22:29:43,164 - DEBUG - 21822 }
+ 2020-01-08 22:29:43,164 - DEBUG - 21892 }
+ 2020-01-08 22:29:43,164 - DEBUG - 22309 }
+ 2020-01-08 22:29:43,164 - DEBUG - oop-behavioral-10
+ 2020-01-08 22:29:43,164 - DEBUG -  What is Chain of Responsibilty behavioral design pattern?
+ 2020-01-08 22:29:43,164 - DEBUG -  A linked list of command objects. Each command wraps a command that preceded it. When the first or
+front command is called, it then calls the one it wraps. Only commands pertinent to the call at hand 
+will execute. Multiple commands may execute for a given call. Real world example is coin bank that sorts coins
+into stacks. Coins are sorted into stacks based on size, dime, penny, nickle, quarter, dollar.
+ 2020-01-08 22:29:43,164 - DEBUG - 22332 }
+ 2020-01-08 22:29:43,164 - DEBUG - 22391 }
+ 2020-01-08 22:29:43,164 - DEBUG - 22717 }
+ 2020-01-08 22:29:43,164 - DEBUG - oop-behavioral-11
+ 2020-01-08 22:29:43,164 - DEBUG -  What is Interpreter behavioral design pattern.
+ 2020-01-08 22:29:43,164 - DEBUG -  Maps a recursive grammar to a tree structure. You have composite nodes which is a rule that references 
+other rules or a terminal leaf node. The composite will have a solve or iterpret method. This uses Composite design
+pattern. A real world example is a musician interpreting sheet music notes. Notes are terminal.
+ 2020-01-08 22:29:43,164 - DEBUG - 22740 }
+ 2020-01-08 22:29:43,164 - DEBUG - 22799 }
+ 2020-01-08 22:29:43,164 - DEBUG - 23264 }
+ 2020-01-08 22:29:43,164 - DEBUG - oop-behavioral-12
+ 2020-01-08 22:29:43,164 - DEBUG -  What is the Visitor behavioral design pattern?
+ 2020-01-08 22:29:43,179 - DEBUG -  If you want to add behavior to an object without chanigng it. Add an accept(Visitor) method. Make a Visitor
+object with one or more visit() methods. Can have more than one visitor or call accept more than once with
+different visitors. Real world example is Cab Compnay, Customer and Cab Driver(Visitor) So Customer has accept(Driver) 
+and calls visit() on the Driver. More than one Driver could be dispatched by cab company for example closest available.
+ 2020-01-08 22:29:43,179 - DEBUG - 23286 }
+ 2020-01-08 22:29:43,179 - DEBUG - 23341 }
+ 2020-01-08 22:29:43,179 - DEBUG - 23654 }
+ 2020-01-08 22:29:43,179 - DEBUG - oop-structural-4
+ 2020-01-08 22:29:43,179 - DEBUG -  What is Adapter structural design pattern?
+ 2020-01-08 22:29:43,179 - DEBUG -  Converts the interface of a class into interface that is expected. A java example is iterator() or 
+asList(). The adapter would implement an interface and wrap the class it is adapting. It makes a class look
+and act like another kind of class. Real world examples are socket adapters and plug adapters.
+ 2020-01-08 22:29:43,179 - DEBUG - 23676 }
+ 2020-01-08 22:29:43,179 - DEBUG - 23733 }
+ 2020-01-08 22:29:43,179 - DEBUG - 24089 }
+ 2020-01-08 22:29:43,179 - DEBUG - oop-structural-5
+ 2020-01-08 22:29:43,179 - DEBUG -  What is Composite structural design pattern?
+ 2020-01-08 22:29:43,179 - DEBUG -  Recursive tree structure of objects that "has a" object or objects. A graphical user interface is such 
+a design. With Java Swing it was Frame, Panel, Component. With JavaFX it is Stage, Scene, Components. In HTML 
+it is <html><body><elements>. An xml document is also composite design. Directory structure on file system 
+is a composite design.
+ 2020-01-08 22:29:43,179 - DEBUG - 24111 }
+ 2020-01-08 22:29:43,179 - DEBUG - 24168 }
+ 2020-01-08 22:29:43,179 - DEBUG - 24552 }
+ 2020-01-08 22:29:43,179 - DEBUG - oop-structural-6
+ 2020-01-08 22:29:43,179 - DEBUG -  What is Decorator structural design pattern?
+ 2020-01-08 22:29:43,179 - DEBUG -  One to one composite design. One object constructs and wraps another object to enhance it's 
+capabilities or alter its function. IO Streams in Java are examples of decorators. A FileInputStream wraps
+a File. A BufferedInputStream can wrap an InputStream or a FileInputStream. Other examples of decorator can 
+be seen in Views in MVC. A DoubleLineBorder might wrap a Border.
+ 2020-01-08 22:29:43,179 - DEBUG - 24574 }
+ 2020-01-08 22:29:43,195 - DEBUG - 24627 }
+ 2020-01-08 22:29:43,195 - DEBUG - 24993 }
+ 2020-01-08 22:29:43,195 - DEBUG - oop-structural-7
+ 2020-01-08 22:29:43,195 - DEBUG -  What is Proxy structural design pattern?
+ 2020-01-08 22:29:43,195 - DEBUG -  RMI is a perfect example with Java. So you make an Interface and a class on each side of an
+internet connection implements it. The class on client side simply calls the same methods on the
+server side. The server side executes the logic and may or may not return some value to the 
+client side class.  A real world example is writing a check for payment.
+ 2020-01-08 22:29:43,195 - DEBUG - 25015 }
+ 2020-01-08 22:29:43,195 - DEBUG - 25069 }
+ 2020-01-08 22:29:43,195 - DEBUG - 25499 }
+ 2020-01-08 22:29:43,195 - DEBUG - oop-structural-8
+ 2020-01-08 22:29:43,195 - DEBUG -  What is Facade structural design pattern?
+ 2020-01-08 22:29:43,195 - DEBUG -  Wraps a complicated sub system with simpler interface. An example of a facade is dealing
+with customer service representative when placing an order. The representative knows about and handles
+all the complexities of the orders, and ordering process. One area where I might be tempted to create
+a facade is in dealing with complex tables in modern UI's. Facade defines a simpler inerface and does not
+add functionallity.
+ 2020-01-08 22:29:43,195 - DEBUG - 25521 }
+ 2020-01-08 22:29:43,195 - DEBUG - 25578 }
+ 2020-01-08 22:29:43,195 - DEBUG - 26137 }
+ 2020-01-08 22:29:43,195 - DEBUG - oop-structural-9
+ 2020-01-08 22:29:43,195 - DEBUG -  What is Flyweight structural design pattern?
+ 2020-01-08 22:29:43,195 - DEBUG -  An example of flyweight is the icons used in the folder tree to represent folders and different
+file types. Instead of having 100's image copies, One object holds the image and is retrieved over and over
+by window pain when needed by a factory. So you have 3 parts, a factory, a base class and a subclass for
+specific types. Flyweight objects have state dependent and state independent parts. The independend parts
+are used over and over or shared. I used this pattern for an RPG map composed of square tiles representing 
+terrain or other objects.
+ 2020-01-08 22:29:43,195 - DEBUG - 26160 }
+ 2020-01-08 22:29:43,195 - DEBUG - 26214 }
+ 2020-01-08 22:29:43,195 - DEBUG - 26746 }
+ 2020-01-08 22:29:43,195 - DEBUG - oop-structural-10
+ 2020-01-08 22:29:43,211 - DEBUG -  What is Bridge structural design pattern?
+ 2020-01-08 22:29:43,211 - DEBUG -  A house hold example is power switch. In a home you can have many types of switches, and different
+types of appliances to be switched on or off. You may have a pole switch, or a toggle switch or a dial 
+switch. You can have a light, or a fan or an outlet or anything on the switch. In OO design the abstraction 
+and implementation vary independently. This is like making one class and putting the behavior in a different 
+class. So the interface can vary with the first class and the behavior can vary with the 2nd class.
+ 2020-01-08 22:29:43,211 - DEBUG - 26780 }
+ 2020-01-08 22:29:43,211 - DEBUG - 26836 }
+ 2020-01-08 22:29:43,211 - DEBUG - 26978 }
+ 2020-01-08 22:29:43,211 - DEBUG - python-datatypes-strings-1
+ 2020-01-08 22:29:43,211 - DEBUG -  Describe a basic python strings definition.
+ 2020-01-08 22:29:43,211 - DEBUG -  use 'xxxx' or "xxxx" . Created with mystringvarname = 'Hello world' .
+use \ for escape characters such as \n newline \" or \' etc.
+ 2020-01-08 22:29:43,211 - DEBUG - 27011 }
+ 2020-01-08 22:29:43,211 - DEBUG - 27071 }
+ 2020-01-08 22:29:43,211 - DEBUG - 27139 }
+ 2020-01-08 22:29:43,211 - DEBUG - python-datatypes-strings-2
+ 2020-01-08 22:29:43,211 - DEBUG -  How can strings be defined over multiple lines?
+ 2020-01-08 22:29:43,211 - DEBUG - 
+""" String can
+cover multiple lines
+"""  or '''  and '''
+ 2020-01-08 22:29:43,211 - DEBUG - 27172 }
+ 2020-01-08 22:29:43,211 - DEBUG - 27245 }
+ 2020-01-08 22:29:43,211 - DEBUG - 27407 }
+ 2020-01-08 22:29:43,211 - DEBUG - python-datatypes-strings-3
+ 2020-01-08 22:29:43,211 - DEBUG -  How can you get a single char from a string? Or a substring?
+ 2020-01-08 22:29:43,211 - DEBUG - 
+They can be treated like an array or list '1234'[0] is '1' .
+mystring='12345'  so mystring[:2] is '12'  and mystring[3:] is '45'
+mystring[1:3] is '23'
+ 2020-01-08 22:29:43,226 - DEBUG - 27440 }
+ 2020-01-08 22:29:43,226 - DEBUG - 27500 }
+ 2020-01-08 22:29:43,226 - DEBUG - 27598 }
+ 2020-01-08 22:29:43,226 - DEBUG - python-datatypes-strings-4
+ 2020-01-08 22:29:43,226 - DEBUG -  How do you iterator over the chars of a string?
+ 2020-01-08 22:29:43,226 - DEBUG -  You can use a string like a list in a for in statement
+for c in mystring:
+    print(c)
+ 2020-01-08 22:29:43,226 - DEBUG - 27632 }
+ 2020-01-08 22:29:43,226 - DEBUG - 27683 }
+ 2020-01-08 22:29:43,226 - DEBUG - 27713 }
+ 2020-01-08 22:29:43,226 - DEBUG - python-datatypes-strings-5
+ 2020-01-08 22:29:43,226 - DEBUG -  How do you get the lenght of a string?
+ 2020-01-08 22:29:43,226 - DEBUG -  len(mystring) is 5
+ 2020-01-08 22:29:43,226 - DEBUG - 27746 }
+ 2020-01-08 22:29:43,226 - DEBUG - 27788 }
+ 2020-01-08 22:29:43,226 - DEBUG - 27875 }
+ 2020-01-08 22:29:43,226 - DEBUG - python-datatypes-strings-6
+ 2020-01-08 22:29:43,226 - DEBUG -  How do you merge two strings?
+ 2020-01-08 22:29:43,226 - DEBUG -  use + to concatinate strings. 'Hello'+'World'
+ Also can use a join() method
+ 2020-01-08 22:29:43,226 - DEBUG - 27910 }
+ 2020-01-08 22:29:43,226 - DEBUG - 27959 }
+ 2020-01-08 22:29:43,226 - DEBUG - 28037 }
+ 2020-01-08 22:29:43,226 - DEBUG - python-datatypes-strings-7
+ 2020-01-08 22:29:43,226 - DEBUG -  How do you use a number in a string?
+ 2020-01-08 22:29:43,226 - DEBUG -  use str(myint) or str(myfloat) to convert int or float to string.
+ 2020-01-08 22:29:43,226 - DEBUG - 28072 }
+ 2020-01-08 22:29:43,226 - DEBUG - 28151 }
+ 2020-01-08 22:29:43,226 - DEBUG - 28182 }
+ 2020-01-08 22:29:43,242 - DEBUG - python-datatypes-strings-8
+ 2020-01-08 22:29:43,242 - DEBUG -  How do you divide a string by some delimiter such as ',' a string?
+ 2020-01-08 22:29:43,242 - DEBUG -  mystring.split(',')
+ 2020-01-08 22:29:43,242 - DEBUG - 28215 }
+ 2020-01-08 22:29:43,242 - DEBUG - 28270 }
+ 2020-01-08 22:29:43,242 - DEBUG - 28298 }
+ 2020-01-08 22:29:43,242 - DEBUG - python-datatypes-strings-9
+ 2020-01-08 22:29:43,242 - DEBUG -  How do you trim white space from a string?
+ 2020-01-08 22:29:43,242 - DEBUG -  mystring.strip()
+ 2020-01-08 22:29:43,242 - DEBUG - 28332 }
+ 2020-01-08 22:29:43,242 - DEBUG - 28392 }
+ 2020-01-08 22:29:43,242 - DEBUG - 28444 }
+ 2020-01-08 22:29:43,242 - DEBUG - python-datatypes-strings-10
+ 2020-01-08 22:29:43,242 - DEBUG -  How do you convert a string to an int or float?
+ 2020-01-08 22:29:43,242 - DEBUG -  int(mystringint) or float(mystringfloat)
+ 2020-01-08 22:29:43,242 - DEBUG - 28477 }
+ 2020-01-08 22:29:43,242 - DEBUG - 28523 }
+ 2020-01-08 22:29:43,242 - DEBUG - 28638 }
+ 2020-01-08 22:29:43,242 - DEBUG - python-datatypes-numbers-1
+ 2020-01-08 22:29:43,242 - DEBUG -  Describe types of python numbers.
+ 2020-01-08 22:29:43,242 - DEBUG -  There is int, float and complex numbers.
+   int 55   float 3.25  complex is 5+3j where 3j is imaginary!
+ 2020-01-08 22:29:43,242 - DEBUG - 28671 }
+ 2020-01-08 22:29:43,242 - DEBUG - 28743 }
+ 2020-01-08 22:29:43,257 - DEBUG - 28891 }
+ 2020-01-08 22:29:43,260 - DEBUG - python-datatypes-numbers-2
+ 2020-01-08 22:29:43,260 - DEBUG -  How do you work with really precise real numbers in python?
+ 2020-01-08 22:29:43,260 - DEBUG -  Use decimal module.
+Decimal is for really long precise numbes  1.01002039487233987290374972374987239879238749082387
+decimal.Decimal(1.1)
+ 2020-01-08 22:29:43,260 - DEBUG - 28924 }
+ 2020-01-08 22:29:43,260 - DEBUG - 28999 }
+ 2020-01-08 22:29:43,260 - DEBUG - 29093 }
+ 2020-01-08 22:29:43,260 - DEBUG - python-datatypes-numbers-3
+ 2020-01-08 22:29:43,272 - DEBUG -  How can you work with say fractional measurements with python?
+ 2020-01-08 22:29:43,276 - DEBUG -  Use fractions module
+fractions.Fraction(1,2) is 1/2
+fractions.Fraction(1.5) is 3/2
+ 2020-01-08 22:29:43,276 - DEBUG - 29126 }
+ 2020-01-08 22:29:43,276 - DEBUG - 29177 }
+ 2020-01-08 22:29:43,276 - DEBUG - 29199 }
+ 2020-01-08 22:29:43,276 - DEBUG - python-datatypes-numbers-4
+ 2020-01-08 22:29:43,276 - DEBUG -  How do the absolute value of a number?
+ 2020-01-08 22:29:43,280 - DEBUG -  abs(mynum)
+ 2020-01-08 22:29:43,280 - DEBUG - 29232 }
+ 2020-01-08 22:29:43,280 - DEBUG - 29282 }
+ 2020-01-08 22:29:43,280 - DEBUG - 29311 }
+ 2020-01-08 22:29:43,280 - DEBUG - python-datatypes-numbers-5
+ 2020-01-08 22:29:43,280 - DEBUG -  How do you raise a number to a power?
+ 2020-01-08 22:29:43,284 - DEBUG -  pow(power,number)
+ 2020-01-08 22:29:43,284 - DEBUG - 29344 }
+ 2020-01-08 22:29:43,284 - DEBUG - 29388 }
+ 2020-01-08 22:29:43,284 - DEBUG - 29424 }
+ 2020-01-08 22:29:43,284 - DEBUG - python-datatypes-numbers-6
+ 2020-01-08 22:29:43,284 - DEBUG -  How do you round a real number?
+ 2020-01-08 22:29:43,284 - DEBUG -  round(num,decimalplaces)
+ 2020-01-08 22:29:43,284 - DEBUG - 29457 }
+ 2020-01-08 22:29:43,284 - DEBUG - 29511 }
+ 2020-01-08 22:29:43,284 - DEBUG - 29679 }
+ 2020-01-08 22:29:43,284 - DEBUG - python-datatypes-numbers-7
+ 2020-01-08 22:29:43,284 - DEBUG -  Whats involved in getting random numbers?
+ 2020-01-08 22:29:43,284 - DEBUG -  use random module
+ use random.seed() first
+ then random.Random() returns next float  0.0 to 1.0
+ or random.randint(start,end) so randint(0,100) is 0 to 100
+ 2020-01-08 22:29:43,284 - DEBUG - 29693 }
+ 2020-01-08 22:29:43,284 - DEBUG - 29766 }
+ 2020-01-08 22:29:43,284 - DEBUG - 29835 }
+ 2020-01-08 22:29:43,284 - DEBUG - uml-1
+ 2020-01-08 22:29:43,284 - DEBUG -  What are the two main types one one subtype of uml diagrams?
+ 2020-01-08 22:29:43,284 - DEBUG -  structure, behavior and interaction is subtype of behavior
+ 2020-01-08 22:29:43,284 - DEBUG - 29846 }
+ 2020-01-08 22:29:43,284 - DEBUG - 29890 }
+ 2020-01-08 22:29:43,284 - DEBUG - 29987 }
+ 2020-01-08 22:29:43,284 - DEBUG - uml-2
+ 2020-01-08 22:29:43,284 - DEBUG -  What is an interaction diagram?
+ 2020-01-08 22:29:43,284 - DEBUG -  They describe how groups of objects collaborate in some behavior, senario or use case.
+ 2020-01-08 22:29:43,284 - DEBUG - 29998 }
+ 2020-01-08 22:29:43,284 - DEBUG - 30039 }
+ 2020-01-08 22:29:43,299 - DEBUG - 30349 }
+ 2020-01-08 22:29:43,299 - DEBUG - uml-3
+ 2020-01-08 22:29:43,299 - DEBUG -  What is a structure diagram?
+ 2020-01-08 22:29:43,299 - DEBUG -  A structure diagram is a conceptual modeling tool used to document the different structures 
 that make up a system such as a database or an application. It shows the hierarchy or structure of the 
 different components or modules of the system and shows how they connect and interact with each other.
- 2020-01-08 16:43:51,742 - DEBUG - 676 }
- 2020-01-08 16:43:51,742 - DEBUG - 716 }
- 2020-01-08 16:43:51,743 - DEBUG - 830 }
- 2020-01-08 16:43:51,743 - DEBUG - uml-4
- 2020-01-08 16:43:51,744 - DEBUG -  What is a behavior diagram?
- 2020-01-08 16:43:51,744 - DEBUG -  UML behavioral diagrams visualize, specify, construct, and document the dynamic aspects
+ 2020-01-08 22:29:43,299 - DEBUG - 30360 }
+ 2020-01-08 22:29:43,299 - DEBUG - 30400 }
+ 2020-01-08 22:29:43,299 - DEBUG - 30514 }
+ 2020-01-08 22:29:43,299 - DEBUG - uml-4
+ 2020-01-08 22:29:43,299 - DEBUG -  What is a behavior diagram?
+ 2020-01-08 22:29:43,299 - DEBUG -  UML behavioral diagrams visualize, specify, construct, and document the dynamic aspects
  of a system.
- 2020-01-08 16:43:51,744 - DEBUG - 851 }
- 2020-01-08 16:43:51,745 - DEBUG - 902 }
- 2020-01-08 16:43:51,745 - DEBUG - 984 }
- 2020-01-08 16:43:51,746 - DEBUG - uml-structure-1
- 2020-01-08 16:43:51,746 - DEBUG -  Name the seven UML structure diagrams.
- 2020-01-08 16:43:51,746 - DEBUG -  Package, Class, Object, Component, Composite, Collaboration, Deployment
- 2020-01-08 16:43:51,747 - DEBUG - 1004 }
- 2020-01-08 16:43:51,747 - DEBUG - 1069 }
- 2020-01-08 16:43:51,748 - DEBUG - 1129 }
- 2020-01-08 16:43:51,749 - DEBUG - uml-behavior-1
- 2020-01-08 16:43:51,749 - DEBUG -  Name the 3 UML behavior diagrams and the one subtype
- 2020-01-08 16:43:51,750 - DEBUG -  Activity, Use Case, State and subtype Interaction
- 2020-01-08 16:43:51,750 - DEBUG - 1152 }
- 2020-01-08 16:43:51,751 - DEBUG - 1209 }
- 2020-01-08 16:43:51,752 - DEBUG - 1274 }
- 2020-01-08 16:43:51,752 - DEBUG - uml-interaction-1
- 2020-01-08 16:43:51,753 - DEBUG -  Name the 4 types of UML interaction diagrams
- 2020-01-08 16:43:51,753 - DEBUG -  Sequence, Timing, Communications, Interaction Overview
- 2020-01-08 16:43:51,754 - DEBUG - 1285 }
- 2020-01-08 16:43:51,754 - DEBUG - 1329 }
- 2020-01-08 16:43:51,755 - DEBUG - 1363 }
- 2020-01-08 16:43:51,755 - DEBUG - uml-2
- 2020-01-08 16:43:51,756 - DEBUG -  How many uml digrams are there?
- 2020-01-08 16:43:51,756 - DEBUG -  Around 14 give or take.
- 2020-01-08 16:43:51,757 - DEBUG - 1384 }
- 2020-01-08 16:43:51,757 - DEBUG - 1435 }
- 2020-01-08 16:43:51,758 - DEBUG - 1683 }
- 2020-01-08 16:43:51,758 - DEBUG - uml-structure-2
- 2020-01-08 16:43:51,758 - DEBUG -  Describe the structure Package diagram
- 2020-01-08 16:43:51,758 - DEBUG -  Shows package grouping of classes usually in a symbol that looks like a folder 
+ 2020-01-08 22:29:43,299 - DEBUG - 30535 }
+ 2020-01-08 22:29:43,299 - DEBUG - 30586 }
+ 2020-01-08 22:29:43,299 - DEBUG - 30668 }
+ 2020-01-08 22:29:43,299 - DEBUG - uml-structure-1
+ 2020-01-08 22:29:43,299 - DEBUG -  Name the seven UML structure diagrams.
+ 2020-01-08 22:29:43,299 - DEBUG -  Package, Class, Object, Component, Composite, Collaboration, Deployment
+ 2020-01-08 22:29:43,299 - DEBUG - 30688 }
+ 2020-01-08 22:29:43,299 - DEBUG - 30753 }
+ 2020-01-08 22:29:43,299 - DEBUG - 30813 }
+ 2020-01-08 22:29:43,299 - DEBUG - uml-behavior-1
+ 2020-01-08 22:29:43,299 - DEBUG -  Name the 3 UML behavior diagrams and the one subtype
+ 2020-01-08 22:29:43,299 - DEBUG -  Activity, Use Case, State and subtype Interaction
+ 2020-01-08 22:29:43,315 - DEBUG - 30836 }
+ 2020-01-08 22:29:43,315 - DEBUG - 30893 }
+ 2020-01-08 22:29:43,315 - DEBUG - 30958 }
+ 2020-01-08 22:29:43,315 - DEBUG - uml-interaction-1
+ 2020-01-08 22:29:43,315 - DEBUG -  Name the 4 types of UML interaction diagrams
+ 2020-01-08 22:29:43,315 - DEBUG -  Sequence, Timing, Communications, Interaction Overview
+ 2020-01-08 22:29:43,315 - DEBUG - 30969 }
+ 2020-01-08 22:29:43,315 - DEBUG - 31013 }
+ 2020-01-08 22:29:43,315 - DEBUG - 31047 }
+ 2020-01-08 22:29:43,315 - DEBUG - uml-2
+ 2020-01-08 22:29:43,315 - DEBUG -  How many uml digrams are there?
+ 2020-01-08 22:29:43,315 - DEBUG -  Around 14 give or take.
+ 2020-01-08 22:29:43,315 - DEBUG - 31068 }
+ 2020-01-08 22:29:43,315 - DEBUG - 31119 }
+ 2020-01-08 22:29:43,315 - DEBUG - 31367 }
+ 2020-01-08 22:29:43,315 - DEBUG - uml-structure-2
+ 2020-01-08 22:29:43,315 - DEBUG -  Describe the structure Package diagram
+ 2020-01-08 22:29:43,315 - DEBUG -  Shows package grouping of classes usually in a symbol that looks like a folder 
 with tab. Packages can implement an inteface or package. Dashed lines with arrows
 shows dependencies. A package symbol can be nested within a package symbol.
- 2020-01-08 16:43:51,758 - DEBUG - 1704 }
- 2020-01-08 16:43:51,758 - DEBUG - 1754 }
- 2020-01-08 16:43:51,758 - DEBUG - 2027 }
- 2020-01-08 16:43:51,758 - DEBUG - uml-structure-3
- 2020-01-08 16:43:51,758 - DEBUG -  Describe the structure Class diagram.
- 2020-01-08 16:43:51,758 - DEBUG -  Have boxes that represent classes with name, properties which
+ 2020-01-08 22:29:43,315 - DEBUG - 31388 }
+ 2020-01-08 22:29:43,315 - DEBUG - 31438 }
+ 2020-01-08 22:29:43,331 - DEBUG - 31711 }
+ 2020-01-08 22:29:43,331 - DEBUG - uml-structure-3
+ 2020-01-08 22:29:43,331 - DEBUG -  Describe the structure Class diagram.
+ 2020-01-08 22:29:43,331 - DEBUG -  Have boxes that represent classes with name, properties which
 are attributes and opeartions. Various association lines with different arrows
 show how classes interelate. Keywords can describe things. Multiplicity is where
 thee is 0, 0..#, 0..* or 1..#, 1..* etc.
- 2020-01-08 16:43:51,758 - DEBUG - 2048 }
- 2020-01-08 16:43:51,758 - DEBUG - 2099 }
- 2020-01-08 16:43:51,758 - DEBUG - 2233 }
- 2020-01-08 16:43:51,758 - DEBUG - uml-structure-4
- 2020-01-08 16:43:51,758 - DEBUG -  Describe the structure Object diagram.
- 2020-01-08 16:43:51,758 - DEBUG -  Snapshot of objects in a system at a point in time. Boxes that show objectname:classname and
+ 2020-01-08 22:29:43,331 - DEBUG - 31732 }
+ 2020-01-08 22:29:43,331 - DEBUG - 31783 }
+ 2020-01-08 22:29:43,331 - DEBUG - 31917 }
+ 2020-01-08 22:29:43,331 - DEBUG - uml-structure-4
+ 2020-01-08 22:29:43,331 - DEBUG -  Describe the structure Object diagram.
+ 2020-01-08 22:29:43,331 - DEBUG -  Snapshot of objects in a system at a point in time. Boxes that show objectname:classname and
 name=value for fields or data.
- 2020-01-08 16:43:51,758 - DEBUG - 2254 }
- 2020-01-08 16:43:51,758 - DEBUG - 2308 }
- 2020-01-08 16:43:51,758 - DEBUG - 2560 }
- 2020-01-08 16:43:51,758 - DEBUG - uml-structure-5
- 2020-01-08 16:43:51,758 - DEBUG -  Describe the structure Component diagram.
- 2020-01-08 16:43:51,758 - DEBUG - Use a box with symbol that looks like a plug. Also use assocition lines with round ciricle in 
+ 2020-01-08 22:29:43,331 - DEBUG - 31938 }
+ 2020-01-08 22:29:43,331 - DEBUG - 31992 }
+ 2020-01-08 22:29:43,331 - DEBUG - 32244 }
+ 2020-01-08 22:29:43,331 - DEBUG - uml-structure-5
+ 2020-01-08 22:29:43,331 - DEBUG -  Describe the structure Component diagram.
+ 2020-01-08 22:29:43,331 - DEBUG - Use a box with symbol that looks like a plug. Also use assocition lines with round ciricle in 
 half circle socket. Can be nested. Use :somename[value] in box. May have ports or squares on sides where 
 connectors come in. Similar to composite.
- 2020-01-08 16:43:51,758 - DEBUG - 2581 }
- 2020-01-08 16:43:51,758 - DEBUG - 2635 }
- 2020-01-08 16:43:51,758 - DEBUG - 2972 }
- 2020-01-08 16:43:51,758 - DEBUG - uml-structure-6
- 2020-01-08 16:43:51,758 - DEBUG -  Describe the structure Composite diagram.
- 2020-01-08 16:43:51,774 - DEBUG -  Uses box with lolipop lines connecting to box or half ciricle lolipops connection to box.
+ 2020-01-08 22:29:43,331 - DEBUG - 32265 }
+ 2020-01-08 22:29:43,331 - DEBUG - 32319 }
+ 2020-01-08 22:29:43,331 - DEBUG - 32656 }
+ 2020-01-08 22:29:43,331 - DEBUG - uml-structure-6
+ 2020-01-08 22:29:43,331 - DEBUG -  Describe the structure Composite diagram.
+ 2020-01-08 22:29:43,331 - DEBUG -  Uses box with lolipop lines connecting to box or half ciricle lolipops connection to box.
 Circle lolipops are controls and half circle are input/output. These boxes can be nested and there
 maybe be control flow association lines called connectors. May have little squares on the sides of
 box called ports. Similar to Component
- 2020-01-08 16:43:51,774 - DEBUG - 2993 }
- 2020-01-08 16:43:51,774 - DEBUG - 3050 }
- 2020-01-08 16:43:51,774 - DEBUG - 3238 }
- 2020-01-08 16:43:51,774 - DEBUG - uml-structure-7
- 2020-01-08 16:43:51,774 - DEBUG -  Describe the structure Collaboration diagram
- 2020-01-08 16:43:51,774 - DEBUG -  Collaboration is UML 1. Mostly boxes with associations and mutipliticy.
+ 2020-01-08 22:29:43,346 - DEBUG - 32677 }
+ 2020-01-08 22:29:43,346 - DEBUG - 32734 }
+ 2020-01-08 22:29:43,346 - DEBUG - 32922 }
+ 2020-01-08 22:29:43,346 - DEBUG - uml-structure-7
+ 2020-01-08 22:29:43,346 - DEBUG -  Describe the structure Collaboration diagram
+ 2020-01-08 22:29:43,346 - DEBUG -  Collaboration is UML 1. Mostly boxes with associations and mutipliticy.
 Has no flow or arrows and a dashed circle or lines that show collaboration occurance.
 Boxes name roles.
- 2020-01-08 16:43:51,774 - DEBUG - 3259 }
- 2020-01-08 16:43:51,774 - DEBUG - 3314 }
- 2020-01-08 16:43:51,790 - DEBUG - 3622 }
- 2020-01-08 16:43:51,790 - DEBUG - uml-structure-8
- 2020-01-08 16:43:51,790 - DEBUG -  Describe the structure Deployment diagram.
- 2020-01-08 16:43:51,790 - DEBUG -  These diagrams show communications paths between parts of a system. And show the 
+ 2020-01-08 22:29:43,346 - DEBUG - 32943 }
+ 2020-01-08 22:29:43,346 - DEBUG - 32998 }
+ 2020-01-08 22:29:43,346 - DEBUG - 33306 }
+ 2020-01-08 22:29:43,346 - DEBUG - uml-structure-8
+ 2020-01-08 22:29:43,346 - DEBUG -  Describe the structure Deployment diagram.
+ 2020-01-08 22:29:43,346 - DEBUG -  These diagrams show communications paths between parts of a system. And show the 
 parts of the system in a 3d box for hardware and other or 3d cylinder for data stores. They can
 show artifacts like executables, and containers or execution enviroments. Also 
 deployment files and operating systems.
- 2020-01-08 16:43:51,790 - DEBUG - 3642 }
- 2020-01-08 16:43:51,790 - DEBUG - 3694 }
- 2020-01-08 16:43:51,790 - DEBUG - 3860 }
- 2020-01-08 16:43:51,790 - DEBUG - uml-behavior-1
- 2020-01-08 16:43:51,790 - DEBUG -  Describe the behavior Activity diagram.
- 2020-01-08 16:43:51,790 - DEBUG -  Activity diagrams describe procedural logic, business processs and work flow. These
+ 2020-01-08 22:29:43,346 - DEBUG - 33326 }
+ 2020-01-08 22:29:43,346 - DEBUG - 33378 }
+ 2020-01-08 22:29:43,346 - DEBUG - 33544 }
+ 2020-01-08 22:29:43,346 - DEBUG - uml-behavior-1
+ 2020-01-08 22:29:43,346 - DEBUG -  Describe the behavior Activity diagram.
+ 2020-01-08 22:29:43,346 - DEBUG -  Activity diagrams describe procedural logic, business processs and work flow. These
  are reminicent of flow charts. However they support parallel behavior.
- 2020-01-08 16:43:51,790 - DEBUG - 3880 }
- 2020-01-08 16:43:51,790 - DEBUG - 3932 }
- 2020-01-08 16:43:51,790 - DEBUG - 4177 }
- 2020-01-08 16:43:51,790 - DEBUG - uml-behavior-2
- 2020-01-08 16:43:51,790 - DEBUG -  Describe the behavior Use Case diagram.
- 2020-01-08 16:43:51,790 - DEBUG -  These capture the functional requirements of a system. Describe users of a system 
+ 2020-01-08 22:29:43,346 - DEBUG - 33564 }
+ 2020-01-08 22:29:43,346 - DEBUG - 33616 }
+ 2020-01-08 22:29:43,346 - DEBUG - 33861 }
+ 2020-01-08 22:29:43,362 - DEBUG - uml-behavior-2
+ 2020-01-08 22:29:43,362 - DEBUG -  Describe the behavior Use Case diagram.
+ 2020-01-08 22:29:43,362 - DEBUG -  These capture the functional requirements of a system. Describe users of a system 
 and interaction with the system itself. Uses a senario which are steps that a user takes to
 interact with the system. Users are actors that play roles.
- 2020-01-08 16:43:51,790 - DEBUG - 4197 }
- 2020-01-08 16:43:51,790 - DEBUG - 4246 }
- 2020-01-08 16:43:51,790 - DEBUG - 4552 }
- 2020-01-08 16:43:51,790 - DEBUG - uml-behavior-3
- 2020-01-08 16:43:51,790 - DEBUG -  Describe the behavior State diagram.
- 2020-01-08 16:43:51,790 - DEBUG -  State machine diagrams show changing states of objects. You might draw a state 
+ 2020-01-08 22:29:43,362 - DEBUG - 33881 }
+ 2020-01-08 22:29:43,362 - DEBUG - 33930 }
+ 2020-01-08 22:29:43,362 - DEBUG - 34236 }
+ 2020-01-08 22:29:43,362 - DEBUG - uml-behavior-3
+ 2020-01-08 22:29:43,362 - DEBUG -  Describe the behavior State diagram.
+ 2020-01-08 22:29:43,362 - DEBUG -  State machine diagrams show changing states of objects. You might draw a state 
 machine diagram to show the lifetime behavior of a single object. They use flow lines thats
 show flow of change in state, not flow of execution. You can have physical or activity states. Can
 have concurrent states.
- 2020-01-08 16:43:51,790 - DEBUG - 4575 }
- 2020-01-08 16:43:51,790 - DEBUG - 4630 }
- 2020-01-08 16:43:51,805 - DEBUG - 4788 }
- 2020-01-08 16:43:51,805 - DEBUG - uml-interaction-2
- 2020-01-08 16:43:51,805 - DEBUG -  Describe the interaction Sequence diagram.
- 2020-01-08 16:43:51,805 - DEBUG -  Captures the behavior of a single senario. Show messages that are passed
+ 2020-01-08 22:29:43,362 - DEBUG - 34259 }
+ 2020-01-08 22:29:43,362 - DEBUG - 34314 }
+ 2020-01-08 22:29:43,362 - DEBUG - 34472 }
+ 2020-01-08 22:29:43,362 - DEBUG - uml-interaction-2
+ 2020-01-08 22:29:43,362 - DEBUG -  Describe the interaction Sequence diagram.
+ 2020-01-08 22:29:43,362 - DEBUG -  Captures the behavior of a single senario. Show messages that are passed
 between objects in a given use case. This resembles a call trace diagram.
- 2020-01-08 16:43:51,805 - DEBUG - 4811 }
- 2020-01-08 16:43:51,805 - DEBUG - 4864 }
- 2020-01-08 16:43:51,805 - DEBUG - 5114 }
- 2020-01-08 16:43:51,805 - DEBUG - uml-interaction-3
- 2020-01-08 16:43:51,805 - DEBUG -  Describe the interaction Timing diagram.
- 2020-01-08 16:43:51,805 - DEBUG -  Used a lot in electronic engineering. Focus on timing constraints for a single object
+ 2020-01-08 22:29:43,362 - DEBUG - 34495 }
+ 2020-01-08 22:29:43,362 - DEBUG - 34548 }
+ 2020-01-08 22:29:43,362 - DEBUG - 34798 }
+ 2020-01-08 22:29:43,362 - DEBUG - uml-interaction-3
+ 2020-01-08 22:29:43,362 - DEBUG -  Describe the interaction Timing diagram.
+ 2020-01-08 22:29:43,362 - DEBUG -  Used a lot in electronic engineering. Focus on timing constraints for a single object
 or more usefully for a bunch of objects. Shows a horizontal time line and list state changes or
 activities with time shown in (s)econds or (m)inutes etc.
- 2020-01-08 16:43:51,805 - DEBUG - 5137 }
- 2020-01-08 16:43:51,805 - DEBUG - 5198 }
- 2020-01-08 16:43:51,805 - DEBUG - 5469 }
- 2020-01-08 16:43:51,805 - DEBUG - uml-interaction-4
- 2020-01-08 16:43:51,805 - DEBUG -  Describe the interaction Communications diagram.
- 2020-01-08 16:43:51,805 - DEBUG -  Emphasises data links between various participants in the diagram. Like sequence but 
+ 2020-01-08 22:29:43,378 - DEBUG - 34821 }
+ 2020-01-08 22:29:43,378 - DEBUG - 34882 }
+ 2020-01-08 22:29:43,378 - DEBUG - 35153 }
+ 2020-01-08 22:29:43,378 - DEBUG - uml-interaction-4
+ 2020-01-08 22:29:43,378 - DEBUG -  Describe the interaction Communications diagram.
+ 2020-01-08 22:29:43,378 - DEBUG -  Emphasises data links between various participants in the diagram. Like sequence but 
 uses boxes with arrowed lines to show direction of communication. Uses numbers 1, 1.1, 1.5.2 etc 
 to show steps or sequence. Boxes can be placed anywhere around the diagram.
- 2020-01-08 16:43:51,805 - DEBUG - 5492 }
- 2020-01-08 16:43:51,805 - DEBUG - 5559 }
- 2020-01-08 16:43:51,805 - DEBUG - 5717 }
- 2020-01-08 16:43:51,805 - DEBUG - uml-interaction-5
- 2020-01-08 16:43:51,805 - DEBUG -  Describe the interaction Interaction Overview daigram.
- 2020-01-08 16:43:51,805 - DEBUG -  Combination of Activity and Sequnece diagrams. Can be show as Activity 
+ 2020-01-08 22:29:43,378 - DEBUG - 35176 }
+ 2020-01-08 22:29:43,378 - DEBUG - 35243 }
+ 2020-01-08 22:29:43,378 - DEBUG - 35401 }
+ 2020-01-08 22:29:43,378 - DEBUG - uml-interaction-5
+ 2020-01-08 22:29:43,378 - DEBUG -  Describe the interaction Interaction Overview daigram.
+ 2020-01-08 22:29:43,378 - DEBUG -  Combination of Activity and Sequnece diagrams. Can be show as Activity 
 diagram with Sequnece diagrams or Sequinece diagrams with Activity digrams.
- 2020-01-08 16:43:51,805 - DEBUG - algo_cards
- 2020-01-08 16:43:51,805 - DEBUG - cards
- 2020-01-08 16:43:51,821 - DEBUG - data_struct_cards
- 2020-01-08 16:43:51,821 - DEBUG - oop_cards
- 2020-01-08 16:43:51,821 - DEBUG - testcycle1
- 2020-01-08 16:43:51,821 - DEBUG - uml_cards
- 2020-01-08 16:43:51,821 - DEBUG - install
- 2020-01-08 16:43:51,821 - DEBUG - leitner_log
- 2020-01-08 16:43:51,821 - DEBUG - qui
- 2020-01-08 16:43:51,821 - DEBUG - setu
- 2020-01-08 16:43:51,821 - DEBUG - None
- 2020-01-08 16:43:51,821 - DEBUG - quizs\
- 2020-01-08 16:43:51,821 - DEBUG - No Test Cycle File Found. Creating new Cycle 1.
- 2020-01-08 16:43:51,821 - DEBUG - Number of cards 20
- 2020-01-08 16:43:51,821 - DEBUG - ['uml-1', 'uml-2', 'uml-3', 'uml-4', 'uml-structure-1', 'uml-behavior-1', 'uml-interaction-1', 'uml-structure-2', 'uml-structure-3', 'uml-structure-4', 'uml-structure-5', 'uml-structure-6', 'uml-structure-7', 'uml-structure-8', 'uml-behavior-2', 'uml-behavior-3', 'uml-interaction-2', 'uml-interaction-3', 'uml-interaction-4', 'uml-interaction-5']
- 2020-01-08 16:43:51,821 - DEBUG - Done making ids
- 2020-01-08 16:43:51,821 - DEBUG - Loading cards into Box1
- 2020-01-08 16:43:51,821 - DEBUG - Set Cards to Box1
- 2020-01-08 16:43:51,821 - DEBUG - Made TestCycle
- 2020-01-08 16:43:51,821 - DEBUG - Making box1
- 2020-01-08 16:43:51,821 - DEBUG - Making box2
- 2020-01-08 16:43:51,836 - DEBUG - Making box3
- 2020-01-08 16:43:51,838 - DEBUG - Making box4
- 2020-01-08 16:43:51,839 - DEBUG - Making box5
- 2020-01-08 16:43:51,841 - DEBUG - Making box6
+ 2020-01-08 22:29:43,378 - DEBUG - algo_cards
+ 2020-01-08 22:29:43,378 - DEBUG - data_struct_cards
+ 2020-01-08 22:29:43,378 - DEBUG - oop_cards
+ 2020-01-08 22:29:43,378 - DEBUG - python_cards
+ 2020-01-08 22:29:43,378 - DEBUG - uml_cards
+ 2020-01-08 22:29:43,378 - DEBUG - install
+ 2020-01-08 22:29:43,378 - DEBUG - leitner_log
+ 2020-01-08 22:29:43,378 - DEBUG - qui
+ 2020-01-08 22:29:43,393 - DEBUG - setu
+ 2020-01-08 22:29:43,393 - DEBUG - None
+ 2020-01-08 22:29:43,393 - DEBUG - quizs\
+ 2020-01-08 22:29:43,393 - DEBUG - No Test Cycle File Found. Creating new Cycle 1.
+ 2020-01-08 22:29:43,393 - DEBUG - Number of cards 119
+ 2020-01-08 22:29:43,393 - DEBUG - ['algorithm-1', 'algorithm-2', 'algorithm-3', 'alogorithm-bigo-1', 'algorithm-bigo-2', 'algorithm-bigo-3', 'algorithm-bigo-4', 'algorithm-bigo-5', 'algorithm-bigo-6', 'algorithm-bigo-7', 'algorithm-bigo-8', 'algorithm-bigo-9', 'algorithm-bigo-10', 'algorithm-bigo-11', 'algorithm-bigo-12', 'algorithm-bigo-13', 'algorithm-bigo-14', 'algorithm-bigo-15', 'algorithm-bigo-16', 'algorithm-bigo-17', 'data_structures-1', 'data_structures-2', 'data_structures-3', 'data_structures-4', 'data_structures-5', 'data_structures-6', 'data_structures-7', 'data_structures-8', 'data_structures-9', 'data_structures-10', 'data_structures-11', 'data_structures-12', 'data_structures-13', 'data_structures-14', 'data_structures-15', 'data_structures-16', 'data_structures-17', 'data_structures-18', 'data_structures-19', 'data_structures-java-1', 'data_structures-java-2', 'data_structures-java-3', 'data_structures-java-4', 'data_structures-20', 'data_structures-javascript-1', 'data_structures-21', 'data_structures-python-1', 'data_structures-csharp-1', 'oop-1', 'oop-2', 'oop-3', 'oop-4', 'oop-5', 'oop-6', 'oop-creational-1', 'oop-behavioral-1', 'oop-structural-1', 'oop-structural-2', 'oop-structural-3', 'oop-creational-2', 'oop-creational-3', 'oop-creational-4', 'oop-creational-5', 'oop-creational-6', 'oop-behavioral-2', 'oop-behavioral-3', 'oop-behavioral-4', 'oop-behavioral-5', 'oop-behavioral-6', 'oop-behavioral-7', 'oop-behavioral-8', 'oop-behavioral-9', 'oop-behavioral-10', 'oop-behavioral-11', 'oop-behavioral-12', 'oop-structural-4', 'oop-structural-5', 'oop-structural-6', 'oop-structural-7', 'oop-structural-8', 'oop-structural-9', 'oop-structural-10', 'python-datatypes-strings-1', 'python-datatypes-strings-2', 'python-datatypes-strings-3', 'python-datatypes-strings-4', 'python-datatypes-strings-5', 'python-datatypes-strings-6', 'python-datatypes-strings-7', 'python-datatypes-strings-8', 'python-datatypes-strings-9', 'python-datatypes-strings-10', 'python-datatypes-numbers-1', 'python-datatypes-numbers-2', 'python-datatypes-numbers-3', 'python-datatypes-numbers-4', 'python-datatypes-numbers-5', 'python-datatypes-numbers-6', 'python-datatypes-numbers-7', 'uml-1', 'uml-2', 'uml-3', 'uml-4', 'uml-structure-1', 'uml-behavior-1', 'uml-interaction-1', 'uml-structure-2', 'uml-structure-3', 'uml-structure-4', 'uml-structure-5', 'uml-structure-6', 'uml-structure-7', 'uml-structure-8', 'uml-behavior-2', 'uml-behavior-3', 'uml-interaction-2', 'uml-interaction-3', 'uml-interaction-4', 'uml-interaction-5']
+ 2020-01-08 22:29:43,393 - DEBUG - Done making ids
+ 2020-01-08 22:29:43,424 - DEBUG - Loading cards into Box1
+ 2020-01-08 22:29:43,424 - DEBUG - Set Cards to Box1
+ 2020-01-08 22:29:43,424 - DEBUG - Made TestCycle
+ 2020-01-08 22:29:43,424 - DEBUG - Making box1
+ 2020-01-08 22:29:43,456 - DEBUG - Making box2
+ 2020-01-08 22:29:43,456 - DEBUG - Making box3
+ 2020-01-08 22:29:43,471 - DEBUG - Making box4
+ 2020-01-08 22:29:43,487 - DEBUG - Making box5
+ 2020-01-08 22:29:43,487 - DEBUG - Making box6
