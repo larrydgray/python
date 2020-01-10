@@ -61,9 +61,9 @@ When you get an exception the error message wiil list a call stack trace. Called
 stack. Stack overflow is where you fill the stack up so much you run out of memory for it.}
 {ID:data_structures-16}
 {QUESTION: Describe a queue.}
-{ANSWER: A queue is a list that is LIFO or last in first out. It's like working from the 
+{ANSWER: A queue is a list that is FIFO or first in first out. It's like working from the 
 bottom of the Stack. A common example would be a keyboard Queue. As characters come in the
-list builds and as your software gets time it pulls characters that last to come into the queue.
+list builds and as your software gets time it pulls characters that first to come into the queue.
 A priority queue is like the system process or thread processing. Each process or thread might
 be given a level. Higher priority is given processor timeslice until that queue is empty, 
 then lower pirority. Priority queue is really like multiple queues.}

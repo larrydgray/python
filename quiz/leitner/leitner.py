@@ -5,18 +5,24 @@ import logging, random
 # Test Info class holds inforation about the current test so that
 # Not so many parameters have to passed around.
 class TestInfo:
-    def __init__(self, path, file_names):
+    def __init__(self, path):
         self.path=path
+        # filename for this test cycle
+        self.test_cycle_file_name=None
         # Tuple of card file names
-        self.test_cycle_file_names=file_names
+        self.card_file_names=None
         # Dictionary of Cards
         self.cards=None
 # Makes sure its not simply None
-test_info = TestInfo('bla','bla.txt')
+test_info = TestInfo('bla')
 
-# Sets the file name for the current test cycle which in 'testcycle5.txt' is 'testcycle5'
-def set_test_cycle_file_names(file_names):
-    test_info.test_cycle_file_names = file_names
+# sets the file name for the current test cycle which in 'testcycle5.txt' is 'testcycle5'
+def set_test_cycle_file_name(filename):
+    test_info.test_cycle_file_name=filename
+
+# Sets the card file names for the current test cycle 
+def set_card_file_names(file_names):
+    test_info.card_file_names = file_names
 
 # Sets the path to the testcycle#.txt, box#.txt and cards.txt files for this test
 # Which is for the example 'quizs//'
@@ -26,15 +32,19 @@ def set_path(the_path):
 # Returns test cylce file name if it exist or
 # Returns None if doesn't exist, meaning starting a fresh cycle #1 from square 1
 def _find_test_cycle_file():
-    
+    logging.debug('finding test cycle file')
     # create a list of file and sub directories 
     # names in the given directory 
-    list_of_files = os.listdir()
+    logging.debug(test_info.path)
+
+    list_of_files = os.listdir(test_info.path)
+    for afile in list_of_files:
+        logging.debug(afile)
     all_files = list()
     # Iterate over all the entries
     for entry in list_of_files:
         # Create full path
-        full_path = os.path.join( entry)
+        full_path = os.path.join(entry)
         # If entry is a directory then get the list of files in this directory 
         if not os.path.isdir(full_path):
             all_files.append(entry)
@@ -42,6 +52,7 @@ def _find_test_cycle_file():
     for file_name in all_files:
         logging.debug(file_name[:len(file_name)-4])
         if file_name[:9]=='testcycle':
+            logging.debug('found '+file_name)
             return file_name[:len(file_name)-4] # 'testcycle#.txt'  would be 'testcycle#'
     return None
 
@@ -119,7 +130,8 @@ def _find_box_file(box_num):
 
 def _new_cycle():
     logging.debug('No Test Cycle File Found. Creating new Cycle 1.')
-    cycle_file = open(test_info.path+'testcycle1.txt','w')
+    set_test_cycle_file_name('testcycle1')
+    cycle_file = open(test_info.path+test_info.test_cycle_file_name+'.txt','w')
     ids_keys=test_info.cards.keys()
     # apparently keys() does not return a List but a keys object or something like this.
     # So we convert it to a List which is what I needed. There may be a better way.
@@ -208,10 +220,13 @@ def _start_next_cycle(test_cycle_num):
         if(card.box>0 and card.box<=highest_box):
             cycle_ids.append(key)
     # rename testcycle file with new cycle number
+    set_test_cycle_file_name('testcycle'+str(test_cycle_num+1))
     os.rename(test_info.path+'testcycle'+str(test_cycle_num)+'.txt', 
         test_info.path+'testcycle'+str(test_cycle_num+1)+'.txt')
+    
+   
     # write id's from all boxes for this cycle in the cycle file
-    test_cycle_file = open(test_info.path+'testcycle'+str(test_cycle_num+1)+'.txt','w')
+    test_cycle_file = open(test_info.path+test_info.test_cycle_file_name+'.txt','w')
     for id in cycle_ids:
         test_cycle_file.write(id+'\n')
     # make and return new Test Cycle object for beginning current cycle
@@ -232,6 +247,7 @@ def load_test_cycle():
        return _new_cycle()
     else:
         # else not brand new cycle, continuing cycle
+        set_test_cycle_file_name(file_name)
         cycle_ids=_load_test_cycle_file()
         test_cycle_num=int(file_name[9:])
         # if empty test cycle file then beginning next cycle
@@ -239,6 +255,7 @@ def load_test_cycle():
             return _start_next_cycle(test_cycle_num)
         # else load current saved cycle state and begin testing
         else:
+            print('Continuing Test Cycle '+str(test_cycle_num))
             test_cycle = TestCycle(test_cycle_num, cycle_ids)
             return test_cycle
 
@@ -343,7 +360,7 @@ def _load_boxes():
 def load_cards():
     logging.debug(os.getcwd())
     aquiz=''
-    for card_file in test_info.test_cycle_file_names:
+    for card_file in test_info.card_file_names:
         quiz_file = open(test_info.path+card_file+".txt",'r')
         aquiz += quiz_file.read()
     card_parser = CardParser(aquiz)
@@ -361,9 +378,8 @@ def load_cards():
             # if cards is not an empty Dictionary
             # we are at end of cards file
             if(cards!=False):
-                
-                _load_boxes() # will set box numbers on each card if its in a box
                 test_info.cards=cards
+                _load_boxes() # will set box numbers on each card if its in a box
                 return cards
             else: # if empty data and no cards we have a problem
                 print('Parse Error! Unexpected end of file. No Data')

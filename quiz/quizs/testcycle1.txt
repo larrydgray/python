@@ -2,8 +2,6 @@ algorithm-1
 algorithm-2
 algorithm-3
 alogorithm-bigo-1
-algorithm-bigo-2
-algorithm-bigo-3
 algorithm-bigo-4
 algorithm-bigo-5
 algorithm-bigo-6
@@ -28,7 +26,6 @@ data_structures-7
 data_structures-8
 data_structures-9
 data_structures-10
-data_structures-11
 data_structures-12
 data_structures-13
 data_structures-14
@@ -40,15 +37,12 @@ data_structures-19
 data_structures-java-1
 data_structures-java-2
 data_structures-java-3
-data_structures-java-4
 data_structures-20
 data_structures-javascript-1
 data_structures-21
 data_structures-python-1
 data_structures-csharp-1
 oop-1
-oop-2
-oop-3
 oop-4
 oop-5
 oop-6
@@ -80,12 +74,10 @@ oop-structural-7
 oop-structural-8
 oop-structural-9
 oop-structural-10
-python-datatypes-strings-1
 python-datatypes-strings-2
 python-datatypes-strings-3
 python-datatypes-strings-4
 python-datatypes-strings-5
-python-datatypes-strings-6
 python-datatypes-strings-7
 python-datatypes-strings-8
 python-datatypes-strings-9
@@ -94,7 +86,6 @@ python-datatypes-numbers-1
 python-datatypes-numbers-2
 python-datatypes-numbers-3
 python-datatypes-numbers-4
-python-datatypes-numbers-5
 python-datatypes-numbers-6
 python-datatypes-numbers-7
 uml-1
@@ -113,7 +104,6 @@ uml-structure-7
 uml-structure-8
 uml-behavior-2
 uml-behavior-3
-uml-interaction-2
 uml-interaction-3
 uml-interaction-4
 uml-interaction-5

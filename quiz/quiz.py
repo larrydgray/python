@@ -1,6 +1,9 @@
 import leitner.leitner
-import keyboard, msvcrt, sys
+import logging, keyboard, msvcrt, sys
 
+logging.basicConfig(filename="quiz_log.txt",
+    level=logging.DEBUG, 
+    format=' %(asctime)s - %(levelname)s - %(message)s')
 # this gets keyboard key input and either promotes, 
 # demotes or leaves the card where it is in boxes.
 def process_card(card, cycle_id_list):
@@ -35,13 +38,13 @@ def process_card(card, cycle_id_list):
 cards={}
 leitner.set_path('quizs\\')
 card_files=('algo_cards', 'data_struct_cards', 'oop_cards', 'python_cards', 'uml_cards')
-leitner.set_test_cycle_file_names(card_files)
+leitner.set_card_file_names(card_files)
 cards = leitner.load_cards()
 
 cycle = leitner.load_test_cycle()
 
 test_cycle_file_name='testcycle'+str(cycle.cycle_num)
-print("Cycle number "+str(cycle.cycle_num))
+logging.debug("Cycle number "+str(cycle.cycle_num))
 while True:
     print("Number of questions left in cycle is "+str(len(cycle.id_list)))
     if  len(cycle.id_list)==0: #if we answered all questions in the cycle

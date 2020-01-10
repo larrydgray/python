@@ -9,6 +9,7 @@ def write_log():
             logFile.write(verse_id+':'+log+'\n')
 
 def read_log():
+    print()
     #open log file
     #read in lines
     #for in the lines
