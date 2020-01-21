@@ -200,29 +200,38 @@ def _start_next_cycle(test_cycle_num):
     # box 1 every cycle, box 2 every other cycle, box 3 every 4th cycle
     # box 4 eveery 8th cycle and box 5 every 16th cycle
     highest_box=1
-    if(test_cycle_num%2==0):
-        highest_box+=1
-    if(test_cycle_num%4==0):
-        highest_box+=1
-    if(test_cycle_num%8==0):
-        highest_box+=1
-    if(test_cycle_num%16==0):
-        highest_box+=1
+    next_cycle_num=test_cycle_num+1
+    print('test cycle number '+str(test_cycle_num))
+    if(next_cycle_num%2==0):
+        highest_box=2
+    if(next_cycle_num%4==0):
+        highest_box=3
+    if(next_cycle_num%8==0):
+        highest_box=4
+    if(next_cycle_num%16==0):
+        highest_box=5
     logging.debug('highestbox '+str(highest_box))
     
     cycle_ids=[]
     keys=test_info.cards.keys()
     logging.debug('Loading box1 to box'+str(highest_box))
     # keys work like List here
+    #print('number of keys'+str(len(keys)))
+    c=0
+    for key in keys:
+        c=c+1
+        print(str(c)+' '+key)
     for key in keys:
         card=test_info.cards[key]
+        print(str(highest_box)+' '+str(card.box))
         # card in box 1 to highest for cycle
         if(card.box>0 and card.box<=highest_box):
+            print(key)
             cycle_ids.append(key)
     # rename testcycle file with new cycle number
-    set_test_cycle_file_name('testcycle'+str(test_cycle_num+1))
+    set_test_cycle_file_name('testcycle'+str(next_cycle_num))
     os.rename(test_info.path+'testcycle'+str(test_cycle_num)+'.txt', 
-        test_info.path+'testcycle'+str(test_cycle_num+1)+'.txt')
+        test_info.path+'testcycle'+str(next_cycle_num)+'.txt')
     
    
     # write id's from all boxes for this cycle in the cycle file
@@ -452,7 +461,9 @@ class CardParser:
                     return ''
             self.pos+=1 # scanning the text to the char after {
             while(self.cards_file_text[self.pos]!='}'): # while not at end of data block }
-                text+=self.cards_file_text[self.pos] # building the data
+                character=self.cards_file_text[self.pos]
+                if(ord(character)!=0xa and ord(character)!=0xd): # new line and carriage return
+                    text+=character # building the data
                 self.pos+=1 # scanning the text
             logging.debug(str(self.pos)+' '+self.cards_file_text[self.pos])
             return text.strip() # strip text of white space and return it
