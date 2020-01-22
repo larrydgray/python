@@ -1,24 +1,26 @@
+
+
 books = []
 
 def write_log():
-    logFile = open("log.txt",'w')
+    log_file = open('log.txt','w')
     verse_ids=book_verses.keys()
     verse=None
     for verse_id in verse_ids:
         verse=book_verses[verse_id]
         log=verse.get_verse_log()        
         if log>0:
-            logFile.write(verse_id+':'+log+'\n')
+            log_file.write(verse_id+'='+log+'\n')
 
 def read_log():
     print()
-    #open log file
-    #read in lines
-    #for in the lines
-    #split line on :
-    #gives book chapter verse lognum
-    #make verse id
-    #set log number for verse
+    log_file = open('log.txt', 'r')
+    log = log_file.readlines()
+    for verse_log in log:
+        verse_id, log_num= verse_log.split('=')
+        verse = book_verses[verse_id]
+        verse.set_verse_log(log_num)
+    
 
 
 # loads the verses from given book .txt file and returns a Dictionary of verses.
@@ -126,6 +128,8 @@ class Verse:
         return self.verse_text
     def get_verse_log(self):
         return self.verse_log
+    def set_verse_log(self,verse_log):
+        self.verse_log=verse_log
     def get_verse_note(self):
         return self.verse_note
     def add_verse_note(self, note):
@@ -211,11 +215,11 @@ current_verse=''
 # main loop gets keyboard input commands
 while(selected_verse!='stop'): #input of stop means quit
     print('Enter b:c:v , list:b:c, list:b:0, books:beginswith or stop') # to retrieve a verse enter book_name:chapter_number:verse_number ie.e Luke:1:1
-    selected_verse=input()
+    selected_verse=input() # input is more than selected verse now, also commands for display number verse in chapter or number of chapters in book and list book names.
     if selected_verse=='stop':
         break
-    if selected_verse[:5]=='books':
-        chars=selected_verse.split(':')[1]
+    if selected_verse[:5]=='books': # list book names
+        chars=selected_verse.split(':')[1] #books:name string to match with starts with
         for book in books:
             if book[0].isdigit(): #if first character in book name is a digit 1 2 or 3
                 if book[1:].lower().startswith(chars.lower()): # if book name after digit begin with search string
@@ -225,25 +229,25 @@ while(selected_verse!='stop'): #input of stop means quit
         print() # print a new line after list of names
         continue
     if selected_verse[:4]=='list':
-        print(get_number_of(selected_verse[5:]))
+        print(get_number_of(selected_verse[5:])) #calls function to handle part after list:  i.e. list:John:5 or list:John:0
         continue
-    if len(selected_verse)==0:
+    if len(selected_verse)==0: # Handle enter on blank input for get next verse
         split=current_verse.split(':')
         book=split[0]
         chapter=int(split[1])
         verse=int(split[2])
-        last_chapter=get_number_of(book+':0')
-        last_verse=get_number_of(book+':'+str(chapter))
+        last_chapter=get_number_of(book+':0') # get the number for last chapter in this book
+        last_verse=get_number_of(book+':'+str(chapter)) # get the number for the last verse in this chapter
         if verse<last_verse:
-            selected_verse=book+':'+str(chapter)+':'+str(verse+1)
+            selected_verse=book+':'+str(chapter)+':'+str(verse+1) #make verse id for next verse
             print(selected_verse)
-        elif verse==last_verse:
+        elif verse==last_verse: # if at last verse inn this chapter get first verse in next chapter
             if chapter<last_chapter:
-                selected_verse=book+':'+str(chapter+1)+':1'
+                selected_verse=book+':'+str(chapter+1)+':1' # get verse id for first verse in next chapter
                 print(selected_verse)
-            elif chapter==last_chapter:
+            elif chapter==last_chapter: # we are at end of book
                 print('End of '+book)
-        continue
+        
     try:
         a_verse = book_verses[selected_verse] # i.e. Luke:1:1 as key
         print()
