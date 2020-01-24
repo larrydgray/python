@@ -2,25 +2,7 @@
 
 books = []
 
-def write_log():
-    log_file = open('log.txt','w')
-    verse_ids=book_verses.keys()
-    verse=None
-    for verse_id in verse_ids:
-        verse=book_verses[verse_id]
-        log=verse.get_verse_log()        
-        if log>0:
-            log_file.write(verse_id+'='+log+'\n')
 
-def read_log():
-    print()
-    log_file = open('log.txt', 'r')
-    log = log_file.readlines()
-    for verse_log in log:
-        verse_id, log_num= verse_log.split('=')
-        verse = book_verses[verse_id]
-        verse.set_verse_log(log_num)
-    
 
 
 # loads the verses from given book .txt file and returns a Dictionary of verses.
@@ -47,12 +29,14 @@ def load_book(name):
             i+=1
             # Process verse text
             while(book[i]!='{'): # stop when at next verse id begining with {
-                verse_text+=book[i]
+                if ord(book[i])!=0xa and ord(book[i])!=0xd:
+                    verse_text+=book[i]
                 i+=1
                 if(i==len(book)): #break if at end of book
                     break
             i-=1 #backs us up to the open bracket {
             chapter,verse = split_verse(verse_num) #extract chapter and verse from key
+
             # print(name+':'+chapter+':'+verse)
             the_verse=Verse(name,chapter,verse, verse_text) #name is book name
             verses[the_verse.getId()]=the_verse # store the verse in the Dictionary
@@ -92,12 +76,56 @@ def get_number_of(book_chapter):
             split = verse_id.split(':')
             verse_book=split[0]
             verse_chapter=int(split[1])
-            verse_verse_num=int(split[2])
+            verses_verse_num=int(split[2])
             if verse_book==book:
                 if verse_chapter==chapter:
-                    if verse_verse_num>verse_count:
-                        verse_count=verse_verse_num
+                    if verses_verse_num>verse_count:
+                        verse_count=verses_verse_num
         return verse_count
+
+# gets the percentage of verses read/viewed as int 0% to 100% 
+# so if number is 1 then returns pecentage read at least once, 2 then at least twice etc.
+# this is brute force, needs recoding
+def get_percent_chapter_log(verse_ids,book,chapter,number):
+    log_count=0
+    verse_count=0   
+    for verse_id in verse_ids:
+        split = verse_id.split(':')
+        verse_book=split[0]
+        verse_chapter=int(split[1])
+        verses_verse_num=int(split[2])
+        if verse_book==book:
+            if verse_chapter==chapter:
+                if verses_verse_num>verse_count:
+                    verse_log=book_verses[verse_id].get_verse_log()
+                    if(verse_log>=number):
+                        log_count+=1
+                    verse_count=verses_verse_num
+    return int((log_count/verse_count)*100) # return int percent of verses read/viewed
+
+# Returns number of chapters in book or verses in chapter.
+# this is brute force, needs recoding
+def get_percent_log(book_chapter_number):
+    book, chapter, number = book_chapter_number.split(':')
+    chapter=int(chapter)
+    number=int(number)
+    verse_ids=book_verses.keys()
+    chapter_percent_total=0
+    # if chapter = 0 then we are looking for number of chapters in a book.
+    if chapter==0:
+        chapter_count=0
+        for verse_id in verse_ids:
+            split = verse_id.split(':')
+            verse_book=split[0]
+            verse_chapter=int(split[1])
+            if verse_book==book:
+                if verse_chapter>chapter_count:
+                    chapter_percent_total+=get_percent_chapter_log(verse_ids, book, chapter, number)
+                    chapter_count=verse_chapter
+        return int(chapter_percent_total/chapter_count)
+    # if chapter > 0 then we are looking for number of verses in chapter.
+    elif chapter>0:
+        return get_percent_chapter_log(verse_ids,book,chapter,number)
 
 # build the verse ID from book name and verse_input return name:#:#
 # this may not be used! consider removing it
@@ -106,6 +134,32 @@ def build_verse_id(book, verse_input):
         return book+':'+chapter+':'+verse
 # A class to hold the verse for storage in a Dicitonary.
 # holds book name, chapter number, verse number and verse text. Also returns an ID book:#:# used as a key.
+
+def write_log():
+    log_file = open('log.txt','w')
+    verse_ids=book_verses.keys()
+    verse=None
+    for verse_id in verse_ids:
+        verse=book_verses[verse_id]
+        log=verse.get_verse_log()        
+        if log>0:
+            log_file.write(verse_id+'='+str(log)+'\n')
+
+def read_log():
+    print()
+    try:
+        log_file = open('log.txt', 'r')
+        log = log_file.readlines()
+    except FileNotFoundError:
+        return
+    else:
+        for verse_log in log:
+            verse_id, log_num= verse_log.split('=')
+            verse = book_verses[verse_id]
+            verse.set_verse_log(int(log_num))
+    
+
+
 class Verse:
 
     def __init__(self, book, chapter, verse, verse_text):
@@ -208,16 +262,29 @@ book_verses.update(load_book('Zech')) #Zechariah
 book_verses.update(load_book('Malachi'))
     
 print("\nStarting")
-
+read_log()
 
 selected_verse=''
 current_verse=''
+logging=False
 # main loop gets keyboard input commands
-while(selected_verse!='stop'): #input of stop means quit
+while True: #input of stop means quit
     print('Enter b:c:v , list:b:c, list:b:0, books:beginswith or stop') # to retrieve a verse enter book_name:chapter_number:verse_number ie.e Luke:1:1
     selected_verse=input() # input is more than selected verse now, also commands for display number verse in chapter or number of chapters in book and list book names.
     if selected_verse=='stop':
         break
+    if selected_verse=='log': # toggle logging mode
+        if logging==False:
+            print('Logging on')
+            logging=True
+        else:
+            print('Logging off')
+            logging=False
+        continue
+    if selected_verse[:4]=='log:':
+        print()
+    if selected_verse=='save':
+        write_log()
     if selected_verse[:5]=='books': # list book names
         chars=selected_verse.split(':')[1] #books:name string to match with starts with
         for book in books:
@@ -240,17 +307,19 @@ while(selected_verse!='stop'): #input of stop means quit
         last_verse=get_number_of(book+':'+str(chapter)) # get the number for the last verse in this chapter
         if verse<last_verse:
             selected_verse=book+':'+str(chapter)+':'+str(verse+1) #make verse id for next verse
-            print(selected_verse)
+            print(selected_verse, end='')
         elif verse==last_verse: # if at last verse inn this chapter get first verse in next chapter
             if chapter<last_chapter:
                 selected_verse=book+':'+str(chapter+1)+':1' # get verse id for first verse in next chapter
-                print(selected_verse)
+                print(selected_verse, end='')
             elif chapter==last_chapter: # we are at end of book
                 print('End of '+book)
         
     try:
         a_verse = book_verses[selected_verse] # i.e. Luke:1:1 as key
-        print()
+        if(logging):
+            a_verse.inc_verse_log()
+        print(' log:'+str(book_verses[selected_verse].get_verse_log()))
         print(a_verse.get_verse_text())
         print()
         current_verse=selected_verse
