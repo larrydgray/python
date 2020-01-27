@@ -269,7 +269,7 @@ current_verse=''
 logging=False
 # main loop gets keyboard input commands
 while True: #input of stop means quit
-    print('Enter b:c:v , list:b:c, list:b:0, books:beginswith or stop') # to retrieve a verse enter book_name:chapter_number:verse_number ie.e Luke:1:1
+    print('Enter b:c:v , list:b:c, list:b:0, books:beginswith, log, log:b:c:#, log:b:0:# or stop') # to retrieve a verse enter book_name:chapter_number:verse_number ie.e Luke:1:1
     selected_verse=input() # input is more than selected verse now, also commands for display number verse in chapter or number of chapters in book and list book names.
     if selected_verse=='stop':
         break
@@ -282,7 +282,8 @@ while True: #input of stop means quit
             logging=False
         continue
     if selected_verse[:4]=='log:':
-        print()
+        print(str(get_percent_log(selected_verse[4:]))+'%')
+        continue
     if selected_verse=='save':
         write_log()
     if selected_verse[:5]=='books': # list book names
