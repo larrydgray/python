@@ -1,6 +1,7 @@
 import leitner.leitner
 import logging, keyboard, msvcrt, sys
 
+test=1
 logging.basicConfig(filename="quiz_log.txt",
     level=logging.DEBUG, 
     format=' %(asctime)s - %(levelname)s - %(message)s')
@@ -36,8 +37,12 @@ def process_card(card, cycle_id_list):
             else:
                 continue # any key but l p or d and we keep looping
 cards={}
-leitner.set_path('quizs\\')
-card_files=('algo_cards', 'data_struct_cards', 'oop_cards', 'python_cards', 'uml_cards')
+if test==1:
+    leitner.set_path('quizs\\')
+    card_files=('algo_cards', 'data_struct_cards', 'oop_cards', 'python_cards', 'uml_cards')
+else:
+    leitner.set_path('quizs\\study\\')
+    card_files=('interview_cards')
 leitner.set_card_file_names(card_files)
 cards = leitner.load_cards()
 

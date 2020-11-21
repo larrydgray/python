@@ -362,15 +362,19 @@ def _load_boxes():
                 test_info.cards[id].box=6
     return test_info.cards
 
-# loads and returns a dicitonary of Cards where the key is Card ID
+# loads and returns a dictionary of Cards where the key is Card ID
 # Card ID is 'category-category-#'  and any number of nested categories
 # category and question number must be unique
 # though I have no check for this coded yet
 def load_cards():
     logging.debug(os.getcwd())
     aquiz=''
-    for card_file in test_info.card_file_names:
-        quiz_file = open(test_info.path+card_file+".txt",'r')
+    if type(test_info.card_file_names) is tuple:
+        for card_file in test_info.card_file_names:
+            quiz_file = open(test_info.path+card_file+".txt",'r')
+            aquiz += quiz_file.read()
+    else:
+        quiz_file = open(test_info.path+test_info.card_file_names+".txt",'r')
         aquiz += quiz_file.read()
     card_parser = CardParser(aquiz)
     cards={}
