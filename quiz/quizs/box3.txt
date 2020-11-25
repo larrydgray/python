@@ -11,7 +11,6 @@ oop-structural-3
 python-datatypes-strings-10
 algorithm-bigo-6
 data_structures-14
-data_structures-java-2
 oop-creational-4
 oop-3
 oop-behavioral-8
