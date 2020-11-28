@@ -36,3 +36,11 @@ oop-behavioral-1
 uml-interaction-5
 oop-behavioral-9
 data_structures-java-2
+algorithm-bigo-9
+data_structures-6
+uml-behavior-2
+oop-creational-4
+oop-4
+data_structures-16
+oop-structural-4
+oop-structural-9

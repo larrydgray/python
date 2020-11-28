@@ -1,6 +1,5 @@
 algorithm-bigo-5
 data_structures-python-1
-data_structures-javascript-1
 uml-structure-7
 algorithm-bigo-11
 algorithm-bigo-10
@@ -8,3 +7,4 @@ algorithm-bigo-15
 algorithm-bigo-7
 uml-behavior-3
 oop-5
+python-datatypes-numbers-3
