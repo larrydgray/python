@@ -1,0 +1,125 @@
+{ID:interview-1}
+{QUESTION:What is the worst mistake you ever made?}
+{ANSWER:Drove on ice when I should have been parked. Drove through Nashville.}
+{ID:interview-2}
+{QUESTION:What is your biggest weakness?}
+{ANSWER:Documentation habits. I know how to document and when to document. I do document but somewhat inconsistently.
+I write articles as documentation for others for the web. I could make documenting more important, form better habits and
+find or learn new tools to help.}
+{ID:interview-3}
+{QUESTION:What is your greatest strength?}
+{ANSWER:Helping others to learn computer concepts. Explaining in simple terms with analogy or metaphor. I teach myself
+first complex systems or concepts. I share my knowledge freely and welcome opportunity. Writing articles and
+possibly documentation or training material. My web site is a good example.}
+{ID:interview-4}
+{QUESTION:Give some examples for when you taught others.}
+{ANSWER:In Army Reserve taught task and task steps and standards. In restaurant taught cooking, cleaning, preparing, stocking, scheduling, standards
+ and techniques.In office work I shared my computer knowledge with anyone if needed. In trucking, safety, rules, operating equipment. Situational
+ awareness (smith system). Interaction with police, shippers, dock workers, other truckers, motorist, dispatch. Other standards and techniques. }
+{ID:interview-5}
+{QUESTION:What makes you effective?}
+{ANSWER:Stubborn persistence in problem solving. Know problem solving steps. Know trouble shooting steps. Know Debugging techniques. }
+{ID:interview-problemsolve-1}
+{QUESTION:What are your problem solving steps?}
+{ANSWER:1. Identify the problem. 2. Gather facts and assumptions. Understand what final outcome will be. 3. Form a theory as to probably cause of issue.
+ do some preliminary trouble shooting or debugging to eliminate possibilities. 4. Develop possible solutions and choose the best one then try it. 5.
+  Test functionality and Analyze the results. 6 Worked or failed? 6a If it worked Verify System functionality. Document process in implementing solution which
+  may require repeating the process. 6b If it failed go back to prior step or maybe even the beginning and try again with alternate solution. }
+{ID:interview-problemsolve-2}
+{QUESTION:What trouble shooting techniques do you use?}
+{ANSWER:Process of elimination, to find out what is not working you often have to verify what is working. Change one thing at a time, make notes, go back
+to original state. Narrow down the problem from many possible things to one or two things.}
+{ID:interview-problemsolve-3}
+{QUESTION:What debugging techniques do you use?}
+{ANSWER:Logging to console and or files or databases. Watching state and variables. Asserting conditions with basic if/else or language assertions
+or unit testing. Find and filter log files. Locate and read/edit config files. Use tools like debuggers, breakpoints. Get insight with DOM inspectors
+ Element inspectors or UML modeling. Search forums and web articles. Ask if anyone has had experience with same issues. Look to see if
+ underlying systems have known issues or bugs.}
+{ID:interview-problemsolve-4}
+{QUESTION:What are the Military problem solving steps you learned?}
+{ANSWER:Recognize and define the problem. Gather facts and make assumptions. Define end states and establish criteria. Develop possible solutions.
+Analyze and compare possible solutions. Select and implement solution. Analyze solution for effectiveness.}
+{ID:interview-problemsolve-5}
+{QUESTION:What was the scientific method you learned in school?}
+{ANSWER:Ask a question. Do background research. Construct a hypothesis. Test hypothesis by doing experiments. Analyze data and draw conclusion.}
+{ID:interview-problemsolve-6}
+{QUESTION:What are the CompTIA trouble shooting steps?}
+{ANSWER:Identify the problem. Establish theory of probably cause. Test theory to determine actual cause. Establish a plan and execute it. Verify
+full system functionality. Document the process.}
+{ID:interview-interpersonal-1}
+{QUESTION:How would you describe your communication skills?}
+{ANSWER:I'm good at written communication and ok at verbal.}
+{ID:interview-interpersonal-2}
+{QUESTION:What about reliability?}
+{ANSWER:I learned to be on time by being early.}
+{ID:interview-interpersonal-3}
+{QUESTION:How would you describe your leadership skills?}
+{ANSWER:I lead by example. I don't expect more fromm others than I expect of myself. I feel this leads to a form of
+respect which increases productivity.}
+{ID:interview-interpersonal-4}
+{QUESTION:How would you describe your decision making ability?}
+{ANSWER:Gather facts and identify assumptions before making decisions. It's all of my problem solving steps and techniques.}
+{ID:interview-interpersonal-5}
+{QUESTION:How are you with assertiveness?}
+{ANSWER:Can be very assertive when baked into a corner. Will always go to the person first, not subordinates, co-workers
+or supervisors.}
+{ID:interview-interpersonal-6}
+{QUESTION:Describe your attitude?}
+{ANSWER:Generally positive.}
+{ID:interview-interpersonal-7}
+{QUESTION:How do you handle feedback.}
+{ANSWER:As long as it is usually in a positive manner and light I welcome feedback. I don't care much for people that
+like to be quick to anger or yell.}
+{ID:interview-interpersonal-6}
+{QUESTION:How do you handle confrontation?}
+{ANSWER:I show empathy. Diffuse anger. I ask is it justified at all? I stay calm. I avoid character assaults. I know when to disengage.
+Stay safe.}
+{ID:interview-6}
+{QUESTION:Describe your ideal career.}
+{ANSWER:A career that I am passionate about, love to wake up and go do, that's respectable. One that takes care of me
+and my dependents.}
+{ID:interview-7}
+{QUESTION:How do you handle pressure?}
+{ANSWER:Become more focused and intent on implementing all techniques and tools. Eliminate distractions.}
+{ID:interview-8}
+{QUESTION:How do you handle disappointment?}
+{ANSWER:With introspection, analyze myself and the situation. Look for improvements to make.}
+{ID:interview-9}
+{QUESTION:What type of environment do you thrive in?}
+{ANSWER:Where I'm skilled, needed, wanted and liked. Where there is a challenge that I enjoy.}
+{ID:interview-10}
+{QUESTION:Describe your leadership style and abilities.}
+{ANSWER:I lead by example, not forceful or dictatorial type at all.}
+{ID:interview-11}
+{QUESTION:How do you train others?}
+{ANSWER:Maintain or enhance self esteem. Show empathy. Ask how they would solve the problem. Explain how I would solve the
+ problem and work out the solution with them.}
+{ID:interview-12}
+{QUESTION:What can you do for the company?}
+{ANSWER:Compose software, troubleshoot problems in systems.Train and coach others.}
+{ID:interview-13}
+{QUESTION:Why should we hire you?}
+{ANSWER:I'm self motiviated. I learn in my spare time for improvement. I welcome opportunity to share what I know with others.}
+{ID:interview-14}
+{QUESTION:How are you different?}
+{ANSWER:I've spent 35 years of my time in self study, which I say is like 7 years on a job. I know am very familiar with hardware
+and repair, software of all kinds and tools, multiple operating systems, and tcp/ip networking. I know coding, debugging, developing apps
+some oop design and engineering. I've studied desktop, client/server, console, web front end and back end, database and mobile
+software development. 20 years of part time study with Java, which I say is like 5 years on a job. I majored in Java and minored in
+JavaScript.}
+{ID:interview-15}
+{QUESTION:What are you?}
+{ANSWER:Programmer, Developer, Something of an Architect whether I'm writing a line of code, object, system of objects,
+API, Application, System of Applications, I'm a Software Engineer. I'm a leader, coach, trainer, mentor. Researcher and writer.
+Computer technician but not a guru. Coach in forums, groups and chat rooms on internet.}
+{ID:interview-16}
+{QUESTION:Where do you see yourself in 5 years?}
+{ANSWER:Very good software developer.}
+{ID:interview-17}
+{QUESTION:Where do you see yourself in 10 years?}
+{ANSWER:Mentor, teacher, trainer but not a supervisor. }
+
+
+
+
+
