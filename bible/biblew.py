@@ -63,11 +63,47 @@ def search():
 
 def count():
     print("list")
-
+    error=False
+    book=ent_book.get()
+    chapter=ent_chapter.get()
+    if book in books:
+        pass
+    else:
+        error=True
+        error_message+="Book name\""+book+"\" not found!\n"
+    if is_number(chapter):
+        pass
+    else:
+        error=True
+        error_message+="Chapter must be a number!\n"
+    if error:
+        txt_output.delete("1.0","end")
+        txt_output.insert(tk.END, error_message)
+    else:
+        if chapter=='':
+            last_chapter=get_number_of(book+':0') # get the number for last chapter in this book
+            txt_output.delete("1.0","end")
+            txt_output.insert(tk.END, "Number of chapters in the book "+book+" are "+last_chapter)
+        else:
+            last_chapter=get_number_of(book+':0') # get the number for last chapter in this book
+            if int(chapter)<=last_chapter and int(chapter)>0:
+                last_verse=get_number_of(book+':'+str(chapter)) # get the number for the last verse in this chapter
+                txt_output.delete("1.0","end")
+                txt_output.insert(tk.END, "Number of verses in the book "+book+" chapter "+chapter+" are "+str(last_verse))
+            else:
+                txt_output.delete("1.0","end")
+                txt_output.insert(tk.END, "Chapter number not valid!")
 
 def list_books():
     print("books")
-
+    txt_output.delete("1.0","end")
+    chars=ent_book.get()
+    for book in books:
+        if book[0].isdigit(): #if first character in book name is a digit 1 2 or 3
+            if book[1:].lower().startswith(chars.lower()): # if book name after digit begin with search string
+                txt_output.insert(tk.END, book+"\n")
+        if book.lower().startswith(chars.lower()): # if book name begins with search name
+            txt_output.insert(tk.END, book+"\n")
 
 def log():
     if lbl_log_state["text"]=="Off":
@@ -212,6 +248,8 @@ def next():
 
 window = tk.Tk()
 window.title("KJV Bible")
+photo = PhotoImage(file = "./images/bible.png")
+window.iconphoto(False, photo)
 window.columnconfigure(0, minsize=50)
 window.rowconfigure(11, minsize=50)
 
