@@ -1,8 +1,9 @@
 
 books = []
-
+bookchv = {}
 # loads the verses from given book .txt file and returns a Dictionary of verses.
 def load_book(name):
+    global books
     print('.', end='')
     books.append(name)
     bookFile = open("./kjv/"+name+".txt",'r')
@@ -263,3 +264,4 @@ read_log()
 selected_verse=''
 current_verse=''
 logging=False
+
