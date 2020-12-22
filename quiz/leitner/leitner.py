@@ -275,6 +275,18 @@ def _save_box(box, box_num):
          box_file.write(id+'\n')
      box_file.close()
 
+
+def count_box_cards():
+    box_cards_count = [0, 0, 0, 0, 0, 0]
+    for x in range(6):
+        box_file = open(test_info.path+'box'+str(x+1)+'.txt', 'r')
+        box = box_file.readlines()
+        if box[0] == "empty":
+            box_cards_count[x] = 0
+        else:
+            box_cards_count[x] = len(box)
+    return box_cards_count
+
 # loads a list of card IDs for given box number
 # List will contain only the tag 'empty' if box is empty
 # can load box 6 even though it is not used currently

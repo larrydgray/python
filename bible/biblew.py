@@ -2,7 +2,7 @@
 import tkinter as tk
 from tkinter import *
 from bible_util import *
-
+from PIL import ImageTk, Image
 
 
 def is_number(s):
@@ -56,6 +56,9 @@ def search():
             txt_output.delete("1.0","end")
             txt_output.insert(tk.END, text)
             prevverse=a_verse
+            display_log_count(a_verse.get_verse_log())
+            write_log()
+            return a_verse
         except KeyError: # Dictionary key error
             txt_output.delete("1.0","end")
             txt_output.insert(tk.END, "Verse not found! "+searchkey)
@@ -174,6 +177,8 @@ def prev():
             txt_output.delete("1.0","end")
             txt_output.insert(tk.END, text)
             prevverse=a_verse
+            display_log_count(a_verse.get_verse_log())
+            write_log()
         except KeyError: # Dictionary key error
             txt_output.delete("1.0","end")
             txt_output.insert(tk.END, "Verse not found! "+searchkey)
@@ -241,9 +246,77 @@ def next():
             txt_output.delete("1.0","end")
             txt_output.insert(tk.END, text)
             prevverse=a_verse
+            display_log_count(a_verse.get_verse_log())
+            write_log()
         except KeyError: # Dictionary key error
             txt_output.delete("1.0","end")
             txt_output.insert(tk.END, "Verse not found! "+searchkey)
+
+
+def plus():
+    verse=search()
+    if verse is None:
+        pass
+    else:
+        log_count=verse.get_verse_log()
+        log_count+=1
+        verse.set_verse_log(log_count)
+        display_log_count(log_count)
+        write_log()
+
+def minus():
+    verse=search()
+    if verse is None:
+        pass
+    else:
+        log_count=verse.get_verse_log()
+        if log_count>0:
+            log_count-=1
+        verse.set_verse_log(log_count)
+        display_log_count(log_count)
+        write_log()
+
+
+def display_log_count(log_count):
+    hashes = int(log_count/5)
+    endhash = log_count%5
+    if hashes == 0:
+        hash1=endhash
+        hash2=0
+        hash3=0
+        hash4=0
+    if hashes == 1:
+        hash1=5
+        hash2=endhash
+        hash3=0
+        hash4=0
+    if hashes == 2:
+        hash1=5
+        hash2=5
+        hash3=endhash
+        hash4=0
+    if hashes ==3:
+        hash1=5
+        hash2=5
+        hash3=5
+        hash4=endhash
+    if hashes >=4:
+        hash1=5
+        hash2=5
+        hash3=5
+        hash4=5
+
+    lbl_hash1.configure(image=hash_images[hash1])
+    lbl_hash1.image = hash_images[hash1]
+    lbl_hash2.configure(image=hash_images[hash2])
+    lbl_hash2.image = hash_images[hash2]
+    lbl_hash3.configure(image=hash_images[hash3])
+    lbl_hash3.image = hash_images[hash3]
+    lbl_hash4.configure(image=hash_images[hash4])
+    lbl_hash4.image = hash_images[hash4]
+
+
+
 
 
 window = tk.Tk()
@@ -253,6 +326,23 @@ window.iconphoto(False, photo)
 window.columnconfigure(0, minsize=50)
 window.rowconfigure(11, minsize=50)
 
+mark0image = Image.open("images/mark0.png")
+img_mark0 = ImageTk.PhotoImage(mark0image)
+mark1image = Image.open("images/mark1.png")
+img_mark1 = ImageTk.PhotoImage(mark1image)
+
+mark2image = Image.open("images/mark2.png")
+img_mark2 = ImageTk.PhotoImage(mark2image)
+
+mark3image = Image.open("images/mark3.png")
+img_mark3 = ImageTk.PhotoImage(mark3image)
+
+mark4image = Image.open("images/mark4.png")
+img_mark4 = ImageTk.PhotoImage(mark4image)
+
+mark5image = Image.open("images/mark5.png") #image1 = img.resize((50, 50), Image.ANTIALIAS)
+img_mark5 = ImageTk.PhotoImage(mark5image)
+hash_images=[img_mark0, img_mark1, img_mark2, img_mark3, img_mark4, img_mark5]
 frm_search = Frame(window)
 btn_prev = tk.Button(frm_search, text="Prev", command=prev)
 btn_prev.grid(row=0,column=0,padx=1)
@@ -281,7 +371,21 @@ ent_verse.grid(row=0, column=8, padx=1)
 
 frm_search.pack()
 
-
+frm_log=Frame(window);
+btn_plus = tk.Button(frm_log, text="+", command=plus)
+btn_plus.grid(row=0,column=0,padx=1)
+btn_minus = tk.Button(frm_log, text="-", command=minus)
+btn_minus.grid(row=0, column=1, padx=1)
+lbl_hash1 = tk.Label(frm_log, image=img_mark2)
+lbl_hash1.grid(row=0,column=2,padx=1)
+lbl_hash2 = tk.Label(frm_log, image=img_mark2)
+lbl_hash2.grid(row=0,column=3)
+lbl_hash3 = tk.Label(frm_log, image=img_mark2)
+lbl_hash3.grid(row=0,column=4)
+lbl_hash4 = tk.Label(frm_log, image=img_mark2)
+lbl_hash4.grid(row=0,column=5)
+display_log_count(8)
+frm_log.pack();
 
 txt_output = tk.Text(window)
 txt_output.configure(height=5, width=50)
