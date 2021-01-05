@@ -68,8 +68,8 @@ or supervisors.}
 {ANSWER:Generally positive.}
 {ID:interview-interpersonal-7}
 {QUESTION:How do you handle feedback.}
-{ANSWER:As long as it is usually in a positive manner and light I welcome feedback. I don't care much for people that
-like to be quick to anger or yell.}
+{ANSWER:I welcome feedback presented in a positive manner. I don't care much for leaders that
+are quick to anger or yell.}
 {ID:interview-interpersonal-6}
 {QUESTION:How do you handle confrontation?}
 {ANSWER:I show empathy. Diffuse anger. I ask is it justified at all? I stay calm. I avoid character assaults. I know when to disengage.
@@ -99,19 +99,19 @@ and my dependents.}
 {ANSWER:Compose software, troubleshoot problems in systems.Train and coach others.}
 {ID:interview-13}
 {QUESTION:Why should we hire you?}
-{ANSWER:I'm self motiviated. I learn in my spare time for improvement. I welcome opportunity to share what I know with others.}
+{ANSWER:I'm self motivated. I learn in my spare time for improvement. I welcome opportunity to share what I know with others.}
 {ID:interview-14}
 {QUESTION:How are you different?}
 {ANSWER:I've spent 35 years of my time in self study, which I say is like 7 years on a job. I know am very familiar with hardware
-and repair, software of all kinds and tools, multiple operating systems, and tcp/ip networking. I know coding, debugging, developing apps
-some oop design and engineering. I've studied desktop, client/server, console, web front end and back end, database and mobile
+and repair, software of all kinds and tools, multiple operating systems, and tcp/ip networking. I know coding, debugging, developing apps,
+oop design and software engineering. I've studied desktop, client/server, console, web front end and back end, database and mobile
 software development. 20 years of part time study with Java, which I say is like 5 years on a job. I majored in Java and minored in
 JavaScript.}
 {ID:interview-15}
 {QUESTION:What are you?}
 {ANSWER:Programmer, Developer, Something of an Architect whether I'm writing a line of code, object, system of objects,
 API, Application, System of Applications, I'm a Software Engineer. I'm a leader, coach, trainer, mentor. Researcher and writer.
-Computer technician but not a guru. Coach in forums, groups and chat rooms on internet.}
+Computer technician. Coach in forums, groups and chat rooms on internet.}
 {ID:interview-16}
 {QUESTION:Where do you see yourself in 5 years?}
 {ANSWER:Very good software developer.}

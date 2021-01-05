@@ -6,7 +6,6 @@ oop-1
 data_structures-10
 data_structures-9
 oop-behavioral-7
-uml-structure-8
 uml-structure-6
 uml-interaction-1
 data_structures-1
@@ -17,3 +16,6 @@ data_structures-javascript-1
 algorithm-bigo-10
 python-datatypes-numbers-3
 algorithm-bigo-7
+data_structures-python-1
+oop-5
+algorithm-bigo-15

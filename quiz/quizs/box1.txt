@@ -1,7 +1,4 @@
 algorithm-bigo-5
-data_structures-python-1
 uml-structure-7
 algorithm-bigo-11
-algorithm-bigo-15
 uml-behavior-3
-oop-5

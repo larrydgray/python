@@ -45,3 +45,4 @@ data_structures-19
 uml-4
 python-datatypes-numbers-5
 algorithm-bigo-4
+uml-structure-8
