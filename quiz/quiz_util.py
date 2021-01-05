@@ -1,7 +1,7 @@
 import leitner.leitner
 import logging, keyboard, msvcrt, sys
 
-test=1
+test=2
 logging.basicConfig(filename="quiz_log.txt",
                     level=logging.DEBUG,
                     format=' %(asctime)s - %(levelname)s - %(message)s')
