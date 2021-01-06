@@ -4,6 +4,7 @@ from tkinter import *
 from quiz_util import cycle
 from PIL import ImageTk, Image
 import leitner.leitner
+import math
 
 def answer():
     global card
@@ -119,7 +120,7 @@ def update_boxes():
     box_cards_percent=[0,0,0,0,0,0]
     c=0
     for count in box_cards:
-        box_cards_percent[c]=int(count/total_cards*10)
+        box_cards_percent[c]=int(math.ceil((count/total_cards)*10))
         c+=1
 
     boxes_tested = [True, False, False, False, False, False]
@@ -167,7 +168,7 @@ def update_boxes():
         lbl_box4.configure(image=box4_image)
         lbl_box4.image = box4_image
     else: # Orange
-        box4_image=img_no_test_boxes[box_cards_percent[box3]]
+        box4_image=img_no_test_boxes[box_cards_percent[box4]]
         lbl_box4.configure(image=box4_image)
         lbl_box4.image = box4_image
 
