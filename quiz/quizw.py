@@ -68,6 +68,10 @@ def next():
         cards = leitner.load_cards()
 
         cycle = leitner.load_test_cycle()
+        while len(cycle.id_list) == 0:
+            id_list[0]='empty'
+            leitner.save_test_cycle_file(cycle)
+            cycle = leitner.load_test_cycle()
 
         test_cycle_file_name = 'testcycle' + str(cycle.cycle_num)
     global card

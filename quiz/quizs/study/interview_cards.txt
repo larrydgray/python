@@ -18,7 +18,8 @@ possibly documentation or training material. My web site is a good example.}
  awareness (smith system). Interaction with police, shippers, dock workers, other truckers, motorist, dispatch. Other standards and techniques. }
 {ID:interview-5}
 {QUESTION:What makes you effective?}
-{ANSWER:Stubborn persistence in problem solving. Know problem solving steps. Know trouble shooting steps. Know Debugging techniques. }
+{ANSWER:Know problem solving steps, trouble shooting steps, debugging techniques. Know what tools to use when. Know where
+to get information needed.}
 {ID:interview-problemsolve-1}
 {QUESTION:What are your problem solving steps?}
 {ANSWER:1. Identify the problem. 2. Gather facts and assumptions. Understand what final outcome will be. 3. Form a theory as to probably cause of issue.
@@ -58,7 +59,8 @@ full system functionality. Document the process.}
 respect which increases productivity.}
 {ID:interview-interpersonal-4}
 {QUESTION:How would you describe your decision making ability?}
-{ANSWER:Gather facts and identify assumptions before making decisions. It's all of my problem solving steps and techniques.}
+{ANSWER:Gather facts and identify assumptions before making decisions. Use of my problem solving steps and techniques. Avoid
+appearance or emotional based decisions.}
 {ID:interview-interpersonal-5}
 {QUESTION:How are you with assertiveness?}
 {ANSWER:Can be very assertive when baked into a corner. Will always go to the person first, not subordinates, co-workers
@@ -91,7 +93,7 @@ and my dependents.}
 {QUESTION:Describe your leadership style and abilities.}
 {ANSWER:I lead by example, not forceful or dictatorial type at all.}
 {ID:interview-11}
-{QUESTION:How do you train others?}
+{QUESTION:How do you correct others?}
 {ANSWER:Maintain or enhance self esteem. Show empathy. Ask how they would solve the problem. Explain how I would solve the
  problem and work out the solution with them.}
 {ID:interview-12}
